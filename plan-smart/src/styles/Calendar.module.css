@@ -1,0 +1,51 @@
+.calendarWrapper {
+  @apply rounded-xl border bg-white p-6 shadow-lg;
+}
+
+.calendarWrapper :global(.rbc-calendar) {
+  @apply font-sans;
+}
+
+.calendarWrapper :global(.rbc-toolbar) {
+  @apply mb-6 flex flex-wrap gap-2;
+}
+
+.calendarWrapper :global(.rbc-toolbar button) {
+  @apply rounded-md border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50;
+}
+
+.calendarWrapper :global(.rbc-toolbar button.rbc-active) {
+  @apply bg-indigo-500 text-white hover:bg-indigo-600;
+}
+
+.calendarWrapper :global(.rbc-header) {
+  @apply border-b border-gray-200 py-2 font-medium text-gray-700;
+}
+
+.calendarWrapper :global(.rbc-event) {
+  @apply rounded-lg border-none shadow-sm transition-opacity hover:opacity-90;
+}
+
+.calendarWrapper :global(.rbc-today) {
+  @apply bg-indigo-50;
+}
+
+.calendarWrapper :global(.rbc-off-range-bg) {
+  @apply bg-gray-50;
+}
+
+.calendarWrapper :global(.rbc-time-content) {
+  @apply border-l border-gray-200;
+}
+
+.calendarWrapper :global(.rbc-time-header-content) {
+  @apply border-l border-gray-200;
+}
+
+.calendarWrapper :global(.rbc-time-slot) {
+  @apply text-sm text-gray-500;
+}
+
+.calendarWrapper :global(.rbc-current-time-indicator) {
+  @apply bg-indigo-500;
+}
