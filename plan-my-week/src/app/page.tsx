@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 
 // Helper functions for date manipulation
 const getWeekDays = (date: Date) => {
@@ -19,7 +18,9 @@ const getWeekDays = (date: Date) => {
   return weekDays;
 };
 
-const formatDateToISO = (date: Date) => {
+// Fix the formatDateToISO function to handle undefined
+const formatDateToISO = (date: Date | undefined): string => {
+  if (!date) return '';
   return date.toISOString().split('T')[0];
 };
 
@@ -33,6 +34,7 @@ type Event = {
   endTime: string;
   color: string;
   category?: string;
+  locked?: boolean;  // New property
 };
 
 type ViewMode = 'week' | 'day' | 'month';
@@ -40,6 +42,18 @@ type Category = {
   id: string;
   name: string;
   color: string;
+};
+
+type AIPreferences = {
+  preferredStartTime: string;
+  preferredEndTime: string;
+  preferredBreakDuration: number;
+  preferredSessionDuration: number;
+  focusTimePreference: 'morning' | 'afternoon' | 'evening';
+  breaksBetweenTasks: boolean;
+  maximumMeetingsPerDay: number;
+  preferredMeetingDuration: number;
+  systemPrompt: string;
 };
 
 export default function HomePage() {
@@ -69,6 +83,48 @@ export default function HomePage() {
     color: '#000000',
     category: '',
   });
+  const [showAIPreferences, setShowAIPreferences] = useState(false);
+  // Fix type safety for AI preferences initial state
+  const [aiPreferences, setAIPreferences] = useState<AIPreferences>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('calendar-ai-preferences');
+      if (saved) {
+        return JSON.parse(saved) as AIPreferences;
+      }
+    }
+    return {
+      preferredStartTime: '09:00',
+      preferredEndTime: '17:00',
+      preferredBreakDuration: 15,
+      preferredSessionDuration: 45,
+      focusTimePreference: 'morning' as const,
+      breaksBetweenTasks: true,
+      maximumMeetingsPerDay: 4,
+      preferredMeetingDuration: 30,
+      systemPrompt: `I am your personal calendar assistant. When optimizing schedules:
+- I prefer to work from {preferredStartTime} to {preferredEndTime}
+- I am most focused in the {focusTimePreference}
+- I need {preferredBreakDuration} minute breaks between tasks
+- My ideal work session is {preferredSessionDuration} minutes
+- I prefer no more than {maximumMeetingsPerDay} meetings per day
+- My ideal meeting length is {preferredMeetingDuration} minutes
+Please help me maintain a balanced and productive schedule while respecting these preferences.`,
+    };
+  });
+  const [showOptimizer, setShowOptimizer] = useState(false);
+  // Update optimizer suggestion types
+  interface OptimizerSuggestion {
+    type: 'merge' | 'reschedule';
+    suggestedChanges?: {
+      eventId: string;
+      newDate?: string;
+      newStartTime?: string;
+      newEndTime?: string;
+    };
+    explanation: string;
+  }
+  
+  const [optimizerSuggestions, setOptimizerSuggestions] = useState<OptimizerSuggestion[]>([]);
 
   // Colors for events - using Vercel color scheme (monochromatic with accents)
   const eventColors = [
@@ -84,13 +140,13 @@ export default function HomePage() {
     // Load events
     const savedEvents = localStorage.getItem('calendar-events');
     if (savedEvents) {
-      setEvents(JSON.parse(savedEvents));
+      setEvents(JSON.parse(savedEvents) as Event[]);
     }
 
     // Load categories
     const savedCategories = localStorage.getItem('calendar-categories');
     if (savedCategories) {
-      setCategories(JSON.parse(savedCategories));
+      setCategories(JSON.parse(savedCategories) as Category[]);
     }
 
     // Load preferences
@@ -101,7 +157,7 @@ export default function HomePage() {
 
     const savedSelectedCategories = localStorage.getItem('calendar-selected-categories');
     if (savedSelectedCategories) {
-      setSelectedCategories(JSON.parse(savedSelectedCategories));
+      setSelectedCategories(JSON.parse(savedSelectedCategories) as string[]);
     }
   }, []);
 
@@ -123,6 +179,19 @@ export default function HomePage() {
   useEffect(() => {
     localStorage.setItem('calendar-selected-categories', JSON.stringify(selectedCategories));
   }, [selectedCategories]);
+
+  // Save AI preferences when they change
+  useEffect(() => {
+    localStorage.setItem('calendar-ai-preferences', JSON.stringify(aiPreferences));
+  }, [aiPreferences]);
+
+  // Check if it's first time using AI optimizer
+  useEffect(() => {
+    const hasUsedOptimizer = localStorage.getItem('calendar-has-used-optimizer');
+    if (!hasUsedOptimizer) {
+      setShowAIPreferences(true);
+    }
+  }, []);
 
   // Initialize week days on mount and when current date changes
   useEffect(() => {
@@ -243,6 +312,192 @@ export default function HomePage() {
     return matchesSearch && matchesCategory;
   });
 
+  // AI Optimization Functions
+  const optimizeSchedule = async () => {
+    try {
+      // Get all events for the current week, excluding locked events
+      const weekEvents = weekDays.flatMap(day => 
+        events
+          .filter(event => event.date === formatDateToISO(day))
+          .filter(event => !event.locked) // Skip locked events
+      );
+
+      // Format the system prompt with actual values
+      const formattedSystemPrompt = (aiPreferences.systemPrompt || '')
+        .replace('{preferredStartTime}', aiPreferences?.preferredStartTime || '09:00')
+        .replace('{preferredEndTime}', aiPreferences?.preferredEndTime || '17:00')
+        .replace('{focusTimePreference}', aiPreferences?.focusTimePreference || 'morning')
+        .replace('{preferredBreakDuration}', (aiPreferences?.preferredBreakDuration || 15).toString())
+        .replace('{preferredSessionDuration}', (aiPreferences?.preferredSessionDuration || 45).toString())
+        .replace('{maximumMeetingsPerDay}', (aiPreferences?.maximumMeetingsPerDay || 4).toString())
+        .replace('{preferredMeetingDuration}', (aiPreferences?.preferredMeetingDuration || 30).toString());
+
+      // Add note about locked events to the system prompt
+      const systemPromptWithLockNote = `${formattedSystemPrompt}\nNote: Some events are locked and should not be modified. Only suggest changes for unlocked events.`;
+
+      // Call the Ollama API
+      const response = await fetch('/api/ollama', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          events: weekEvents, // Only sending unlocked events
+          preferences: aiPreferences,
+          systemPrompt: systemPromptWithLockNote,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to get AI suggestions');
+      }
+
+      interface OptimizerResponse {
+        suggestions: Array<{
+          type: 'move' | 'split' | 'merge' | 'break';
+          description: string;
+          originalEvent?: Event;
+          suggestedChanges: Partial<Event>;
+        }>;
+      }
+
+      const data = (await response.json()) as OptimizerResponse;
+      setOptimizerSuggestions(data.suggestions ?? []);
+      setShowOptimizer(true);
+    } catch (error) {
+      console.error('Failed to optimize schedule:', error);
+      setNotifications([...notifications, 'Failed to get AI suggestions. Please try again.']);
+    }
+  };
+
+  const applyOptimizationSuggestion = (suggestion: OptimizerSuggestion) => {
+    if (!suggestion.suggestedChanges) {
+      console.warn('No suggested changes in the optimization suggestion');
+      return;
+    }
+  
+    const { eventId, newDate, newStartTime, newEndTime } = suggestion.suggestedChanges;
+    if (!eventId) {
+      console.warn('No eventId in the suggested changes');
+      return;
+    }
+  
+    setWeekDays((prevWeekDays) => {
+      return prevWeekDays.map((day) => {
+        const updatedEvents = day.events.map((event) => {
+          if (event.id === eventId) {
+            return {
+              ...event,
+              date: newDate || event.date,
+              startTime: newStartTime || event.startTime,
+              endTime: newEndTime || event.endTime,
+            };
+          }
+          return event;
+        });
+  
+        return {
+          ...day,
+          events: updatedEvents,
+        };
+      });
+    });
+  };
+
+  const generateTestData = () => {
+    if (weekDays.length < 5) {
+      setNotifications([...notifications, 'Error: Calendar week not properly initialized']);
+      return;
+    }
+  
+    const testEvents: Omit<Event, 'id'>[] = [
+      {
+        title: "Morning Stand-up",
+        description: "Daily team sync",
+        date: formatDateToISO(weekDays[1]),
+        startTime: "09:00",
+        endTime: "09:30",
+        color: "#0070f3",
+        category: "Work"
+      },
+      {
+        title: "Focus Coding Time",
+        description: "Deep work session",
+        date: formatDateToISO(weekDays[1]),
+        startTime: "10:00",
+        endTime: "12:00",
+        color: "#50e3c2",
+        category: "Work"
+      },
+      {
+        title: "Lunch Break",
+        description: "Time to recharge",
+        date: formatDateToISO(weekDays[2]),
+        startTime: "12:00",
+        endTime: "13:00",
+        color: "#ff0080",
+        category: "Personal"
+      },
+      {
+        title: "Client Meeting",
+        description: "Project review",
+        date: formatDateToISO(weekDays[2]),
+        startTime: "14:00",
+        endTime: "15:30",
+        color: "#0070f3",
+        category: "Work"
+      },
+      {
+        title: "Gym Session",
+        description: "Weekly workout",
+        date: formatDateToISO(weekDays[3]),
+        startTime: "07:00",
+        endTime: "08:00",
+        color: "#ff0080",
+        category: "Personal"
+      },
+      {
+        title: "Team Planning",
+        description: "Sprint planning session",
+        date: formatDateToISO(weekDays[3]),
+        startTime: "10:00",
+        endTime: "11:30",
+        color: "#0070f3",
+        category: "Work"
+      },
+      {
+        title: "Code Review",
+        description: "Review PRs",
+        date: formatDateToISO(weekDays[4]),
+        startTime: "15:00",
+        endTime: "16:30",
+        color: "#0070f3",
+        category: "Work"
+      },
+      {
+        title: "Late Meeting",
+        description: "Cross-timezone sync",
+        date: formatDateToISO(weekDays[4]),
+        startTime: "16:30",
+        endTime: "17:30",
+        color: "#0070f3",
+        category: "Work"
+      }
+    ];
+  
+    // Clear existing events and add test events
+    const newEvents = testEvents.map(event => ({
+      ...event,
+      id: Date.now().toString() + Math.random().toString(36).substr(2, 9)
+    }));
+    
+    setEvents(newEvents);
+    setNotifications([...notifications, 'Test data generated successfully']);
+    
+    // Fix setTimeout with async function
+    void setTimeout(() => void optimizeSchedule(), 500);
+  };
+
   return (
     <div className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
       {/* Notifications */}
@@ -320,15 +575,29 @@ export default function HomePage() {
                 </button>
               </div>
 
-              <button
-                onClick={() => {
-                  setSelectedEvent(null);
-                  setShowEventModal(true);
-                }}
-                className="bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
-              >
-                + Add Event
-              </button>
+              <div className="flex space-x-4">
+                <button
+                  onClick={() => {
+                    setSelectedEvent(null);
+                    setShowEventModal(true);
+                  }}
+                  className="bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                >
+                  + Add Event
+                </button>
+                <button
+                  onClick={optimizeSchedule}
+                  className="px-4 py-2 text-sm font-medium rounded-md transition-colors bg-purple-600 text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
+                >
+                  Optimize Schedule
+                </button>
+                <button
+                  onClick={generateTestData}
+                  className="px-4 py-2 text-sm font-medium rounded-md transition-colors bg-green-600 text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                >
+                  Generate Test Data
+                </button>
+              </div>
             </div>
           </div>
 
@@ -346,7 +615,7 @@ export default function HomePage() {
                 aria-label="Previous"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+                  <path fillRule="evenodd" d="M12.707 5.293a1 1 010 1.414L9.414 10l3.293 3.293a1 1 01-1.414 1.414l-4-4a1 1 010-1.414l4-4a1 1 011.414 0z" clipRule="evenodd" />
                 </svg>
               </button>
               <span className="text-sm font-medium">
@@ -358,7 +627,7 @@ export default function HomePage() {
                 aria-label="Next"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  <path fillRule="evenodd" d="M7.293 14.707a1 1 010-1.414L10.586 10 7.293 6.707a1 1 011.414-1.414l4 4a1 1 010 1.414l-4 4a1 1 01-1.414 0z" clipRule="evenodd" />
                 </svg>
               </button>
             </div>
@@ -499,7 +768,7 @@ export default function HomePage() {
                 className="p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                  <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 111.414 1.414L11.414 10l4.293 4.293a1 1 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 01-1.414-1.414L8.586 10 4.293 5.707a1 1 010-1.414z" clipRule="evenodd" />
                 </svg>
               </button>
             </div>
@@ -651,6 +920,20 @@ export default function HomePage() {
                           ))}
                         </select>
                       </div>
+                      <div className="mt-4">
+                        <div className="flex items-center">
+                          <input
+                            type="checkbox"
+                            id="locked"
+                            className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+                            checked={newEvent.locked ?? false}
+                            onChange={(e) => setNewEvent({ ...newEvent, locked: e.target.checked })}
+                          />
+                          <label htmlFor="locked" className="ml-2 block text-sm text-gray-700 dark:text-gray-300">
+                            Lock event (prevent AI from modifying)
+                          </label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -672,6 +955,256 @@ export default function HomePage() {
                     Cancel
                   </button>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* AI Preferences Modal */}
+      {showAIPreferences && (
+        <div className="fixed inset-0 z-10 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div className="fixed inset-0 bg-black bg-opacity-40 transition-opacity"></div>
+
+            <span className="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+
+            <div className="inline-block align-bottom bg-white dark:bg-black rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+              <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <h3 className="text-lg leading-6 font-medium mb-4">AI Schedule Optimizer Preferences</h3>
+                <div className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                        Preferred Start Time
+                      </label>
+                      <input
+                        type="time"
+                        value={aiPreferences.preferredStartTime}
+                        onChange={(e) => setAIPreferences({...aiPreferences, preferredStartTime: e.target.value})}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                        Preferred End Time
+                      </label>
+                      <input
+                        type="time"
+                        value={aiPreferences.preferredEndTime}
+                        onChange={(e) => setAIPreferences({...aiPreferences, preferredEndTime: e.target.value})}
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Focus Time Preference
+                    </label>
+                    <select
+                      value={aiPreferences.focusTimePreference}
+                      onChange={(e) => setAIPreferences({
+                        ...aiPreferences, 
+                        focusTimePreference: e.target.value as AIPreferences['focusTimePreference']
+                      })}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                    >
+                      <option value="morning">Morning</option>
+                      <option value="afternoon">Afternoon</option>
+                      <option value="evening">Evening</option>
+                    </select>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                        Break Duration (minutes)
+                      </label>
+                      <input
+                        type="number"
+                        value={aiPreferences.preferredBreakDuration}
+                        onChange={(e) => setAIPreferences({
+                          ...aiPreferences, 
+                          preferredBreakDuration: parseInt(e.target.value)
+                        })}
+                        min="5"
+                        max="60"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                        Session Duration (minutes)
+                      </label>
+                      <input
+                        type="number"
+                        value={aiPreferences.preferredSessionDuration}
+                        onChange={(e) => setAIPreferences({
+                          ...aiPreferences, 
+                          preferredSessionDuration: parseInt(e.target.value)
+                        })}
+                        min="15"
+                        max="180"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                        Max Meetings Per Day
+                      </label>
+                      <input
+                        type="number"
+                        value={aiPreferences.maximumMeetingsPerDay}
+                        onChange={(e) => setAIPreferences({
+                          ...aiPreferences, 
+                          maximumMeetingsPerDay: parseInt(e.target.value)
+                        })}
+                        min="1"
+                        max="10"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                        Preferred Meeting Length (minutes)
+                      </label>
+                      <input
+                        type="number"
+                        value={aiPreferences.preferredMeetingDuration}
+                        onChange={(e) => setAIPreferences({
+                          ...aiPreferences, 
+                          preferredMeetingDuration: parseInt(e.target.value)
+                        })}
+                        min="15"
+                        max="180"
+                        step="15"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex items-center">
+                    <input
+                      type="checkbox"
+                      checked={aiPreferences.breaksBetweenTasks}
+                      onChange={(e) => setAIPreferences({
+                        ...aiPreferences, 
+                        breaksBetweenTasks: e.target.checked
+                      })}
+                      className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded"
+                    />
+                    <label className="ml-2 block text-sm text-gray-700 dark:text-gray-300">
+                      Add breaks between tasks
+                    </label>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      AI Assistant Personality
+                    </label>
+                    <textarea
+                      value={aiPreferences.systemPrompt}
+                      onChange={(e) => setAIPreferences({
+                        ...aiPreferences,
+                        systemPrompt: e.target.value
+                      })}
+                      rows={6}
+                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                      placeholder="Describe how you want the AI to assist you..."
+                    />
+                    <p className="mt-1 text-sm text-gray-500">
+                      This prompt helps the AI understand your preferences and personality. You can modify it to better suit your needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse bg-gray-50 dark:bg-gray-900">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowAIPreferences(false);
+                    localStorage.setItem('calendar-has-used-optimizer', 'true');
+                  }}
+                  className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm"
+                >
+                  Save Preferences
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* AI Optimizer Suggestions Modal */}
+      {showOptimizer && (
+        <div className="fixed inset-0 z-10 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div className="fixed inset-0 bg-black bg-opacity-40 transition-opacity"></div>
+
+            <span className="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+
+            <div className="inline-block align-bottom bg-white dark:bg-black rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+              <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div className="sm:flex sm:items-start">
+                  <div className="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                    <h3 className="text-lg leading-6 font-medium mb-4">Schedule Optimization Suggestions</h3>
+                    
+                    {optimizerSuggestions.length === 0 ? (
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        No suggestions available. Your schedule looks optimized!
+                      </p>
+                    ) : (
+                      <div className="space-y-4">
+                        {optimizerSuggestions.map((suggestion, index) => (
+                          <div 
+                            key={index}
+                            className="p-4 rounded-lg border border-gray-200 dark:border-gray-700"
+                          >
+                            <p className="text-sm mb-3">{suggestion.description}</p>
+                            <div className="flex justify-end space-x-2">
+                              <button
+                                onClick={() => applyOptimizationSuggestion(suggestion)}
+                                className="px-3 py-1 text-sm font-medium rounded-md bg-purple-600 text-white hover:bg-purple-700"
+                              >
+                                Apply
+                              </button>
+                              <button
+                                onClick={() => setOptimizerSuggestions(
+                                  optimizerSuggestions.filter((_, i) => i !== index)
+                                )}
+                                className="px-3 py-1 text-sm font-medium rounded-md border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-900"
+                              >
+                                Ignore
+                              </button>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+              
+              <div className="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse bg-gray-50 dark:bg-gray-900">
+                <button
+                  type="button"
+                  onClick={() => setShowOptimizer(false)}
+                  className="w-full inline-flex justify-center rounded-md border border-gray-300 dark:border-gray-600 shadow-sm px-4 py-2 bg-white dark:bg-black text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setShowAIPreferences(true)}
+                  className="mt-3 sm:mt-0 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm"
+                >
+                  Adjust Preferences
+                </button>
               </div>
             </div>
           </div>
