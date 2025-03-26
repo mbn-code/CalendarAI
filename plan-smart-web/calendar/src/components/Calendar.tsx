@@ -12,21 +12,24 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { DayView, WeekView, MonthView, YearView } from './CalendarViews';
+import { DayView, WeekView, MonthView } from './CalendarViews';
 import { EventDialog } from './EventDialog';
 import { QuickCreatePopover } from './QuickCreatePopover';
 import { format } from 'date-fns';
 
-const viewModeOptions: { value: ViewMode; label: string }[] = [
+const viewModeOptions: { value: 'day' | 'week' | 'month'; label: string }[] = [
   { value: 'day', label: 'Day' },
   { value: 'week', label: 'Week' },
   { value: 'month', label: 'Month' },
-  { value: 'year', label: 'Year' },
 ];
 
-export function Calendar() {
-  const { preferences } = useCalendarStore();
-  const [viewMode, setViewMode] = useState<ViewMode>(preferences?.defaultView || 'week');
+interface CalendarProps {
+  viewMode: 'day' | 'week' | 'month';
+  onViewModeChange: (mode: 'day' | 'week' | 'month') => void;
+}
+
+export function Calendar({ viewMode, onViewModeChange }: CalendarProps) {
+  const { preferences, populateWithMockEvents } = useCalendarStore();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [showEventDialog, setShowEventDialog] = useState(false);
@@ -44,9 +47,6 @@ export function Calendar() {
           break;
         case 'month':
           newDate.setMonth(prevDate.getMonth() + (direction === 'next' ? 1 : -1));
-          break;
-        case 'year':
-          newDate.setFullYear(prevDate.getFullYear() + (direction === 'next' ? 1 : -1));
           break;
       }
       return newDate;
@@ -85,8 +85,6 @@ export function Calendar() {
         return <WeekView date={currentDate} onDateClick={handleDateClick} />;
       case 'month':
         return <MonthView date={currentDate} onDateClick={handleDateClick} />;
-      case 'year':
-        return <YearView date={currentDate} onDateClick={handleDateClick} />;
     }
   };
 
@@ -124,6 +122,12 @@ export function Calendar() {
             </div>
 
             <div className="flex items-center space-x-2">
+              <Button
+                variant="outline"
+                onClick={() => populateWithMockEvents()}
+              >
+                Add Mock Events
+              </Button>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" className="gap-2">
@@ -135,7 +139,7 @@ export function Calendar() {
                   {viewModeOptions.map((option) => (
                     <DropdownMenuItem
                       key={option.value}
-                      onClick={() => setViewMode(option.value)}
+                      onClick={() => onViewModeChange(option.value)}
                     >
                       {option.label}
                     </DropdownMenuItem>

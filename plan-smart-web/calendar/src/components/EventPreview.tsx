@@ -38,7 +38,7 @@ export function EventPreview({ event, children, onDelete }: EventPreviewProps) {
             <div className="flex items-center gap-2">
               <div
                 className="w-3 h-3 rounded-full"
-                style={{ backgroundColor: event.category.color }}
+                style={{ backgroundColor: event.category?.color || '#666666' }}
               />
               <span className="font-medium">{event.title}</span>
             </div>
@@ -79,7 +79,7 @@ export function EventPreview({ event, children, onDelete }: EventPreviewProps) {
             </div>
           )}
           <div className="text-xs text-muted-foreground mt-2">
-            {event.category.name}
+            {event.category?.name || 'No Category'}
           </div>
         </div>
       </HoverCardContent>

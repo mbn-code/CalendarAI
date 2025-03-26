@@ -138,12 +138,12 @@ export function DayView({ date, onDateClick }: ViewProps) {
                 style={{
                   top: `${getMinutesSinceMidnight(event.start)}px`,
                   height: `${getEventDurationInMinutes(event.start, event.end)}px`,
-                  backgroundColor: event.category.color + '10',
-                  borderColor: event.category.color + '40',
+                  backgroundColor: (event.category?.color || '#666666') + '10',
+                  borderColor: (event.category?.color || '#666666') + '40',
                 }}
               >
                 <div className="p-2">
-                  <div className="font-medium" style={{ color: event.category.color }}>
+                  <div className="font-medium" style={{ color: event.category?.color || '#666666' }}>
                     {event.title}
                   </div>
                   <div className="text-xs text-muted-foreground">
@@ -217,12 +217,12 @@ export function WeekView({ date, onDateClick }: ViewProps) {
                       style={{
                         top: `${getMinutesSinceMidnight(event.start)}px`,
                         height: `${getEventDurationInMinutes(event.start, event.end)}px`,
-                        backgroundColor: event.category.color + '10',
-                        borderColor: event.category.color + '40',
+                        backgroundColor: (event.category?.color || '#666666') + '10',
+                        borderColor: (event.category?.color || '#666666') + '40',
                       }}
                     >
                       <div className="p-1 truncate">
-                        <div className="font-medium" style={{ color: event.category.color }}>
+                        <div className="font-medium" style={{ color: event.category?.color || '#666666' }}>
                           {event.title}
                         </div>
                         <div className="text-[10px] text-muted-foreground">
