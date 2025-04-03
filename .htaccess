@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /calendar/
+RewriteBase /CalendarAI/
 
 # Handle API requests
 RewriteCond %{REQUEST_FILENAME} !-f

@@ -1,3 +1,34 @@
+// Add debug utilities at the top of the file
+const DEBUG = true;  // Match PHP config
+
+function debugLog(message, data = null) {
+    if (!DEBUG) return;
+    
+    const logMessage = {
+        timestamp: new Date().toISOString(),
+        message,
+        data
+    };
+    
+    console.log('[Calendar Debug]', logMessage);
+}
+
+// Function to extract debug info from API responses
+function getDebugInfo(response) {
+    if (!DEBUG) return null;
+    
+    const debugHeader = response.headers.get('X-Debug-Info');
+    if (debugHeader) {
+        try {
+            return JSON.parse(atob(debugHeader));
+        } catch (e) {
+            console.warn('Failed to parse debug info:', e);
+            return debugHeader;
+        }
+    }
+    return null;
+}
+
 // Table filtering
 function filterTable(inputElement, tableId) {
     const filterValue = inputElement.value.toLowerCase();
@@ -171,97 +202,180 @@ async function showOptimizeModal() {
 
 async function optimizeSchedule(preferences) {
     try {
-        // Show loading state
-        Swal.fire({
+        debugLog('Starting schedule optimization', preferences);
+        let progressSteps = [
+            'Analyzing schedule patterns...',
+            'Checking event conflicts...',
+            'Optimizing time slots...',
+            'Finalizing recommendations...'
+        ];
+        let currentStep = 0;
+
+        // Show loading state with progress
+        const loadingDialog = await Swal.fire({
             title: 'Analyzing Your Schedule',
             html: `
                 <div class="space-y-4">
                     <div class="flex justify-center">
                         <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500"></div>
                     </div>
-                    <p class="text-sm text-gray-600">AI is analyzing your schedule patterns...</p>
-                    <div class="text-xs text-gray-500 space-y-1">
-                        <div>• Evaluating event timing</div>
-                        <div>• Checking for conflicts</div>
-                        <div>• Optimizing break periods</div>
+                    <p id="currentStep" class="text-sm text-gray-600">${progressSteps[0]}</p>
+                    <div id="optimizationLog" class="text-xs text-gray-500 space-y-1 mt-4">
+                        <div>• Starting analysis...</div>
                     </div>
                 </div>
             `,
             allowOutsideClick: false,
-            showConfirmButton: false
-        });
-
-        const response = await fetch('/calendar/api/optimize.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ preferences })
-        });
-
-        if (!response.ok) {
-            throw new Error('Optimization request failed');
-        }
-
-        const result = await response.json();
-        if (!result.success) {
-            throw new Error(result.error || 'Optimization failed');
-        }
-
-        // Show optimization results
-        const { value: selectedChanges } = await Swal.fire({
-            title: 'AI Optimization Results',
-            html: `
-                <div class="text-left space-y-6">
-                    <div class="mb-4">
-                        <h3 class="font-medium text-lg mb-2">Schedule Health:</h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            ${formatHealthMetrics(result.schedule_health)}
-                        </div>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <h3 class="font-medium text-lg mb-2">AI Suggestions:</h3>
-                        <div class="bg-purple-50 p-4 rounded-lg text-sm space-y-2">
-                            ${formatSuggestions(result.suggestions)}
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h3 class="font-medium text-lg mb-2">Proposed Changes:</h3>
-                        <div class="space-y-2 max-h-60 overflow-y-auto">
-                            ${formatProposedChanges(result.changes)}
-                        </div>
-                    </div>
-                </div>
-            `,
-            width: '800px',
-            showCancelButton: true,
-            confirmButtonText: 'Apply Selected Changes',
-            cancelButtonText: 'Cancel',
+            showConfirmButton: false,
             didOpen: () => {
-                initializeChangeToggles();
-            },
-            preConfirm: () => getSelectedChanges()
+                window.updateOptimizationLog = (message) => {
+                    const log = document.getElementById('optimizationLog');
+                    if (log) {
+                        log.innerHTML += `<div>• ${escapeHtml(message)}</div>`;
+                        log.scrollTop = log.scrollHeight;
+                    }
+                };
+            }
         });
 
-        if (selectedChanges && selectedChanges.length > 0) {
-            await applyChanges(selectedChanges);
-            showNotification('Schedule optimized successfully!', 'success');
-            setTimeout(() => location.reload(), 1500);
+        // Start progress animation
+        const progressInterval = setInterval(() => {
+            const stepEl = document.getElementById('currentStep');
+            if (stepEl && currentStep < progressSteps.length - 1) {
+                currentStep = (currentStep + 1) % progressSteps.length;
+                stepEl.textContent = progressSteps[currentStep];
+            }
+        }, 3000);
+
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+
+            const response = await fetch('/CalendarAI/api/optimize.php', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({ preferences }),
+                signal: controller.signal
+            });
+
+            clearTimeout(timeoutId);
+            clearInterval(progressInterval);
+
+            const debugInfo = response.headers.get('X-Debug-Info');
+            if (debugInfo) {
+                try {
+                    const decoded = atob(debugInfo);
+                    debugLog('Server debug info', decoded);
+                    window.updateOptimizationLog?.(decoded);
+                } catch (e) {
+                    debugLog('Failed to parse debug info', e);
+                }
+            }
+
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                throw new Error(`Invalid content type: ${contentType}`);
+            }
+
+            const result = await response.json();
+            debugLog('Optimization API response', result);
+
+            if (!response.ok) {
+                throw new Error(result.message || `HTTP error! status: ${response.status}`);
+            }
+
+            if (!result.success) {
+                throw new Error(result.message || 'Optimization failed');
+            }
+
+            // Close the loading dialog
+            loadingDialog.close();
+
+            const { value: selectedChanges } = await Swal.fire({
+                title: 'AI Optimization Results',
+                html: `
+                    <div class="text-left space-y-6">
+                        <div class="mb-4">
+                            <h3 class="font-medium text-lg mb-2">Schedule Health:</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                ${formatHealthMetrics(result.schedule_health)}
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h3 class="font-medium text-lg mb-2">AI Suggestions:</h3>
+                            <div class="bg-purple-50 p-4 rounded-lg text-sm space-y-2">
+                                ${formatSuggestions(result.suggestions)}
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="font-medium text-lg mb-2">Proposed Changes:</h3>
+                            <div class="space-y-2 max-h-60 overflow-y-auto">
+                                ${formatProposedChanges(result.changes)}
+                            </div>
+                        </div>
+                        
+                        ${result.statistics ? `
+                        <div class="mt-4 p-4 bg-gray-50 rounded-lg">
+                            <h3 class="font-medium text-sm mb-2">Statistics:</h3>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div>Total Events: ${result.statistics.total_events}</div>
+                                <div>Optimized: ${result.statistics.optimized_events}</div>
+                                <div>Improvement Score: ${result.statistics.improvement_score}%</div>
+                            </div>
+                        </div>
+                        ` : ''}
+                    </div>
+                `,
+                width: '800px',
+                showCancelButton: true,
+                confirmButtonText: 'Apply Selected Changes',
+                cancelButtonText: 'Cancel',
+                didOpen: () => {
+                    initializeChangeToggles();
+                },
+                preConfirm: () => getSelectedChanges()
+            });
+
+            if (selectedChanges && selectedChanges.length > 0) {
+                debugLog('Applying selected changes', selectedChanges);
+                await applyChanges(selectedChanges);
+                showNotification('Schedule optimized successfully!', 'success');
+                setTimeout(() => location.reload(), 1500);
+            }
+
+        } catch (error) {
+            clearInterval(progressInterval);
+            if (error.name === 'AbortError') {
+                throw new Error('Request timed out. Please try again later.');
+            }
+            throw error;
         }
 
     } catch (error) {
-        console.error('Optimization error:', error);
+        debugLog('Optimization error', {
+            message: error.message,
+            stack: error.stack
+        });
+        
         Swal.fire({
             icon: 'error',
             title: 'Optimization Failed',
-            text: error.message
+            text: error.message,
+            footer: DEBUG ? `<pre class="text-xs text-left p-2 bg-gray-50">${error.stack}</pre>` : null
         });
     }
 }
 
 async function applyChanges(changes) {
     try {
-        const response = await fetch('/calendar/api/apply-changes.php', {
+        debugLog('Applying schedule changes', changes);
+        
+        const response = await fetch('/CalendarAI/api/apply-changes.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -269,11 +383,22 @@ async function applyChanges(changes) {
             body: JSON.stringify({ changes })
         });
 
+        const debugInfo = getDebugInfo(response);
+        if (debugInfo) {
+            debugLog('Server debug information for changes', debugInfo);
+        }
+
         const result = await response.json();
+        debugLog('Changes application result', result);
+
         if (!result.success) {
             throw new Error(result.error || 'Failed to apply changes');
         }
     } catch (error) {
+        debugLog('Error applying changes', {
+            message: error.message,
+            stack: error.stack
+        });
         console.error('Error applying changes:', error);
         throw new Error('Failed to apply schedule changes: ' + error.message);
     }
@@ -415,7 +540,7 @@ async function applySelectedChanges() {
     }
 
     try {
-        const response = await fetch('/calendar/api/apply-changes.php', {
+        const response = await fetch('/CalendarAI/api/apply-changes.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -602,7 +727,7 @@ document.getElementById('sendMessage')?.addEventListener('click', async function
     processingIndicator.classList.remove('hidden');
     
     try {
-        const response = await fetch('/calendar/api/chat-assistant.php', {
+        const response = await fetch('/CalendarAI/api/chat-assistant.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -658,7 +783,7 @@ async function handleAssistantAction(action) {
         case 'add':
         case 'move':
         case 'delete':
-            await fetch('/calendar/api/apply-changes.php', {
+            await fetch('/CalendarAI/api/apply-changes.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

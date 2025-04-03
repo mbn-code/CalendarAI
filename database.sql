@@ -4,13 +4,30 @@ DROP TABLE IF EXISTS system_prompts;
 DROP TABLE IF EXISTS user_preferences;
 DROP TABLE IF EXISTS calendar_events;
 DROP TABLE IF EXISTS event_categories;
+DROP TABLE IF EXISTS password_resets;
 DROP TABLE IF EXISTS users;
 
 -- Create tables in order of dependencies
 CREATE TABLE users (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(50),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    full_name VARCHAR(100),
+    role ENUM('admin', 'user') DEFAULT 'user',
+    is_active BOOLEAN DEFAULT TRUE,
+    last_login DATETIME,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE password_resets (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    token VARCHAR(255) NOT NULL,
+    expires_at DATETIME NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
 CREATE TABLE event_categories (
@@ -69,8 +86,8 @@ CREATE TABLE assistant_chat (
 );
 
 -- Insert default admin user if not exists
-INSERT IGNORE INTO users (id, username) VALUES 
-(1, 'admin');
+INSERT IGNORE INTO users (id, username, email, password, full_name, role) VALUES 
+(1, 'admin', 'admin@calendar.ai', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'System Admin', 'admin');
 
 -- Insert default system prompt if not exists
 INSERT IGNORE INTO system_prompts (user_id, prompt_text, is_active) VALUES 

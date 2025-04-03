@@ -1,17 +1,16 @@
 <?php
-session_start();  // Move session_start before any output
+session_start();  
 
-// Initialize default user if none exists
-if (!isset($_SESSION['user_id'])) {
-    $_SESSION['user_id'] = 1;  // Use default user ID
-}
-
+require_once __DIR__ . '/frontend/pages/auth/middleware.php';
 require_once __DIR__ . '/header/header.php';
 require_once __DIR__ . '/backend/db.php';
 require_once __DIR__ . '/components/sidebar.php';
 require_once __DIR__ . '/components/navbar.php';
 require_once __DIR__ . '/components/setup-wizard.php';
 require_once __DIR__ . '/components/calendar-assistant.php';
+
+// Require authentication for accessing the calendar
+requireAuth();
 
 $month = isset($_GET['month']) ? (int)$_GET['month'] : (int)date('m');
 $year = isset($_GET['year']) ? (int)$_GET['year'] : (int)date('Y');
@@ -20,10 +19,10 @@ $firstDayOfMonth = mktime(0, 0, 0, $month, 1, $year);
 $numberDays = date('t', $firstDayOfMonth);
 $firstDayOfWeek = date('w', $firstDayOfMonth);
 
-// Fetch events for current month
-$events_query = "SELECT * FROM calendar_events WHERE MONTH(start_date) = ? AND YEAR(start_date) = ?";
+// Fetch events for current month with user_id filter
+$events_query = "SELECT * FROM calendar_events WHERE MONTH(start_date) = ? AND YEAR(start_date) = ? AND user_id = ?";
 $stmt = $conn->prepare($events_query);
-$stmt->bind_param("ii", $month, $year);
+$stmt->bind_param("iii", $month, $year, $_SESSION['user_id']);
 $stmt->execute();
 $result = $stmt->get_result();
 $events = $result->fetch_all(MYSQLI_ASSOC);
