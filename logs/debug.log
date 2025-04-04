@@ -14238,3 +14238,298 @@ Data: {
     "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
 }
 [04-Apr-2025 14:23:24 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:25:36 Europe/Berlin] [2025-04-04 14:25:36] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:25:36 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:25:42 Europe/Berlin] [2025-04-04 14:25:42] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:25:42 Europe/Berlin] Raw input: {"days":["2025-04-07"],"preferences":{"studyTime":"evening","breakDuration":"30","sessionLength":"120","priority":"deadlines"}}
+[04-Apr-2025 14:25:42 Europe/Berlin] [2025-04-04 14:25:42] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:25:42 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:30:22 Europe/Berlin] [2025-04-04 14:30:22] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:30:22 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:30:50 Europe/Berlin] [2025-04-04 14:30:50] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:30:50 Europe/Berlin] Raw input: {"days":["2025-04-09"],"preferences":{"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines"}}
+[04-Apr-2025 14:30:51 Europe/Berlin] [2025-04-04 14:30:51] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:30:51 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:35:37 Europe/Berlin] [2025-04-04 14:35:37] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:35:37 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:35:47 Europe/Berlin] [2025-04-04 14:35:47] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:35:47 Europe/Berlin] Raw input: {"days":["2025-04-11"],"preferences":{"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines"}}
+[04-Apr-2025 14:35:48 Europe/Berlin] [2025-04-04 14:35:48] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:35:48 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:37:21 Europe/Berlin] [2025-04-04 14:37:21] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:37:21 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:37:29 Europe/Berlin] [2025-04-04 14:37:29] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:37:29 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preferences":{"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines"}}
+[04-Apr-2025 14:37:30 Europe/Berlin] [2025-04-04 14:37:30] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:37:30 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:37:32 Europe/Berlin] [2025-04-04 14:37:32] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:37:32 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:37:41 Europe/Berlin] [2025-04-04 14:37:41] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:37:41 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-05","2025-04-06","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03"],"preferences":{"studyTime":"evening","breakDuration":"30","sessionLength":"120","priority":"flexible"}}
+[04-Apr-2025 14:37:43 Europe/Berlin] [2025-04-04 14:37:43] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:37:43 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:37:48 Europe/Berlin] [2025-04-04 14:37:48] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:37:48 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:37:51 Europe/Berlin] [2025-04-04 14:37:51] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:37:51 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:37:53 Europe/Berlin] [2025-04-04 14:37:53] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:37:53 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:37:55 Europe/Berlin] [2025-04-04 14:37:55] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:37:55 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:37:55 Europe/Berlin] [2025-04-04 14:37:55] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:37:55 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:38:11 Europe/Berlin] [2025-04-04 14:38:11] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:38:11 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:38:38 Europe/Berlin] [2025-04-04 14:38:38] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:38:38 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:38:39 Europe/Berlin] [2025-04-04 14:38:39] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:38:39 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:38:41 Europe/Berlin] [2025-04-04 14:38:41] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:38:41 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:38:43 Europe/Berlin] [2025-04-04 14:38:43] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:38:43 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:38:45 Europe/Berlin] [2025-04-04 14:38:45] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:38:45 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:38:45 Europe/Berlin] [2025-04-04 14:38:45] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:38:45 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:38:47 Europe/Berlin] [2025-04-04 14:38:47] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:38:47 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:38:56 Europe/Berlin] [2025-04-04 14:38:56] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:38:56 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-11","2025-04-18","2025-04-25","2025-05-02"],"preferences":{"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines"}}
+[04-Apr-2025 14:38:57 Europe/Berlin] [2025-04-04 14:38:57] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:38:57 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:39:03 Europe/Berlin] [2025-04-04 14:39:03] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:39:03 Europe/Berlin] Raw input: {"days":["2025-04-05","2025-04-06","2025-04-12","2025-04-13","2025-04-19","2025-04-20","2025-04-26","2025-04-27","2025-05-03"],"preferences":{"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines"}}
+[04-Apr-2025 14:39:04 Europe/Berlin] [2025-04-04 14:39:04] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:39:04 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:39:08 Europe/Berlin] [2025-04-04 14:39:08] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:39:08 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preferences":{"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines"}}
+[04-Apr-2025 14:39:08 Europe/Berlin] [2025-04-04 14:39:08] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:39:08 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:39:10 Europe/Berlin] [2025-04-04 14:39:10] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:39:10 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:39:12 Europe/Berlin] [2025-04-04 14:39:12] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:39:12 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:39:20 Europe/Berlin] [2025-04-04 14:39:20] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:39:20 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-05","2025-04-06","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03"],"preferences":{"studyTime":"evening","breakDuration":"30","sessionLength":"120","priority":"flexible"}}
+[04-Apr-2025 14:39:20 Europe/Berlin] [2025-04-04 14:39:20] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:39:20 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:40:40 Europe/Berlin] [2025-04-04 14:40:40] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:40:40 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:40:44 Europe/Berlin] [2025-04-04 14:40:44] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:40:44 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preferences":{"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines"}}
+[04-Apr-2025 14:40:45 Europe/Berlin] [2025-04-04 14:40:45] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:40:45 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:40:54 Europe/Berlin] [2025-04-04 14:40:54] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:40:54 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-05","2025-04-06","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03"],"preferences":{"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"balanced"}}
+[04-Apr-2025 14:40:55 Europe/Berlin] [2025-04-04 14:40:55] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:40:55 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:41:08 Europe/Berlin] [2025-04-04 14:41:08] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:41:08 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:41:13 Europe/Berlin] [2025-04-04 14:41:13] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:41:13 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preferences":{"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines"}}
+[04-Apr-2025 14:41:14 Europe/Berlin] [2025-04-04 14:41:14] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:41:14 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:41:19 Europe/Berlin] [2025-04-04 14:41:19] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:41:19 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:41:22 Europe/Berlin] [2025-04-04 14:41:22] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:41:22 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preferences":{"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"flexible"}}
+[04-Apr-2025 14:41:22 Europe/Berlin] [2025-04-04 14:41:22] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:41:22 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:41:29 Europe/Berlin] [2025-04-04 14:41:29] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:41:29 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preferences":{"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"balanced"}}
+[04-Apr-2025 14:41:30 Europe/Berlin] [2025-04-04 14:41:30] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:41:30 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:41:41 Europe/Berlin] [2025-04-04 14:41:41] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:41:41 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:41:45 Europe/Berlin] [2025-04-04 14:41:45] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:41:45 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preferences":{"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"balanced"}}
+[04-Apr-2025 14:41:45 Europe/Berlin] [2025-04-04 14:41:45] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:41:45 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:43:32 Europe/Berlin] [2025-04-04 14:43:32] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:43:32 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:43:42 Europe/Berlin] [2025-04-04 14:43:42] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:43:42 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preferences":{"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines"}}
+[04-Apr-2025 14:43:44 Europe/Berlin] [2025-04-04 14:43:44] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:43:44 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[04-Apr-2025 14:43:56 Europe/Berlin] [2025-04-04 14:43:56] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:43:56 Europe/Berlin] Raw input: {"days":["2025-04-04","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preferences":{"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"balanced"}}
+[04-Apr-2025 14:43:57 Europe/Berlin] [2025-04-04 14:43:57] db.php:33 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[04-Apr-2025 14:43:57 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171

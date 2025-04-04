@@ -892,3 +892,29 @@ function applyDayAndPreferenceSelection() {
             });
         });
 }
+
+function selectPreset(preset) {
+    const dayElements = document.querySelectorAll('.day-item');
+    const today = new Date();
+
+    dayElements.forEach(dayElement => {
+        const date = new Date(dayElement.dataset.date);
+        const dayOfWeek = date.getDay();
+
+        let shouldSelect = false;
+
+        if (preset === 'weekdays' && dayOfWeek >= 1 && dayOfWeek <= 5) {
+            shouldSelect = true;
+        } else if (preset === 'weekends' && (dayOfWeek === 0 || dayOfWeek === 6)) {
+            shouldSelect = true;
+        } else if (preset === 'fridays' && dayOfWeek === 5) {
+            shouldSelect = true;
+        }
+
+        if (shouldSelect) {
+            dayElement.classList.add('bg-purple-200', 'selected');
+        } else {
+            dayElement.classList.remove('bg-purple-200', 'selected');
+        }
+    });
+}

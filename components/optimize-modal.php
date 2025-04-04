@@ -6,6 +6,20 @@ function renderOptimizeModal() {
             <h2 class="text-xl font-bold mb-4">Optimize Your Calendar</h2>
             <div id="daySelection" class="mb-6">
                 <p class="text-gray-700 mb-3">Select specific days within the next month to optimize:</p>
+                <div class="flex space-x-4 mb-4">
+                    <button type="button" onclick="selectPreset('weekdays')" 
+                            class="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+                        Weekdays
+                    </button>
+                    <button type="button" onclick="selectPreset('weekends')" 
+                            class="px-4 py-2 text-white bg-green-500 rounded-lg hover:bg-green-600">
+                        Weekends
+                    </button>
+                    <button type="button" onclick="selectPreset('fridays')" 
+                            class="px-4 py-2 text-white bg-purple-500 rounded-lg hover:bg-purple-600">
+                        Fridays
+                    </button>
+                </div>
                 <div id="calendarDays" class="grid grid-cols-7 gap-2">
                     <!-- Days will be dynamically populated here -->
                 </div>

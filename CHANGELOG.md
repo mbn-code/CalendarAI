@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.3.5] - 2024-01-13
+
+### Added
+- Combined the day selection and preferences into a single modal for optimization.
+- Users can now select specific days within the next month and set preferences simultaneously.
+
+### Fixed
+- Resolved an issue where the backend optimized incorrect days.
+- Updated `optimize.php` to strictly filter and process events only for the selected days.
+- Ensured the optimization logic respects the selected day boundaries.
+
 ## [0.3.4] - 2024-01-12
 
 ### Added
