@@ -202,171 +202,38 @@ async function showOptimizeModal() {
 
 async function optimizeSchedule(preferences) {
     try {
-        debugLog('Starting schedule optimization', preferences);
-        let progressSteps = [
-            'Analyzing schedule patterns...',
-            'Checking event conflicts...',
-            'Optimizing time slots...',
-            'Finalizing recommendations...'
-        ];
-        let currentStep = 0;
-
-        // Show loading state with progress
-        const loadingDialog = await Swal.fire({
-            title: 'Analyzing Your Schedule',
-            html: `
-                <div class="space-y-4">
-                    <div class="flex justify-center">
-                        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500"></div>
-                    </div>
-                    <p id="currentStep" class="text-sm text-gray-600">${progressSteps[0]}</p>
-                    <div id="optimizationLog" class="text-xs text-gray-500 space-y-1 mt-4">
-                        <div>• Starting analysis...</div>
-                    </div>
-                </div>
-            `,
-            allowOutsideClick: false,
-            showConfirmButton: false,
-            didOpen: () => {
-                window.updateOptimizationLog = (message) => {
-                    const log = document.getElementById('optimizationLog');
-                    if (log) {
-                        log.innerHTML += `<div>• ${escapeHtml(message)}</div>`;
-                        log.scrollTop = log.scrollHeight;
-                    }
-                };
-            }
+        const response = await fetch('/CalendarAI/api/optimize.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ preferences })
         });
 
-        // Start progress animation
-        const progressInterval = setInterval(() => {
-            const stepEl = document.getElementById('currentStep');
-            if (stepEl && currentStep < progressSteps.length - 1) {
-                currentStep = (currentStep + 1) % progressSteps.length;
-                stepEl.textContent = progressSteps[currentStep];
-            }
-        }, 3000);
+        const result = await response.json();
 
-        try {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
-
-            const response = await fetch('/CalendarAI/api/optimize.php', {
-                method: 'POST',
-                headers: { 
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({ preferences }),
-                signal: controller.signal
-            });
-
-            clearTimeout(timeoutId);
-            clearInterval(progressInterval);
-
-            const debugInfo = response.headers.get('X-Debug-Info');
-            if (debugInfo) {
-                try {
-                    const decoded = atob(debugInfo);
-                    debugLog('Server debug info', decoded);
-                    window.updateOptimizationLog?.(decoded);
-                } catch (e) {
-                    debugLog('Failed to parse debug info', e);
-                }
-            }
-
-            const contentType = response.headers.get('content-type');
-            if (!contentType || !contentType.includes('application/json')) {
-                throw new Error(`Invalid content type: ${contentType}`);
-            }
-
-            const result = await response.json();
-            debugLog('Optimization API response', result);
-
-            if (!response.ok) {
-                throw new Error(result.message || `HTTP error! status: ${response.status}`);
-            }
-
-            if (!result.success) {
-                throw new Error(result.message || 'Optimization failed');
-            }
-
-            // Close the loading dialog
-            loadingDialog.close();
-
-            const { value: selectedChanges } = await Swal.fire({
-                title: 'AI Optimization Results',
-                html: `
-                    <div class="text-left space-y-6">
-                        <div class="mb-4">
-                            <h3 class="font-medium text-lg mb-2">Schedule Health:</h3>
-                            <div class="grid grid-cols-2 gap-4">
-                                ${formatHealthMetrics(result.schedule_health)}
-                            </div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <h3 class="font-medium text-lg mb-2">AI Suggestions:</h3>
-                            <div class="bg-purple-50 p-4 rounded-lg text-sm space-y-2">
-                                ${formatSuggestions(result.suggestions)}
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h3 class="font-medium text-lg mb-2">Proposed Changes:</h3>
-                            <div class="space-y-2 max-h-60 overflow-y-auto">
-                                ${formatProposedChanges(result.changes)}
-                            </div>
-                        </div>
-                        
-                        ${result.statistics ? `
-                        <div class="mt-4 p-4 bg-gray-50 rounded-lg">
-                            <h3 class="font-medium text-sm mb-2">Statistics:</h3>
-                            <div class="grid grid-cols-2 gap-2 text-sm">
-                                <div>Total Events: ${result.statistics.total_events}</div>
-                                <div>Optimized: ${result.statistics.optimized_events}</div>
-                                <div>Improvement Score: ${result.statistics.improvement_score}%</div>
-                            </div>
-                        </div>
-                        ` : ''}
-                    </div>
-                `,
-                width: '800px',
-                showCancelButton: true,
-                confirmButtonText: 'Apply Selected Changes',
-                cancelButtonText: 'Cancel',
-                didOpen: () => {
-                    initializeChangeToggles();
-                },
-                preConfirm: () => getSelectedChanges()
-            });
-
-            if (selectedChanges && selectedChanges.length > 0) {
-                debugLog('Applying selected changes', selectedChanges);
-                await applyChanges(selectedChanges);
-                showNotification('Schedule optimized successfully!', 'success');
-                setTimeout(() => location.reload(), 1500);
-            }
-
-        } catch (error) {
-            clearInterval(progressInterval);
-            if (error.name === 'AbortError') {
-                throw new Error('Request timed out. Please try again later.');
-            }
-            throw error;
+        if (!result.success) {
+            throw new Error(result.message);
         }
 
+        if (result.changes.length > 0) {
+            Swal.fire({
+                title: 'Optimization Complete',
+                html: result.changes.map(change => `<p>Event ID ${change.event_id} moved to ${change.new_time} - ${change.reason}</p>`).join(''),
+                icon: 'success'
+            });
+        } else {
+            Swal.fire({
+                title: 'No Changes Needed',
+                text: 'Your schedule is already optimized.',
+                icon: 'info'
+            });
+        }
     } catch (error) {
-        debugLog('Optimization error', {
-            message: error.message,
-            stack: error.stack
-        });
-        
         Swal.fire({
-            icon: 'error',
             title: 'Optimization Failed',
             text: error.message,
-            footer: DEBUG ? `<pre class="text-xs text-left p-2 bg-gray-50">${error.stack}</pre>` : null
+            icon: 'error'
         });
     }
 }
@@ -589,21 +456,66 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.getElementById('prevStep');
     const nextButton = document.getElementById('nextStep');
     const progressDots = document.querySelectorAll('#wizardSteps > div');
-    let currentStep = 0;
+    let currentStep = 0; // Start at first step
 
     function updateWizardStep() {
+        // Hide all steps
         wizardSteps.forEach((step, index) => {
             step.classList.toggle('hidden', index !== currentStep);
         });
 
+        // Update progress dots
         progressDots.forEach((dot, index) => {
             dot.classList.toggle('bg-purple-600', index <= currentStep);
             dot.classList.toggle('bg-gray-300', index > currentStep);
         });
 
+        // Show/hide Previous button
         prevButton.classList.toggle('hidden', currentStep === 0);
-        nextButton.textContent = currentStep === wizardSteps.length - 1 ? 'Finish' : 'Next';
+        
+        // Update Next/Finish button
+        nextButton.textContent = currentStep === wizardSteps.length - 1 ? 'Complete Setup' : 'Next';
     }
+
+    // Ensure wizard starts at first step
+    updateWizardStep();
+
+    // Event Listeners
+    prevButton.addEventListener('click', () => {
+        if (currentStep > 0) {
+            currentStep--;
+            updateWizardStep();
+        }
+    });
+
+    nextButton.addEventListener('click', async () => {
+        if (currentStep < wizardSteps.length - 1) {
+            // Validate current step before proceeding
+            const currentWizardStep = wizardSteps[currentStep];
+            const inputs = currentWizardStep.querySelectorAll('input, select, textarea');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (input.type === 'time' && !input.value) {
+                    isValid = false;
+                    input.classList.add('border-red-500');
+                } else {
+                    input.classList.remove('border-red-500');
+                }
+            });
+
+            if (!isValid) {
+                showNotification('Please fill in all required fields', 'error');
+                return;
+            }
+
+            currentStep++;
+            updateWizardStep();
+        } else {
+            // On final step, save preferences
+            await savePreferences();
+        }
+    });
 
     function collectPreferences() {
         return {
@@ -622,16 +534,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const preferences = collectPreferences();
         
         try {
-            const response = await fetch('/calendar/api/save-preferences.php', {
+            const response = await fetch('/CalendarAI/api/save-preferences.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    userId: 1, // Replace with actual user ID from session
-                    preferences: preferences
+                    preferences: preferences,
+                    isBasicSetup: document.querySelector('button#skipSetup') !== null
                 })
             });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
 
             const data = await response.json();
             
@@ -643,12 +559,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     confirmButtonColor: '#6366F1'
                 }).then(() => {
                     hideSetupWizard();
-                    showCalendarAssistant(); // Show the chat interface after setup
+                    location.reload(); // Reload to reflect new setup status
                 });
             } else {
                 throw new Error(data.error || 'Failed to save preferences');
             }
         } catch (error) {
+            console.error('Save preferences error:', error);
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
@@ -657,23 +574,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-
-    // Event Listeners
-    prevButton.addEventListener('click', () => {
-        if (currentStep > 0) {
-            currentStep--;
-            updateWizardStep();
-        }
-    });
-
-    nextButton.addEventListener('click', async () => {
-        if (currentStep < wizardSteps.length - 1) {
-            currentStep++;
-            updateWizardStep();
-        } else {
-            await savePreferences();
-        }
-    });
 
     // Initialize slider outputs
     document.getElementById('breakDuration').addEventListener('input', function() {
@@ -795,6 +695,114 @@ async function handleAssistantAction(action) {
             break;
     }
 }
+
+// Declutter functionality
+async function showDeclutterModal() {
+    const { value: deletableEvents } = await Swal.fire({
+        title: 'Declutter Your Calendar',
+        html: `
+            <div class="space-y-4 text-left">
+                <p>Select events you want to delete:</p>
+                <div id="declutterEvents" class="space-y-2">
+                    <!-- Events will be dynamically populated here -->
+                </div>
+            </div>
+        `,
+        showCancelButton: true,
+        confirmButtonText: 'Delete Selected',
+        cancelButtonText: 'Cancel',
+        preConfirm: () => {
+            const selectedEvents = Array.from(document.querySelectorAll('.declutter-checkbox:checked'))
+                .map(checkbox => checkbox.dataset.eventId);
+            return selectedEvents;
+        }
+    });
+
+    if (deletableEvents && deletableEvents.length > 0) {
+        await deleteEvents(deletableEvents);
+    }
+}
+
+async function deleteEvents(eventIds) {
+    try {
+        const response = await fetch('/CalendarAI/api/delete-events.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ eventIds })
+        });
+
+        const result = await response.json();
+
+        if (!result.success) {
+            throw new Error(result.message);
+        }
+
+        Swal.fire({
+            title: 'Declutter Complete',
+            text: 'Selected events have been deleted.',
+            icon: 'success'
+        });
+
+        location.reload();
+    } catch (error) {
+        Swal.fire({
+            title: 'Declutter Failed',
+            text: error.message,
+            icon: 'error'
+        });
+    }
+}
+
+// Sidebar AI Chat functionality
+async function handleChatAssistantInput(message) {
+    try {
+        const response = await fetch('/CalendarAI/api/chat-assistant.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message })
+        });
+
+        const result = await response.json();
+
+        if (!result.success) {
+            throw new Error(result.message);
+        }
+
+        // Display the assistant's response
+        const chatMessages = document.getElementById('chatMessages');
+        chatMessages.innerHTML += `
+            <div class="flex mb-3">
+                <div class="bg-gray-100 text-gray-900 rounded-lg py-2 px-4 max-w-[80%]">
+                    ${result.response}
+                </div>
+            </div>
+        `;
+
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    } catch (error) {
+        Swal.fire({
+            title: 'Chat Assistant Error',
+            text: error.message,
+            icon: 'error'
+        });
+    }
+}
+
+// Event listener for chat input
+const chatInput = document.getElementById('chatInput');
+const sendMessageButton = document.getElementById('sendMessage');
+
+sendMessageButton.addEventListener('click', () => {
+    const message = chatInput.value.trim();
+    if (message) {
+        handleChatAssistantInput(message);
+        chatInput.value = '';
+    }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize any search inputs with debounce

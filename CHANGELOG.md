@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.4] - 2024-01-12
+
+### Added
+- Integrated LLM (Large Language Model) for advanced schedule optimization.
+- LLM analyzes user preferences and events to provide intelligent suggestions.
+- Updated `optimize.php` to query the LLM and apply its recommendations.
+
+### Enhanced
+- Optimization algorithm now incorporates LLM-generated insights.
+- Improved event rescheduling logic with AI-driven decisions.
+
+### Technical Details
+- Added LLM API integration in `optimize.php`.
+- Enhanced database update logic to reflect LLM-optimized changes.
+
 ## [0.3.3] - 2024-01-11
 
 ### Added

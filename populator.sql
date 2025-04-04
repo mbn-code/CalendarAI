@@ -20,7 +20,8 @@ INSERT INTO users (username, email, password, full_name, role, is_active, last_l
 ('jane.smith', 'jane@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Jane Smith', 'user', TRUE, NOW()),
 ('bob.wilson', 'bob@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Bob Wilson', 'user', TRUE, NOW()),
 ('alice.miller', 'alice@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Alice Miller', 'user', TRUE, NOW()),
-('inactive.user', 'inactive@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Inactive User', 'user', FALSE, NULL);
+('inactive.user', 'inactive@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Inactive User', 'user', FALSE, NULL),
+('mbn', 'mbn@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'MBN User', 'user', TRUE, NOW());
 
 -- Create user preferences for active users
 INSERT INTO user_preferences (user_id, focus_start_time, focus_end_time, chill_start_time, chill_end_time, break_duration, session_length, priority_mode, has_completed_setup) VALUES
@@ -28,7 +29,8 @@ INSERT INTO user_preferences (user_id, focus_start_time, focus_end_time, chill_s
 (2, '09:00', '17:00', '17:00', '23:00', 20, 90, 'productivity', TRUE),   -- john
 (3, '07:00', '15:00', '15:00', '21:00', 10, 60, 'wellbeing', TRUE),     -- jane
 (4, '10:00', '18:00', '18:00', '00:00', 15, 120, 'balanced', FALSE),    -- bob
-(5, '08:30', '16:30', '16:30', '22:30', 30, 180, 'productivity', TRUE); -- alice
+(5, '08:30', '16:30', '16:30', '22:30', 30, 180, 'productivity', TRUE), -- alice
+(7, '09:30', '17:30', '17:30', '23:30', 25, 150, 'wellbeing', TRUE);   -- mbn
 
 -- Populate categories
 INSERT INTO event_categories (name, color) VALUES 

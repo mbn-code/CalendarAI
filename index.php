@@ -1,5 +1,7 @@
 <?php
-session_start();  
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 require_once __DIR__ . '/frontend/pages/auth/middleware.php';
 require_once __DIR__ . '/header/header.php';
@@ -12,8 +14,29 @@ require_once __DIR__ . '/components/calendar-assistant.php';
 // Require authentication for accessing the calendar
 requireAuth();
 
+// Get calendar parameters
 $month = isset($_GET['month']) ? (int)$_GET['month'] : (int)date('m');
 $year = isset($_GET['year']) ? (int)$_GET['year'] : (int)date('Y');
+
+// Initialize setup state
+$hasCompletedSetup = false;
+$setupCheck = $conn->prepare("SELECT has_completed_setup FROM user_preferences WHERE user_id = ?");
+$setupCheck->bind_param("i", $_SESSION['user_id']);
+$setupCheck->execute();
+$result = $setupCheck->get_result();
+
+if ($row = $result->fetch_assoc()) {
+    $hasCompletedSetup = (bool)$row['has_completed_setup'];
+} else {
+    // If no preferences exist, insert default record
+    $stmt = $conn->prepare("
+        INSERT INTO user_preferences 
+        (user_id, focus_start_time, focus_end_time, chill_start_time, chill_end_time, break_duration, session_length, priority_mode, has_completed_setup)
+        VALUES (?, '09:00', '17:00', '17:00', '22:00', 15, 120, 'balanced', false)
+    ");
+    $stmt->bind_param("i", $_SESSION['user_id']);
+    $stmt->execute();
+}
 
 $firstDayOfMonth = mktime(0, 0, 0, $month, 1, $year);
 $numberDays = date('t', $firstDayOfMonth);
@@ -26,18 +49,6 @@ $stmt->bind_param("iii", $month, $year, $_SESSION['user_id']);
 $stmt->execute();
 $result = $stmt->get_result();
 $events = $result->fetch_all(MYSQLI_ASSOC);
-
-// Check if user has completed setup
-$hasCompletedSetup = false;
-if (isset($_SESSION['user_id'])) {
-    $setupCheck = $conn->prepare("SELECT has_completed_setup FROM user_preferences WHERE user_id = ?");
-    $setupCheck->bind_param("i", $_SESSION['user_id']);
-    $setupCheck->execute();
-    $result = $setupCheck->get_result();
-    if ($row = $result->fetch_assoc()) {
-        $hasCompletedSetup = (bool)$row['has_completed_setup'];
-    }
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
