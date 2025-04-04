@@ -10,6 +10,7 @@ require_once __DIR__ . '/components/sidebar.php';
 require_once __DIR__ . '/components/navbar.php';
 require_once __DIR__ . '/components/setup-wizard.php';
 require_once __DIR__ . '/components/calendar-assistant.php';
+require_once __DIR__ . '/components/optimize-modal.php';
 
 // Require authentication for accessing the calendar
 requireAuth();
@@ -102,6 +103,15 @@ $events = $result->fetch_all(MYSQLI_ASSOC);
             }).showToast();
         }
     }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const optimizeBtn = document.getElementById('optimizeBtn');
+            if (optimizeBtn) {
+                optimizeBtn.addEventListener('click', initializeOptimizeModal);
+            }
+        });
     </script>
 
     <style>
@@ -299,6 +309,9 @@ $events = $result->fetch_all(MYSQLI_ASSOC);
     
     <!-- Calendar Assistant -->
     <?= renderCalendarAssistant() ?>
+    
+    <!-- Render Optimize Modal -->
+    <?= renderOptimizeModal() ?>
     
     <!-- Main Content - Responsive layout -->
     <main class="md:ml-64 pt-16 min-h-screen transition-all duration-300">

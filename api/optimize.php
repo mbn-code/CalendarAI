@@ -25,16 +25,19 @@ try {
         throw new Exception("Invalid input data");
     }
 
-    if (!$input || !isset($input['preferences'])) {
-        throw new Exception("Missing preferences in input data");
+    if (!$input || !isset($input['days']) || !is_array($input['days'])) {
+        throw new Exception("Missing or invalid 'days' in input data");
     }
 
-    $preferences = $input['preferences'];
+    $selectedDays = $input['days'];
     $userId = $_SESSION['user_id'];
 
-    $query = "SELECT * FROM calendar_events WHERE user_id = ? AND start_date >= CURDATE() ORDER BY start_date ASC";
+    $placeholders = implode(',', array_fill(0, count($selectedDays), '?'));
+    $query = "SELECT * FROM calendar_events WHERE user_id = ? AND DATE(start_date) IN ($placeholders) ORDER BY start_date ASC";
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("i", $userId);
+
+    $params = array_merge([$userId], $selectedDays);
+    $stmt->bind_param(str_repeat('s', count($params)), ...$params);
     $stmt->execute();
     $result = $stmt->get_result();
     $events = $result->fetch_all(MYSQLI_ASSOC);
@@ -42,7 +45,7 @@ try {
     if (count($events) === 0) {
         echo json_encode([
             'success' => true,
-            'message' => 'No events to optimize',
+            'message' => 'No events to optimize for the selected days',
             'changes' => []
         ]);
         exit;
@@ -87,7 +90,7 @@ try {
 
     echo json_encode([
         'success' => true,
-        'message' => 'Optimization complete',
+        'message' => 'Optimization complete for selected days',
         'changes' => $changes
     ]);
 } catch (Exception $e) {

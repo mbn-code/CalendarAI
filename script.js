@@ -140,64 +140,7 @@ function debounce(func, wait) {
 
 // Optimization functions
 async function showOptimizeModal() {
-    const { value: preferences } = await Swal.fire({
-        title: 'Calendar Optimization',
-        html: `
-            <div class="space-y-4 text-left">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Study Time</label>
-                    <select id="studyTime" class="w-full rounded-lg border-gray-300 shadow-sm">
-                        <option value="morning">Morning (6AM-12PM)</option>
-                        <option value="afternoon">Afternoon (12PM-5PM)</option>
-                        <option value="evening">Evening (5PM-10PM)</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Learning Style</label>
-                    <select id="learningStyle" class="w-full rounded-lg border-gray-300 shadow-sm">
-                        <option value="focused">Focused (Longer sessions, shorter breaks)</option>
-                        <option value="balanced">Balanced (Medium sessions and breaks)</option>
-                        <option value="flexible">Flexible (Shorter sessions, longer breaks)</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Optimization Priority</label>
-                    <select id="priority" class="w-full rounded-lg border-gray-300 shadow-sm">
-                        <option value="energy">Energy Levels</option>
-                        <option value="deadlines">Deadlines First</option>
-                        <option value="category">Category-based</option>
-                    </select>
-                </div>
-                <div class="bg-blue-50 p-4 rounded-lg">
-                    <p class="text-sm text-blue-700">
-                        AI will analyze your schedule and suggest optimizations based on:
-                        <ul class="list-disc pl-5 mt-2 space-y-1">
-                            <li>Your preferred working hours</li>
-                            <li>Learning style patterns</li>
-                            <li>Event categories and priorities</li>
-                            <li>Break requirements</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-        `,
-        showCancelButton: true,
-        confirmButtonText: 'Analyze & Optimize',
-        cancelButtonText: 'Cancel',
-        showLoaderOnConfirm: true,
-        preConfirm: () => {
-            return {
-                studyTime: document.getElementById('studyTime').value,
-                learningStyle: document.getElementById('learningStyle').value,
-                priority: document.getElementById('priority').value,
-                userId: window.userId || 1
-            };
-        }
-    });
-
-    if (preferences) {
-        await optimizeSchedule(preferences);
-    }
+    initializeOptimizeModal(); // Ensure only the new modal with selectable days is shown
 }
 
 async function optimizeSchedule(preferences) {
@@ -814,3 +757,138 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Remove the initializeOptimization call since we don't need it
 });
+
+function populateCalendarDays() {
+    const calendarDaysContainer = document.getElementById('calendarDays');
+    if (!calendarDaysContainer) return;
+
+    const today = new Date();
+    const nextMonth = new Date(today);
+    nextMonth.setMonth(today.getMonth() + 1);
+
+    const days = [];
+    for (let d = new Date(today); d < nextMonth; d.setDate(d.getDate() + 1)) {
+        const dateStr = d.toISOString().split('T')[0];
+        days.push(`
+            <div class="day-item border rounded-lg p-2 text-center cursor-pointer hover:bg-purple-100" 
+                 data-date="${dateStr}" onclick="toggleDaySelection(this)">
+                ${d.getDate()}
+            </div>
+        `);
+    }
+
+    calendarDaysContainer.innerHTML = days.join('');
+}
+
+function toggleDaySelection(dayElement) {
+    dayElement.classList.toggle('bg-purple-200');
+    dayElement.classList.toggle('selected');
+}
+
+function applyDaySelection() {
+    const selectedDays = Array.from(document.querySelectorAll('.day-item.selected'))
+        .map(day => day.dataset.date);
+
+    if (selectedDays.length === 0) {
+        Swal.fire({
+            title: 'No Days Selected',
+            text: 'Please select at least one day to optimize.',
+            icon: 'warning'
+        });
+        return;
+    }
+
+    Swal.fire({
+        title: 'Optimizing...',
+        text: `Optimizing the following days: ${selectedDays.join(', ')}`,
+        icon: 'info',
+        showConfirmButton: false,
+        allowOutsideClick: false
+    });
+
+    fetch('/CalendarAI/api/optimize.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ days: selectedDays })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                Swal.fire({
+                    title: 'Optimization Complete',
+                    text: 'Your selected days have been optimized.',
+                    icon: 'success'
+                });
+            } else {
+                throw new Error(data.error || 'Optimization failed.');
+            }
+        })
+        .catch(error => {
+            Swal.fire({
+                title: 'Error',
+                text: error.message,
+                icon: 'error'
+            });
+        });
+}
+
+// Initialize calendar days when the modal is shown
+function initializeOptimizeModal() {
+    populateCalendarDays();
+    modal.show('optimizeModal');
+}
+
+function applyDayAndPreferenceSelection() {
+    const selectedDays = Array.from(document.querySelectorAll('.day-item.selected'))
+        .map(day => day.dataset.date);
+
+    if (selectedDays.length === 0) {
+        Swal.fire({
+            title: 'No Days Selected',
+            text: 'Please select at least one day to optimize.',
+            icon: 'warning'
+        });
+        return;
+    }
+
+    const preferencesForm = document.getElementById('preferencesForm');
+    const formData = new FormData(preferencesForm);
+    const preferences = Object.fromEntries(formData.entries());
+
+    Swal.fire({
+        title: 'Optimizing...',
+        text: `Optimizing the following days: ${selectedDays.join(', ')}`,
+        icon: 'info',
+        showConfirmButton: false,
+        allowOutsideClick: false
+    });
+
+    fetch('/CalendarAI/api/optimize.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ days: selectedDays, preferences })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                Swal.fire({
+                    title: 'Optimization Complete',
+                    text: 'Your selected days and preferences have been optimized.',
+                    icon: 'success'
+                });
+            } else {
+                throw new Error(data.error || 'Optimization failed.');
+            }
+        })
+        .catch(error => {
+            Swal.fire({
+                title: 'Error',
+                text: error.message,
+                icon: 'error'
+            });
+        });
+}
