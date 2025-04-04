@@ -918,3 +918,100 @@ function selectPreset(preset) {
         }
     });
 }
+
+function displayOptimizationResult(data) {
+    const aiSuggestions = document.getElementById('aiSuggestions');
+    const optimizationStats = document.getElementById('optimizationStats');
+    const proposedChanges = document.getElementById('proposedChanges');
+
+    // Display AI suggestions
+    aiSuggestions.innerHTML = data.analysis.insights
+        .map(insight => `<li class="mb-2">${insight}</li>`)
+        .join('');
+
+    // Display health metrics
+    const health = data.analysis.schedule_health;
+    optimizationStats.innerHTML = formatHealthMetrics(health);
+
+    // Display proposed changes
+    proposedChanges.innerHTML = formatProposedChanges(data.changes);
+
+    // Initialize change toggles
+    initializeChangeToggles();
+
+    // Show results, hide loading
+    document.getElementById('optimizationLoading').classList.add('hidden');
+    document.getElementById('optimizationResults').classList.remove('hidden');
+}
+
+// Function to run optimization process
+async function runOptimization() {
+    const selectedDays = Array.from(document.querySelectorAll('.day-item.selected'))
+        .map(day => day.dataset.date);
+
+    if (selectedDays.length === 0) {
+        Swal.fire({
+            title: 'No Days Selected',
+            text: 'Please select at least one day to optimize.',
+            icon: 'warning'
+        });
+        return;
+    }
+
+    // Show loading state
+    document.getElementById('preferencesForm').classList.add('hidden');
+    document.getElementById('optimizationResults').classList.add('hidden');
+    document.getElementById('optimizationLoading').classList.remove('hidden');
+    document.getElementById('optimizeScheduleBtn').classList.add('hidden');
+
+    // Collect form data
+    const form = document.querySelector('#preferencesForm form');
+    const formData = new FormData(form);
+    const preferences = {
+        studyTime: formData.get('studyTime'),
+        breakDuration: parseInt(formData.get('breakDuration')),
+        sessionLength: parseInt(formData.get('sessionLength')),
+        priority: formData.get('priority')
+    };
+
+    try {
+        // Send optimization request
+        const response = await fetch('/CalendarAI/api/optimize.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ 
+                days: selectedDays, 
+                preferences: preferences 
+            })
+        });
+
+        const data = await response.json();
+        
+        // Hide loading
+        document.getElementById('optimizationLoading').classList.add('hidden');
+        
+        if (data.success) {
+            // Show results and apply changes button
+            document.getElementById('optimizationResults').classList.remove('hidden');
+            document.getElementById('applyChangesBtn').classList.remove('hidden');
+            
+            // Display the optimization results
+            displayOptimizationResult(data);
+        } else {
+            throw new Error(data.error || 'Optimization failed');
+        }
+    } catch (error) {
+        // Handle errors
+        document.getElementById('optimizationLoading').classList.add('hidden');
+        document.getElementById('preferencesForm').classList.remove('hidden');
+        document.getElementById('optimizeScheduleBtn').classList.remove('hidden');
+        
+        Swal.fire({
+            title: 'Optimization Error',
+            text: error.message,
+            icon: 'error'
+        });
+    }
+}

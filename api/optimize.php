@@ -51,16 +51,32 @@ try {
         echo json_encode([
             'success' => true,
             'message' => 'No events to optimize for the selected days',
-            'changes' => []
+            'changes' => [],
+            'analysis' => [
+                'insights' => ['No events found for the selected days.'],
+                'schedule_health' => [
+                    'focus_time_utilization' => 100,
+                    'break_compliance' => 100,
+                    'conflict_score' => 0,
+                    'balance_score' => 10
+                ]
+            ]
         ]);
         exit;
     }
 
     $changes = [];
+    $insights = [];
+    $totalEvents = count($events);
+    $conflictCount = 0;
+    $breakCompliance = 0;
+    $focusTimeEvents = 0;
 
     foreach ($selectedDays as $day) {
         $currentTime = strtotime($day . ' 00:00:00');
         $endOfDay = strtotime($day . ' 23:59:59');
+        $dayEvents = 0;
+        $lastEventEnd = null;
 
         foreach ($events as $event) {
             $eventStart = strtotime($event['start_date']);
@@ -69,6 +85,21 @@ try {
             // Skip events outside the current day
             if ($eventStart < $currentTime || $eventStart > $endOfDay) {
                 continue;
+            }
+            
+            $dayEvents++;
+
+            // Check for conflicts
+            if ($lastEventEnd !== null && $eventStart < $lastEventEnd) {
+                $conflictCount++;
+            }
+
+            // Check break compliance
+            if ($lastEventEnd !== null) {
+                $breakDuration = ($eventStart - $lastEventEnd) / 60; // in minutes
+                if ($breakDuration >= $preferences['breakDuration']) {
+                    $breakCompliance++;
+                }
             }
 
             if ($preferences['priority'] === 'deadlines') {
@@ -127,7 +158,12 @@ try {
                 }
             }
 
-            $currentTime = max($currentTime, $eventEnd);
+            $lastEventEnd = $eventEnd;
+        }
+
+        // Generate insights based on the day's analysis
+        if ($dayEvents > 0) {
+            $insights[] = "Found {$dayEvents} events on " . date('F j, Y', strtotime($day));
         }
 
         // Add new study sessions or breaks based on preferences
@@ -145,6 +181,7 @@ try {
                 'new_time' => $sessionStart,
                 'reason' => 'Added a study session based on preferences'
             ];
+            $focusTimeEvents++;
 
             $currentTime += $preferences['sessionLength'] * 60;
 
@@ -169,10 +206,36 @@ try {
         }
     }
 
+    // Calculate schedule health metrics
+    $totalBreaks = max(1, $totalEvents - 1); // Maximum possible breaks
+    $breakCompliancePercent = ($breakCompliance / $totalBreaks) * 100;
+    $conflictScore = min(10, $conflictCount); // Scale from 0-10, lower is better
+    $focusTimeUtilization = min(100, ($focusTimeEvents / max(1, $totalEvents)) * 100);
+    $balanceScore = min(10, 10 - ($conflictScore / 2) + ($breakCompliancePercent / 20));
+
+    if (count($changes) > 0) {
+        $insights[] = "Optimized " . count($changes) . " events across selected days";
+    }
+    if ($conflictCount > 0) {
+        $insights[] = "Resolved {$conflictCount} schedule conflicts";
+    }
+    if ($focusTimeEvents > 0) {
+        $insights[] = "Added {$focusTimeEvents} focused study sessions";
+    }
+
     echo json_encode([
         'success' => true,
         'message' => 'Optimization complete for selected days',
-        'changes' => $changes
+        'changes' => $changes,
+        'analysis' => [
+            'insights' => $insights,
+            'schedule_health' => [
+                'focus_time_utilization' => round($focusTimeUtilization),
+                'break_compliance' => round($breakCompliancePercent),
+                'conflict_score' => $conflictScore,
+                'balance_score' => round($balanceScore, 1)
+            ]
+        ]
     ]);
 } catch (Exception $e) {
     error_log("Exception: " . $e->getMessage()); // Log exception messages
