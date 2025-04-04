@@ -55,20 +55,27 @@ try {
         $eventStart = strtotime($event['start_date']);
         $eventEnd = isset($event['end_date']) ? strtotime($event['end_date']) : $eventStart + 3600;
 
+        // Skip breaks to preserve their original timing
+        if (isset($event['category_id']) && $event['category_id'] === 'break') {
+            $currentTime = max($currentTime, $eventEnd);
+            continue;
+        }
+
         if ($eventStart > $currentTime) {
             $gap = $eventStart - $currentTime;
 
             if ($gap > 3600) {
                 $newTime = date('Y-m-d H:i:s', $currentTime + 1800);
+                $reason = 'Optimized to utilize free time effectively';
                 $changes[] = [
                     'event_id' => $event['id'],
                     'new_time' => $newTime,
-                    'reason' => 'Optimized to utilize free time effectively'
+                    'reason' => $reason
                 ];
 
-                $updateQuery = "UPDATE calendar_events SET start_date = ?, is_ai_optimized = 1 WHERE id = ?";
+                $updateQuery = "UPDATE calendar_events SET start_date = ?, is_ai_optimized = 1, ai_description = ? WHERE id = ?";
                 $updateStmt = $conn->prepare($updateQuery);
-                $updateStmt->bind_param("si", $newTime, $event['id']);
+                $updateStmt->bind_param("ssi", $newTime, $reason, $event['id']);
                 $updateStmt->execute();
 
                 $currentTime += 1800;
