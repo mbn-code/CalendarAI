@@ -60635,3 +60635,3430 @@ Data: {
     "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
 }
 [06-Apr-2025 00:40:34 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 00:54:01 Europe/Berlin] [2025-04-06 00:54:01] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 00:54:02 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 00:54:31 Europe/Berlin] [2025-04-06 00:54:31] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 00:54:31 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 00:54:44 Europe/Berlin] [2025-04-06 00:54:44] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Starting optimization process
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preset":"busy_week"}
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Received data: {"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preset":"busy_week"}
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Selected preset: busy_week
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":15,"max_consecutive_meetings":3,"preferred_meeting_duration":45,"focus_block_duration":90,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-07
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-08
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-09
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-10
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-11
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-14
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-15
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 10 events for day: 2025-04-16
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-17
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-18
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-21
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-22
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-23
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-24
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-25
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-28
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-29
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-30
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-05-01
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-05-02
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Retrieved events count: 147
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] First event sample: {"id":"25","user_id":"1","title":"Data Structures","description":"Regular class session","category_id":"1","start_date":"2025-04-07 08:00:00","end_date":"2025-04-07 09:00:00","all_day":"0","is_ai_optimized":"0","ai_description":null,"is_human_ai_altered":"0","preset_source":null,"created_at":"2025-04-06 00:54:29"}
+[06-Apr-2025 00:54:44 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"25","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"26","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"27","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"28","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3604","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"5755","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"2559","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3633","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"73","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"74","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"75","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"76","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3634","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3635","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3659","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"121","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"122","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"123","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"124","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"5761","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3660","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3681","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"169","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"170","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"171","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"172","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3682","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3702","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"193","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"194","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"195","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"196","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3703","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3773","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"265","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"266","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"267","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"268","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3774","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"5767","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"2581","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3803","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"313","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"314","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"315","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"316","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3804","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"5640","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3805","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3831","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"361","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"362","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"363","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"364","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3832","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"5773","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"2596","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"2597","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3833","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"5883","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3858","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"409","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"410","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"411","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"412","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3859","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3883","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"433","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"434","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"435","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"436","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2607","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"505","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"506","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"507","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"508","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3956","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"5779","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"2616","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3982","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"553","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"554","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"555","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"556","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3983","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"5653","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3984","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"601","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"602","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"603","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"604","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4010","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"5785","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"4029","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"649","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"650","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"651","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"652","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4030","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"5658","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"4031","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"4054","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"673","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"674","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"675","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"676","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2638","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"2639","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"4055","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"4109","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"697","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"698","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"699","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"700","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"5788","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"2645","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"4110","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"4124","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"721","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"722","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"723","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"724","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4125","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"745","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"746","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"747","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"748","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4137","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"5791","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"2650","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"4138","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"4150","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"769","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"770","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"771","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"772","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4151","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"5662","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"4152","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"4165","new_time":"2025-04-06 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"793","new_time":"2025-04-06 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"794","new_time":"2025-04-06 12:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"795","new_time":"2025-04-06 13:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"796","new_time":"2025-04-06 15:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4166","new_time":"2025-04-06 16:45:00","duration":15,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"2656","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"4167","new_time":"2025-04-06 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"}]
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:7 - Starting to apply changes
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:18 - Initiating changes application
+Data: {
+    "changes_count": 147
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:22 - Started database transaction
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "25",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "25",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "26",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "26",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "27",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "27",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "28",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "28",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3604",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3604",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5755",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5755",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2559",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2559",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3633",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3633",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "73",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "73",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "74",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "74",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "75",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "75",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "76",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "76",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3634",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3634",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3635",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3635",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3659",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3659",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "121",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "121",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "122",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "122",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "123",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "123",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "124",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "124",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5761",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5761",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3660",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3660",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3681",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3681",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "169",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "169",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "170",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "170",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "171",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "171",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "172",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "172",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3682",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3682",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3702",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3702",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "193",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "193",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "194",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "194",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "195",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "195",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "196",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "196",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3703",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3703",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3773",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3773",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "265",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "265",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "266",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "266",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "267",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "267",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "268",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "268",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3774",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3774",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5767",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5767",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2581",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2581",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3803",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3803",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "313",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "313",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "314",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "314",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "315",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "315",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "316",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "316",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3804",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3804",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5640",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5640",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3805",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3805",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3831",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3831",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "361",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "361",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "362",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "362",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "363",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "363",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "364",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "364",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3832",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3832",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5773",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5773",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2596",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2596",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2597",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2597",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3833",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3833",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5883",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5883",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3858",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3858",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "409",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "409",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "410",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "410",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "411",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "411",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "412",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "412",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3859",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3859",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3883",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3883",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "433",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "433",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "434",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "434",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "435",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "435",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "436",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "436",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2607",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2607",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "505",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "505",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "506",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "506",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "507",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "507",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "508",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "508",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3956",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3956",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5779",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5779",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2616",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2616",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3982",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3982",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "553",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "553",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "554",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "554",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "555",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "555",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "556",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "556",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3983",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3983",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5653",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5653",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3984",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3984",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "601",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "601",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "602",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "602",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "603",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "603",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "604",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "604",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4010",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4010",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5785",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5785",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4029",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4029",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "649",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "649",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "650",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "650",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "651",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "651",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "652",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "652",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4030",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4030",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5658",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5658",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4031",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4031",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4054",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4054",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "673",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "673",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "674",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "674",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "675",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "675",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "676",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "676",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2638",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2638",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2639",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2639",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4055",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4055",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4109",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4109",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "697",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "697",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "698",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "698",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "699",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "699",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "700",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "700",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5788",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5788",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2645",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2645",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4110",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4110",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4124",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4124",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "721",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "721",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "722",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "722",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "723",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "723",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "724",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "724",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4125",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4125",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "745",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "745",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "746",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "746",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "747",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "747",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "748",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "748",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4137",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4137",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5791",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5791",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2650",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2650",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4138",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4138",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4150",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4150",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "769",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "769",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "770",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "770",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "771",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "771",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "772",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "772",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4151",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4151",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5662",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5662",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4152",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4152",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4165",
+    "new_time": "2025-04-06 09:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4165",
+    "new_start": "2025-04-06 09:15:00",
+    "new_end": "2025-04-06 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "793",
+    "new_time": "2025-04-06 10:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "793",
+    "new_start": "2025-04-06 10:45:00",
+    "new_end": "2025-04-06 11:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "794",
+    "new_time": "2025-04-06 12:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "794",
+    "new_start": "2025-04-06 12:15:00",
+    "new_end": "2025-04-06 13:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "795",
+    "new_time": "2025-04-06 13:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "795",
+    "new_start": "2025-04-06 13:45:00",
+    "new_end": "2025-04-06 14:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "796",
+    "new_time": "2025-04-06 15:15:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "796",
+    "new_start": "2025-04-06 15:15:00",
+    "new_end": "2025-04-06 16:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4166",
+    "new_time": "2025-04-06 16:45:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4166",
+    "new_start": "2025-04-06 16:45:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2656",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2656",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4167",
+    "new_time": "2025-04-06 17:30:00"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4167",
+    "new_start": "2025-04-06 17:30:00",
+    "new_end": "2025-04-06 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:83 - Logging optimization action
+Data: {
+    "user_id": 1,
+    "changes_applied": 147
+}
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:95 - Committed database transaction
+[06-Apr-2025 00:54:50 Europe/Berlin] [2025-04-06 00:54:50] apply-changes.php:98 - Successfully completed all changes
+Data: {
+    "total_applied": 147
+}
+[06-Apr-2025 00:54:51 Europe/Berlin] [2025-04-06 00:54:51] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 00:54:51 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 00:55:23 Europe/Berlin] [2025-04-06 00:55:23] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 00:55:23 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 01:28:35 Europe/Berlin] [2025-04-06 01:28:35] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:28:35 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 01:28:36 Europe/Berlin] [2025-04-06 01:28:36] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:28:36 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 01:28:44 Europe/Berlin] [2025-04-06 01:28:44] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Starting optimization process
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"evening","breakDuration":"30","sessionLength":"120","priority":"deadlines","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preset":"conflicts"}
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Received data: {"studyTime":"evening","breakDuration":"30","sessionLength":"120","priority":"deadlines","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preset":"conflicts"}
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Selected preset: conflicts
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":30,"max_consecutive_meetings":2,"conflict_resolution_priority":"high","spacing_buffer":15,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-07
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-08
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-09
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-10
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-11
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-14
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-15
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-16
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-17
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-18
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-21
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-22
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-23
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-24
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-25
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-28
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-29
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 10 events for day: 2025-04-30
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-05-01
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-05-02
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Retrieved events count: 142
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] First event sample: {"id":"25","user_id":"1","title":"Data Structures","description":"Regular class session","category_id":"1","start_date":"2025-04-07 08:00:00","end_date":"2025-04-07 09:00:00","all_day":"0","is_ai_optimized":"0","ai_description":null,"is_human_ai_altered":"0","preset_source":null,"created_at":"2025-04-06 00:55:21"}
+[06-Apr-2025 01:28:44 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"25","new_time":"2025-04-07 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"26","new_time":"2025-04-07 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"27","new_time":"2025-04-07 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"28","new_time":"2025-04-07 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3604","new_time":"2025-04-07 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5755","new_time":"2025-04-07 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3627","new_time":"2025-04-08 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"73","new_time":"2025-04-08 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"74","new_time":"2025-04-08 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"75","new_time":"2025-04-08 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"76","new_time":"2025-04-08 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3649","new_time":"2025-04-09 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"121","new_time":"2025-04-09 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"122","new_time":"2025-04-09 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"123","new_time":"2025-04-09 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"124","new_time":"2025-04-09 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3650","new_time":"2025-04-09 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5761","new_time":"2025-04-09 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3651","new_time":"2025-04-09 21:45:00","duration":-285,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3676","new_time":"2025-04-10 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"169","new_time":"2025-04-10 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"170","new_time":"2025-04-10 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"171","new_time":"2025-04-10 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"172","new_time":"2025-04-10 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5883","new_time":"2025-04-11 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3702","new_time":"2025-04-11 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"193","new_time":"2025-04-11 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"194","new_time":"2025-04-11 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"195","new_time":"2025-04-11 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"196","new_time":"2025-04-11 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3703","new_time":"2025-04-11 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3780","new_time":"2025-04-14 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"265","new_time":"2025-04-14 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"266","new_time":"2025-04-14 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"267","new_time":"2025-04-14 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"268","new_time":"2025-04-14 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3781","new_time":"2025-04-14 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5767","new_time":"2025-04-14 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"313","new_time":"2025-04-15 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"314","new_time":"2025-04-15 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"315","new_time":"2025-04-15 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"316","new_time":"2025-04-15 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3806","new_time":"2025-04-15 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5641","new_time":"2025-04-15 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3832","new_time":"2025-04-16 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"361","new_time":"2025-04-16 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"362","new_time":"2025-04-16 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"363","new_time":"2025-04-16 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"364","new_time":"2025-04-16 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5773","new_time":"2025-04-16 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3853","new_time":"2025-04-17 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"409","new_time":"2025-04-17 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"410","new_time":"2025-04-17 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"411","new_time":"2025-04-17 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"412","new_time":"2025-04-17 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3854","new_time":"2025-04-17 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"433","new_time":"2025-04-18 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"434","new_time":"2025-04-18 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"435","new_time":"2025-04-18 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"436","new_time":"2025-04-18 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3881","new_time":"2025-04-18 20:45:00","duration":-225,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"505","new_time":"2025-04-21 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"506","new_time":"2025-04-21 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"507","new_time":"2025-04-21 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"508","new_time":"2025-04-21 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3956","new_time":"2025-04-21 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5779","new_time":"2025-04-21 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3983","new_time":"2025-04-22 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"553","new_time":"2025-04-22 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"554","new_time":"2025-04-22 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"555","new_time":"2025-04-22 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"556","new_time":"2025-04-22 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3984","new_time":"2025-04-22 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5648","new_time":"2025-04-22 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5884","new_time":"2025-04-23 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"4004","new_time":"2025-04-23 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"601","new_time":"2025-04-23 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"602","new_time":"2025-04-23 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"603","new_time":"2025-04-23 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"604","new_time":"2025-04-23 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4005","new_time":"2025-04-23 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5785","new_time":"2025-04-23 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"649","new_time":"2025-04-24 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"650","new_time":"2025-04-24 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"651","new_time":"2025-04-24 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"652","new_time":"2025-04-24 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"673","new_time":"2025-04-25 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"674","new_time":"2025-04-25 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"675","new_time":"2025-04-25 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"676","new_time":"2025-04-25 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"2651","new_time":"2025-04-25 19:45:00","duration":-165,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4098","new_time":"2025-04-28 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"697","new_time":"2025-04-28 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"698","new_time":"2025-04-28 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"699","new_time":"2025-04-28 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"700","new_time":"2025-04-28 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4099","new_time":"2025-04-28 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5788","new_time":"2025-04-28 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4100","new_time":"2025-04-28 20:45:00","duration":-225,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4109","new_time":"2025-04-29 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"721","new_time":"2025-04-29 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"722","new_time":"2025-04-29 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"723","new_time":"2025-04-29 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"724","new_time":"2025-04-29 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4110","new_time":"2025-04-29 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4120","new_time":"2025-04-30 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"745","new_time":"2025-04-30 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"746","new_time":"2025-04-30 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"747","new_time":"2025-04-30 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"748","new_time":"2025-04-30 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4121","new_time":"2025-04-30 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5791","new_time":"2025-04-30 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2660","new_time":"2025-04-30 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4122","new_time":"2025-04-30 21:45:00","duration":-285,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4130","new_time":"2025-05-01 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"769","new_time":"2025-05-01 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"770","new_time":"2025-05-01 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"771","new_time":"2025-05-01 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"772","new_time":"2025-05-01 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4131","new_time":"2025-05-01 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5658","new_time":"2025-05-01 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4143","new_time":"2025-05-02 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"793","new_time":"2025-05-02 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"794","new_time":"2025-05-02 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"795","new_time":"2025-05-02 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"796","new_time":"2025-05-02 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4144","new_time":"2025-05-02 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"}]
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:7 - Starting to apply changes
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:18 - Initiating changes application
+Data: {
+    "changes_count": 127
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:22 - Started database transaction
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "25",
+    "new_time": "2025-04-07 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "25",
+    "new_start": "2025-04-07 09:15:00",
+    "new_end": "2025-04-07 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "26",
+    "new_time": "2025-04-07 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "26",
+    "new_start": "2025-04-07 11:00:00",
+    "new_end": "2025-04-07 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "27",
+    "new_time": "2025-04-07 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "27",
+    "new_start": "2025-04-07 12:45:00",
+    "new_end": "2025-04-07 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "28",
+    "new_time": "2025-04-07 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "28",
+    "new_start": "2025-04-07 14:30:00",
+    "new_end": "2025-04-07 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3604",
+    "new_time": "2025-04-07 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3604",
+    "new_start": "2025-04-07 16:15:00",
+    "new_end": "2025-04-07 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5755",
+    "new_time": "2025-04-07 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5755",
+    "new_start": "2025-04-07 17:45:00",
+    "new_end": "2025-04-07 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3627",
+    "new_time": "2025-04-08 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3627",
+    "new_start": "2025-04-08 09:15:00",
+    "new_end": "2025-04-08 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "73",
+    "new_time": "2025-04-08 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "73",
+    "new_start": "2025-04-08 11:00:00",
+    "new_end": "2025-04-08 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "74",
+    "new_time": "2025-04-08 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "74",
+    "new_start": "2025-04-08 12:45:00",
+    "new_end": "2025-04-08 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "75",
+    "new_time": "2025-04-08 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "75",
+    "new_start": "2025-04-08 14:30:00",
+    "new_end": "2025-04-08 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "76",
+    "new_time": "2025-04-08 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "76",
+    "new_start": "2025-04-08 16:15:00",
+    "new_end": "2025-04-08 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3649",
+    "new_time": "2025-04-09 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3649",
+    "new_start": "2025-04-09 09:15:00",
+    "new_end": "2025-04-09 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "121",
+    "new_time": "2025-04-09 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "121",
+    "new_start": "2025-04-09 11:00:00",
+    "new_end": "2025-04-09 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "122",
+    "new_time": "2025-04-09 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "122",
+    "new_start": "2025-04-09 12:45:00",
+    "new_end": "2025-04-09 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "123",
+    "new_time": "2025-04-09 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "123",
+    "new_start": "2025-04-09 14:30:00",
+    "new_end": "2025-04-09 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "124",
+    "new_time": "2025-04-09 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "124",
+    "new_start": "2025-04-09 16:15:00",
+    "new_end": "2025-04-09 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3650",
+    "new_time": "2025-04-09 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3650",
+    "new_start": "2025-04-09 17:45:00",
+    "new_end": "2025-04-09 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5761",
+    "new_time": "2025-04-09 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5761",
+    "new_start": "2025-04-09 17:45:00",
+    "new_end": "2025-04-09 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3651",
+    "new_time": "2025-04-09 21:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3651",
+    "new_start": "2025-04-09 21:45:00",
+    "new_end": "2025-04-09 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3676",
+    "new_time": "2025-04-10 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3676",
+    "new_start": "2025-04-10 09:15:00",
+    "new_end": "2025-04-10 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "169",
+    "new_time": "2025-04-10 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "169",
+    "new_start": "2025-04-10 11:00:00",
+    "new_end": "2025-04-10 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "170",
+    "new_time": "2025-04-10 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "170",
+    "new_start": "2025-04-10 12:45:00",
+    "new_end": "2025-04-10 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "171",
+    "new_time": "2025-04-10 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "171",
+    "new_start": "2025-04-10 14:30:00",
+    "new_end": "2025-04-10 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "172",
+    "new_time": "2025-04-10 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "172",
+    "new_start": "2025-04-10 16:15:00",
+    "new_end": "2025-04-10 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5883",
+    "new_time": "2025-04-11 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5883",
+    "new_start": "2025-04-11 09:15:00",
+    "new_end": "2025-04-11 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3702",
+    "new_time": "2025-04-11 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3702",
+    "new_start": "2025-04-11 11:00:00",
+    "new_end": "2025-04-11 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "193",
+    "new_time": "2025-04-11 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "193",
+    "new_start": "2025-04-11 12:45:00",
+    "new_end": "2025-04-11 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "194",
+    "new_time": "2025-04-11 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "194",
+    "new_start": "2025-04-11 14:30:00",
+    "new_end": "2025-04-11 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "195",
+    "new_time": "2025-04-11 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "195",
+    "new_start": "2025-04-11 16:15:00",
+    "new_end": "2025-04-11 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "196",
+    "new_time": "2025-04-11 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "196",
+    "new_start": "2025-04-11 17:45:00",
+    "new_end": "2025-04-11 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3703",
+    "new_time": "2025-04-11 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3703",
+    "new_start": "2025-04-11 17:45:00",
+    "new_end": "2025-04-11 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3780",
+    "new_time": "2025-04-14 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3780",
+    "new_start": "2025-04-14 09:15:00",
+    "new_end": "2025-04-14 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "265",
+    "new_time": "2025-04-14 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "265",
+    "new_start": "2025-04-14 11:00:00",
+    "new_end": "2025-04-14 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "266",
+    "new_time": "2025-04-14 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "266",
+    "new_start": "2025-04-14 12:45:00",
+    "new_end": "2025-04-14 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "267",
+    "new_time": "2025-04-14 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "267",
+    "new_start": "2025-04-14 14:30:00",
+    "new_end": "2025-04-14 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "268",
+    "new_time": "2025-04-14 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "268",
+    "new_start": "2025-04-14 16:15:00",
+    "new_end": "2025-04-14 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3781",
+    "new_time": "2025-04-14 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3781",
+    "new_start": "2025-04-14 17:45:00",
+    "new_end": "2025-04-14 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5767",
+    "new_time": "2025-04-14 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5767",
+    "new_start": "2025-04-14 17:45:00",
+    "new_end": "2025-04-14 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "313",
+    "new_time": "2025-04-15 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "313",
+    "new_start": "2025-04-15 09:15:00",
+    "new_end": "2025-04-15 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "314",
+    "new_time": "2025-04-15 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "314",
+    "new_start": "2025-04-15 11:00:00",
+    "new_end": "2025-04-15 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "315",
+    "new_time": "2025-04-15 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "315",
+    "new_start": "2025-04-15 12:45:00",
+    "new_end": "2025-04-15 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "316",
+    "new_time": "2025-04-15 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "316",
+    "new_start": "2025-04-15 14:30:00",
+    "new_end": "2025-04-15 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3806",
+    "new_time": "2025-04-15 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3806",
+    "new_start": "2025-04-15 16:15:00",
+    "new_end": "2025-04-15 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5641",
+    "new_time": "2025-04-15 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5641",
+    "new_start": "2025-04-15 17:45:00",
+    "new_end": "2025-04-15 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3832",
+    "new_time": "2025-04-16 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3832",
+    "new_start": "2025-04-16 09:15:00",
+    "new_end": "2025-04-16 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "361",
+    "new_time": "2025-04-16 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "361",
+    "new_start": "2025-04-16 11:00:00",
+    "new_end": "2025-04-16 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "362",
+    "new_time": "2025-04-16 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "362",
+    "new_start": "2025-04-16 12:45:00",
+    "new_end": "2025-04-16 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "363",
+    "new_time": "2025-04-16 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "363",
+    "new_start": "2025-04-16 14:30:00",
+    "new_end": "2025-04-16 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "364",
+    "new_time": "2025-04-16 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "364",
+    "new_start": "2025-04-16 16:15:00",
+    "new_end": "2025-04-16 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5773",
+    "new_time": "2025-04-16 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5773",
+    "new_start": "2025-04-16 17:45:00",
+    "new_end": "2025-04-16 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3853",
+    "new_time": "2025-04-17 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3853",
+    "new_start": "2025-04-17 09:15:00",
+    "new_end": "2025-04-17 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "409",
+    "new_time": "2025-04-17 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "409",
+    "new_start": "2025-04-17 11:00:00",
+    "new_end": "2025-04-17 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "410",
+    "new_time": "2025-04-17 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "410",
+    "new_start": "2025-04-17 12:45:00",
+    "new_end": "2025-04-17 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "411",
+    "new_time": "2025-04-17 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "411",
+    "new_start": "2025-04-17 14:30:00",
+    "new_end": "2025-04-17 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "412",
+    "new_time": "2025-04-17 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "412",
+    "new_start": "2025-04-17 16:15:00",
+    "new_end": "2025-04-17 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3854",
+    "new_time": "2025-04-17 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3854",
+    "new_start": "2025-04-17 17:45:00",
+    "new_end": "2025-04-17 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "433",
+    "new_time": "2025-04-18 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "433",
+    "new_start": "2025-04-18 09:15:00",
+    "new_end": "2025-04-18 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "434",
+    "new_time": "2025-04-18 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "434",
+    "new_start": "2025-04-18 11:00:00",
+    "new_end": "2025-04-18 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "435",
+    "new_time": "2025-04-18 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "435",
+    "new_start": "2025-04-18 12:45:00",
+    "new_end": "2025-04-18 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "436",
+    "new_time": "2025-04-18 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "436",
+    "new_start": "2025-04-18 14:30:00",
+    "new_end": "2025-04-18 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3881",
+    "new_time": "2025-04-18 20:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3881",
+    "new_start": "2025-04-18 20:45:00",
+    "new_end": "2025-04-18 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "505",
+    "new_time": "2025-04-21 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "505",
+    "new_start": "2025-04-21 09:15:00",
+    "new_end": "2025-04-21 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "506",
+    "new_time": "2025-04-21 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "506",
+    "new_start": "2025-04-21 11:00:00",
+    "new_end": "2025-04-21 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "507",
+    "new_time": "2025-04-21 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "507",
+    "new_start": "2025-04-21 12:45:00",
+    "new_end": "2025-04-21 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "508",
+    "new_time": "2025-04-21 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "508",
+    "new_start": "2025-04-21 14:30:00",
+    "new_end": "2025-04-21 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3956",
+    "new_time": "2025-04-21 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3956",
+    "new_start": "2025-04-21 16:15:00",
+    "new_end": "2025-04-21 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5779",
+    "new_time": "2025-04-21 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5779",
+    "new_start": "2025-04-21 17:45:00",
+    "new_end": "2025-04-21 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3983",
+    "new_time": "2025-04-22 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3983",
+    "new_start": "2025-04-22 09:15:00",
+    "new_end": "2025-04-22 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "553",
+    "new_time": "2025-04-22 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "553",
+    "new_start": "2025-04-22 11:00:00",
+    "new_end": "2025-04-22 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "554",
+    "new_time": "2025-04-22 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "554",
+    "new_start": "2025-04-22 12:45:00",
+    "new_end": "2025-04-22 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "555",
+    "new_time": "2025-04-22 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "555",
+    "new_start": "2025-04-22 14:30:00",
+    "new_end": "2025-04-22 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "556",
+    "new_time": "2025-04-22 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "556",
+    "new_start": "2025-04-22 16:15:00",
+    "new_end": "2025-04-22 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "3984",
+    "new_time": "2025-04-22 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "3984",
+    "new_start": "2025-04-22 17:45:00",
+    "new_end": "2025-04-22 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5648",
+    "new_time": "2025-04-22 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5648",
+    "new_start": "2025-04-22 17:45:00",
+    "new_end": "2025-04-22 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5884",
+    "new_time": "2025-04-23 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5884",
+    "new_start": "2025-04-23 09:15:00",
+    "new_end": "2025-04-23 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4004",
+    "new_time": "2025-04-23 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4004",
+    "new_start": "2025-04-23 11:00:00",
+    "new_end": "2025-04-23 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "601",
+    "new_time": "2025-04-23 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "601",
+    "new_start": "2025-04-23 12:45:00",
+    "new_end": "2025-04-23 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "602",
+    "new_time": "2025-04-23 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "602",
+    "new_start": "2025-04-23 14:30:00",
+    "new_end": "2025-04-23 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "603",
+    "new_time": "2025-04-23 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "603",
+    "new_start": "2025-04-23 16:15:00",
+    "new_end": "2025-04-23 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "604",
+    "new_time": "2025-04-23 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "604",
+    "new_start": "2025-04-23 17:45:00",
+    "new_end": "2025-04-23 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4005",
+    "new_time": "2025-04-23 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4005",
+    "new_start": "2025-04-23 17:45:00",
+    "new_end": "2025-04-23 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5785",
+    "new_time": "2025-04-23 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5785",
+    "new_start": "2025-04-23 17:45:00",
+    "new_end": "2025-04-23 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "649",
+    "new_time": "2025-04-24 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "649",
+    "new_start": "2025-04-24 09:15:00",
+    "new_end": "2025-04-24 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "650",
+    "new_time": "2025-04-24 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "650",
+    "new_start": "2025-04-24 11:00:00",
+    "new_end": "2025-04-24 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "651",
+    "new_time": "2025-04-24 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "651",
+    "new_start": "2025-04-24 12:45:00",
+    "new_end": "2025-04-24 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "652",
+    "new_time": "2025-04-24 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "652",
+    "new_start": "2025-04-24 14:30:00",
+    "new_end": "2025-04-24 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "673",
+    "new_time": "2025-04-25 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "673",
+    "new_start": "2025-04-25 09:15:00",
+    "new_end": "2025-04-25 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "674",
+    "new_time": "2025-04-25 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "674",
+    "new_start": "2025-04-25 11:00:00",
+    "new_end": "2025-04-25 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "675",
+    "new_time": "2025-04-25 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "675",
+    "new_start": "2025-04-25 12:45:00",
+    "new_end": "2025-04-25 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "676",
+    "new_time": "2025-04-25 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "676",
+    "new_start": "2025-04-25 14:30:00",
+    "new_end": "2025-04-25 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2651",
+    "new_time": "2025-04-25 19:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2651",
+    "new_start": "2025-04-25 19:45:00",
+    "new_end": "2025-04-25 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4098",
+    "new_time": "2025-04-28 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4098",
+    "new_start": "2025-04-28 09:15:00",
+    "new_end": "2025-04-28 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "697",
+    "new_time": "2025-04-28 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "697",
+    "new_start": "2025-04-28 11:00:00",
+    "new_end": "2025-04-28 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "698",
+    "new_time": "2025-04-28 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "698",
+    "new_start": "2025-04-28 12:45:00",
+    "new_end": "2025-04-28 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "699",
+    "new_time": "2025-04-28 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "699",
+    "new_start": "2025-04-28 14:30:00",
+    "new_end": "2025-04-28 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "700",
+    "new_time": "2025-04-28 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "700",
+    "new_start": "2025-04-28 16:15:00",
+    "new_end": "2025-04-28 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4099",
+    "new_time": "2025-04-28 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4099",
+    "new_start": "2025-04-28 17:45:00",
+    "new_end": "2025-04-28 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5788",
+    "new_time": "2025-04-28 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5788",
+    "new_start": "2025-04-28 17:45:00",
+    "new_end": "2025-04-28 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4100",
+    "new_time": "2025-04-28 20:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4100",
+    "new_start": "2025-04-28 20:45:00",
+    "new_end": "2025-04-28 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4109",
+    "new_time": "2025-04-29 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4109",
+    "new_start": "2025-04-29 09:15:00",
+    "new_end": "2025-04-29 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "721",
+    "new_time": "2025-04-29 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "721",
+    "new_start": "2025-04-29 11:00:00",
+    "new_end": "2025-04-29 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "722",
+    "new_time": "2025-04-29 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "722",
+    "new_start": "2025-04-29 12:45:00",
+    "new_end": "2025-04-29 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "723",
+    "new_time": "2025-04-29 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "723",
+    "new_start": "2025-04-29 14:30:00",
+    "new_end": "2025-04-29 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "724",
+    "new_time": "2025-04-29 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "724",
+    "new_start": "2025-04-29 16:15:00",
+    "new_end": "2025-04-29 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4110",
+    "new_time": "2025-04-29 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4110",
+    "new_start": "2025-04-29 17:45:00",
+    "new_end": "2025-04-29 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4120",
+    "new_time": "2025-04-30 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4120",
+    "new_start": "2025-04-30 09:15:00",
+    "new_end": "2025-04-30 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "745",
+    "new_time": "2025-04-30 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "745",
+    "new_start": "2025-04-30 11:00:00",
+    "new_end": "2025-04-30 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "746",
+    "new_time": "2025-04-30 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "746",
+    "new_start": "2025-04-30 12:45:00",
+    "new_end": "2025-04-30 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "747",
+    "new_time": "2025-04-30 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "747",
+    "new_start": "2025-04-30 14:30:00",
+    "new_end": "2025-04-30 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "748",
+    "new_time": "2025-04-30 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "748",
+    "new_start": "2025-04-30 16:15:00",
+    "new_end": "2025-04-30 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4121",
+    "new_time": "2025-04-30 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4121",
+    "new_start": "2025-04-30 17:45:00",
+    "new_end": "2025-04-30 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5791",
+    "new_time": "2025-04-30 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5791",
+    "new_start": "2025-04-30 17:45:00",
+    "new_end": "2025-04-30 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "2660",
+    "new_time": "2025-04-30 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "2660",
+    "new_start": "2025-04-30 17:45:00",
+    "new_end": "2025-04-30 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4122",
+    "new_time": "2025-04-30 21:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4122",
+    "new_start": "2025-04-30 21:45:00",
+    "new_end": "2025-04-30 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4130",
+    "new_time": "2025-05-01 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4130",
+    "new_start": "2025-05-01 09:15:00",
+    "new_end": "2025-05-01 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "769",
+    "new_time": "2025-05-01 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "769",
+    "new_start": "2025-05-01 11:00:00",
+    "new_end": "2025-05-01 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "770",
+    "new_time": "2025-05-01 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "770",
+    "new_start": "2025-05-01 12:45:00",
+    "new_end": "2025-05-01 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "771",
+    "new_time": "2025-05-01 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "771",
+    "new_start": "2025-05-01 14:30:00",
+    "new_end": "2025-05-01 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "772",
+    "new_time": "2025-05-01 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "772",
+    "new_start": "2025-05-01 16:15:00",
+    "new_end": "2025-05-01 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4131",
+    "new_time": "2025-05-01 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4131",
+    "new_start": "2025-05-01 17:45:00",
+    "new_end": "2025-05-01 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5658",
+    "new_time": "2025-05-01 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5658",
+    "new_start": "2025-05-01 17:45:00",
+    "new_end": "2025-05-01 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4143",
+    "new_time": "2025-05-02 09:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4143",
+    "new_start": "2025-05-02 09:15:00",
+    "new_end": "2025-05-02 10:15:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "793",
+    "new_time": "2025-05-02 11:00:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "793",
+    "new_start": "2025-05-02 11:00:00",
+    "new_end": "2025-05-02 12:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "794",
+    "new_time": "2025-05-02 12:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "794",
+    "new_start": "2025-05-02 12:45:00",
+    "new_end": "2025-05-02 13:45:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "795",
+    "new_time": "2025-05-02 14:30:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "795",
+    "new_start": "2025-05-02 14:30:00",
+    "new_end": "2025-05-02 15:30:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "796",
+    "new_time": "2025-05-02 16:15:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "796",
+    "new_start": "2025-05-02 16:15:00",
+    "new_end": "2025-05-02 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "4144",
+    "new_time": "2025-05-02 17:45:00"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "4144",
+    "new_start": "2025-05-02 17:45:00",
+    "new_end": "2025-05-02 17:00:00",
+    "preset_source": "default"
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:83 - Logging optimization action
+Data: {
+    "user_id": 1,
+    "changes_applied": 127
+}
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:95 - Committed database transaction
+[06-Apr-2025 01:28:46 Europe/Berlin] [2025-04-06 01:28:46] apply-changes.php:98 - Successfully completed all changes
+Data: {
+    "total_applied": 127
+}
+[06-Apr-2025 01:28:47 Europe/Berlin] [2025-04-06 01:28:47] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:28:47 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171

@@ -244,10 +244,10 @@ function optimizeDaySchedule($events, $params, $preset) {
     $changes = [];
     $workday_start = strtotime($params['optimal_day_start'] ?? '09:00');
     $workday_end = strtotime($params['optimal_day_end'] ?? '17:00');
-    $last_end_time = $workday_start;
     
+    // Step 1: Validate all events and collect valid ones
+    $validEvents = [];
     foreach ($events as $event) {
-        // Step 4: Validate date fields
         if (empty($event['start_date'])) {
             error_log("[ERROR] Invalid start_date for event ID " . ($event['id'] ?? 'unknown'));
             continue;
@@ -263,66 +263,122 @@ function optimizeDaySchedule($events, $params, $preset) {
             ? strtotime($event['end_date']) 
             : $start + 3600; // Default 1 hour
         
+        // Extract the original date (YYYY-MM-DD) to preserve it
+        $originalDate = date('Y-m-d', $start);
+            
+        // Add to valid events with parsed timestamps
+        $validEvents[] = [
+            'event' => $event,
+            'start' => $start,
+            'end' => $end,
+            'duration' => $end - $start,
+            'originalDate' => $originalDate
+        ];
+    }
+    
+    // Step 2: Sort events by start time to ensure proper sequence
+    usort($validEvents, function($a, $b) {
+        return $a['start'] - $b['start'];
+    });
+    
+    // Step 3: Process events in sequence with proper spacing
+    $last_end_time = $workday_start;
+    $min_break = ($params['min_break'] ?? 15) * 60; // Convert to seconds
+    $currentDate = null;
+    
+    foreach ($validEvents as $eventData) {
+        $event = $eventData['event'];
+        $start = $eventData['start'];
+        $end = $eventData['end'];
+        $duration = $eventData['duration'];
+        $originalDate = $eventData['originalDate'];
+        
+        // Reset last_end_time if we're on a new date
+        if ($currentDate !== $originalDate) {
+            $currentDate = $originalDate;
+            $last_end_time = strtotime($originalDate . ' ' . date('H:i:s', $workday_start));
+        }
+        
+        $needs_rescheduling = false;
+        $new_start = null;
+        $reason = '';
+        
         // Apply preset-specific optimizations
         switch ($preset) {
             case 'busy_week':
                 // Optimize for high efficiency
                 if ($start - $last_end_time > 30 * 60) { // 30-minute gap
-                    $new_start = date('Y-m-d H:i:s', $last_end_time + 15 * 60);
-                    $duration = $end - $start;
-                    $changes[] = [
-                        'event_id' => $event['id'],
-                        'new_time' => $new_start,
-                        'duration' => round($duration / 60),
-                        'reason' => 'Compacted schedule for higher efficiency'
-                    ];
+                    $needs_rescheduling = true;
+                    $new_start = $last_end_time + 15 * 60;
+                    $reason = 'Compacted schedule for higher efficiency';
                 }
                 break;
 
             case 'conflicts':
                 // Focus on resolving overlaps
                 if ($start < $last_end_time) { // Overlap detected
-                    $new_start = date('Y-m-d H:i:s', $last_end_time + 15 * 60);
-                    $duration = $end - $start;
-                    $changes[] = [
-                        'event_id' => $event['id'],
-                        'new_time' => $new_start,
-                        'duration' => round($duration / 60),
-                        'reason' => 'Resolved scheduling conflict'
-                    ];
+                    $needs_rescheduling = true;
+                    $new_start = $last_end_time + 15 * 60;
+                    $reason = 'Resolved scheduling conflict';
                 }
                 break;
 
             case 'optimized':
                 // Apply ideal spacing and timing
                 $optimal_start = $last_end_time + 30 * 60; // 30-minute spacing
-                if ($start != $optimal_start) {
-                    $new_start = date('Y-m-d H:i:s', $optimal_start);
-                    $duration = $end - $start;
-                    $changes[] = [
-                        'event_id' => $event['id'],
-                        'new_time' => $new_start,
-                        'duration' => round($duration / 60),
-                        'reason' => 'Optimized for ideal spacing and energy levels'
-                    ];
+                if (abs($start - $optimal_start) > 5 * 60) { // If more than 5 minutes off from optimal
+                    $needs_rescheduling = true;
+                    $new_start = $optimal_start;
+                    $reason = 'Optimized for ideal spacing and energy levels';
                 }
                 break;
 
             default:
                 // Basic optimization
-                if ($start < $last_end_time) {
-                    $new_start = date('Y-m-d H:i:s', $last_end_time + 15 * 60);
-                    $duration = $end - $start;
-                    $changes[] = [
-                        'event_id' => $event['id'],
-                        'new_time' => $new_start,
-                        'duration' => round($duration / 60),
-                        'reason' => 'Basic schedule optimization'
-                    ];
+                if ($start < $last_end_time) { // Overlap detected
+                    $needs_rescheduling = true;
+                    $new_start = $last_end_time + 15 * 60;
+                    $reason = 'Basic schedule optimization';
                 }
         }
         
-        $last_end_time = $end;
+        // Apply rescheduling if needed
+        if ($needs_rescheduling) {
+            // Calculate end of workday for the current date
+            $dayEndTime = strtotime($originalDate . ' ' . date('H:i:s', $workday_end));
+            
+            // Ensure the new end time doesn't exceed workday_end
+            if ($new_start + $duration > $dayEndTime) {
+                // If it would exceed, try to fit it by reducing duration if over 30 minutes
+                if ($duration > 30 * 60) {
+                    $new_duration = min($duration, ($dayEndTime - $new_start));
+                    $changes[] = [
+                        'event_id' => $event['id'],
+                        'new_time' => date('Y-m-d H:i:s', $new_start),
+                        'duration' => round($new_duration / 60),
+                        'reason' => $reason . ' (with adjusted duration)'
+                    ];
+                    $last_end_time = $new_start + $new_duration;
+                } else {
+                    // Log warning that event couldn't fit
+                    error_log("[WARNING] Event ID {$event['id']} couldn't fit in optimized schedule for date $originalDate");
+                }
+            } else {
+                $changes[] = [
+                    'event_id' => $event['id'],
+                    'new_time' => date('Y-m-d H:i:s', $new_start),
+                    'duration' => round($duration / 60),
+                    'reason' => $reason
+                ];
+                $last_end_time = $new_start + $duration;
+            }
+        } else {
+            // Event doesn't need rescheduling, update last_end_time
+            $last_end_time = $end;
+        }
+        
+        // Ensure minimum break between events
+        $last_end_time += $min_break;
     }
     
     return $changes;
