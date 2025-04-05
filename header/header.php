@@ -77,6 +77,50 @@ function renderHeader($title = 'Home') {
                 transition: all 0.3s ease;
             }
 
+            /* Enhanced AI-optimized event styles */
+            .event-pill.ai-optimized {
+                box-shadow: 0 0 8px rgba(124, 58, 237, 0.3);
+                transition: all 0.3s ease;
+            }
+            
+            .event-pill.ai-optimized:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 12px rgba(124, 58, 237, 0.4);
+            }
+
+            /* Preset-specific optimized event styles */
+            .event-pill.ai-optimized.preset-default {
+                background-color: #f0ebfe !important;
+                border-color: #d8ccfd !important;
+                color: #6941c6 !important;
+                box-shadow: 0 0 8px rgba(124, 58, 237, 0.3);
+            }
+
+            .event-pill.ai-optimized.preset-busy {
+                background-color: #fef3c7 !important;
+                border-color: #fcd34d !important;
+                color: #92400e !important;
+                box-shadow: 0 0 8px rgba(251, 191, 36, 0.3);
+            }
+
+            .event-pill.ai-optimized.preset-conflicts {
+                background-color: #fee2e2 !important;
+                border-color: #fca5a5 !important;
+                color: #991b1b !important;
+                box-shadow: 0 0 8px rgba(239, 68, 68, 0.3);
+            }
+
+            .event-pill.ai-optimized.preset-optimized {
+                background-color: #d1fae5 !important;
+                border-color: #6ee7b7 !important;
+                color: #065f46 !important;
+                box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+            }
+
+            .event-pill.ai-optimized:hover {
+                transform: scale(1.05);
+            }
+
             .chat-message-user {
                 background-color: #f3f4f6;
                 border-radius: 1rem 1rem 0.25rem 1rem;

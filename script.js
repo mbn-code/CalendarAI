@@ -1,3 +1,6 @@
+// Global variables
+let selectedOptimizationPreset = 'default';
+
 // Add debug utilities at the top of the file
 const DEBUG = true;  // Match PHP config
 
@@ -342,14 +345,21 @@ async function applySelectedChanges() {
         .map(checkbox => ({
             event_id: checkbox.dataset.eventId,
             new_time: checkbox.dataset.newTime,
-            duration: checkbox.dataset.duration
+            duration: checkbox.dataset.duration || undefined
         }));
 
     if (selectedChanges.length === 0) {
+        Swal.fire({
+            title: 'No Changes Selected',
+            text: 'Please select at least one change to apply.',
+            icon: 'warning'
+        });
         return;
     }
 
     try {
+        debugLog('Applying selected changes', selectedChanges);
+        
         const response = await fetch('/CalendarAI/api/apply-changes.php', {
             method: 'POST',
             headers: {
@@ -358,7 +368,28 @@ async function applySelectedChanges() {
             body: JSON.stringify({ changes: selectedChanges })
         });
 
-        const result = await response.json();
+        // Check for HTTP errors
+        if (!response.ok) {
+            const errorText = await response.text();
+            debugLog('Server error response', { status: response.status, body: errorText });
+            throw new Error(`Server error (${response.status}): ${errorText}`);
+        }
+        
+        const responseText = await response.text();
+        debugLog('Raw server response', responseText);
+        
+        // Parse JSON safely
+        let result;
+        try {
+            result = JSON.parse(responseText);
+        } catch (parseError) {
+            debugLog('JSON parse error', { 
+                error: parseError.message,
+                responseText: responseText.substring(0, 1000) // Log first 1000 chars
+            });
+            throw new Error(`Failed to parse server response: ${parseError.message}`);
+        }
+        
         if (result.success) {
             Swal.fire({
                 title: 'Success!',
@@ -370,9 +401,14 @@ async function applySelectedChanges() {
                 location.reload();
             });
         } else {
-            throw new Error(result.error);
+            throw new Error(result.error || 'Failed to apply changes');
         }
     } catch (error) {
+        debugLog('Error applying changes', {
+            message: error.message,
+            stack: error.stack
+        });
+        
         Swal.fire({
             title: 'Error',
             text: 'Failed to apply changes: ' + error.message,
@@ -755,7 +791,55 @@ document.addEventListener('DOMContentLoaded', () => {
         input.addEventListener('input', debounce(e => filterTable(e.target, tableId), 300));
     });
 
-    // Remove the initializeOptimization call since we don't need it
+    // Initialize chat functionality
+    const chatInput = document.getElementById('chatInput');
+    const sendMessageButton = document.getElementById('sendMessage');
+    const toggleAssistantButton = document.getElementById('toggleAssistant');
+
+    if (sendMessageButton && chatInput) {
+        sendMessageButton.addEventListener('click', () => {
+            const message = chatInput.value.trim();
+            if (message) {
+                handleChatAssistantInput(message);
+                chatInput.value = '';
+            }
+        });
+    }
+
+    if (toggleAssistantButton) {
+        toggleAssistantButton.addEventListener('click', function() {
+            const assistant = document.getElementById('calendarAssistant');
+            if (assistant) {
+                assistant.classList.toggle('translate-x-full');
+            }
+        });
+    }
+
+    // Initialize slider outputs
+    const breakDuration = document.getElementById('breakDuration');
+    const sessionLength = document.getElementById('sessionLength');
+
+    if (breakDuration) {
+        breakDuration.addEventListener('input', function() {
+            if (this.nextElementSibling) {
+                this.nextElementSibling.value = this.value + ' min';
+            }
+        });
+    }
+
+    if (sessionLength) {
+        sessionLength.addEventListener('input', function() {
+            if (this.nextElementSibling) {
+                this.nextElementSibling.value = this.value + ' min';
+            }
+        });
+    }
+
+    // Initialize optimization modal if it exists
+    const optimizeBtn = document.getElementById('optimizeBtn');
+    if (optimizeBtn) {
+        optimizeBtn.addEventListener('click', initializeOptimizeModal);
+    }
 });
 
 function populateCalendarDays() {
@@ -945,6 +1029,60 @@ function displayOptimizationResult(data) {
 }
 
 // Function to run optimization process
+function selectOptimizationPreset(preset) {
+    // Remove active state from all preset buttons
+    document.querySelectorAll('.preset-btn').forEach(btn => {
+        btn.classList.remove('ring-2', 'ring-offset-2');
+        btn.classList.remove('ring-purple-500', 'ring-orange-500', 'ring-red-500', 'ring-green-500');
+    });
+
+    // Add active state to selected preset button
+    const btn = document.querySelector(`[onclick="selectOptimizationPreset('${preset}')"]`);
+    btn.classList.add('ring-2', 'ring-offset-2');
+    switch(preset) {
+        case 'busy_week':
+            btn.classList.add('ring-orange-500');
+            break;
+        case 'conflicts':
+            btn.classList.add('ring-red-500');
+            break;
+        case 'optimized':
+            btn.classList.add('ring-green-500');
+            break;
+        default:
+            btn.classList.add('ring-purple-500');
+    }
+
+    selectedOptimizationPreset = preset;
+}
+
+function selectDayPreset(preset) {
+    const dayElements = document.querySelectorAll('.day-item');
+    dayElements.forEach(dayElement => {
+        const date = new Date(dayElement.dataset.date);
+        const dayOfWeek = date.getDay();
+        
+        let shouldSelect = false;
+        switch(preset) {
+            case 'weekdays':
+                shouldSelect = dayOfWeek >= 1 && dayOfWeek <= 5;
+                break;
+            case 'weekends':
+                shouldSelect = dayOfWeek === 0 || dayOfWeek === 6;
+                break;
+            case 'all':
+                shouldSelect = true;
+                break;
+        }
+        
+        if (shouldSelect) {
+            dayElement.classList.add('bg-purple-200', 'selected');
+        } else {
+            dayElement.classList.remove('bg-purple-200', 'selected');
+        }
+    });
+}
+
 async function runOptimization() {
     const selectedDays = Array.from(document.querySelectorAll('.day-item.selected'))
         .map(day => day.dataset.date);
@@ -967,27 +1105,45 @@ async function runOptimization() {
     // Collect form data
     const form = document.querySelector('#preferencesForm form');
     const formData = new FormData(form);
-    const preferences = {
-        studyTime: formData.get('studyTime'),
-        breakDuration: parseInt(formData.get('breakDuration')),
-        sessionLength: parseInt(formData.get('sessionLength')),
-        priority: formData.get('priority')
-    };
+    const preferences = Object.fromEntries(formData.entries());
+
+    // Add selected days and preset to preferences
+    preferences.days = selectedDays;
+    preferences.preset = selectedOptimizationPreset;
 
     try {
+        debugLog('Sending optimization request', preferences);
+        
         // Send optimization request
         const response = await fetch('/CalendarAI/api/optimize.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ 
-                days: selectedDays, 
-                preferences: preferences 
-            })
+            body: JSON.stringify(preferences)
         });
+        
+        // Check for HTTP errors
+        if (!response.ok) {
+            const errorText = await response.text();
+            debugLog('Server error response', { status: response.status, body: errorText });
+            throw new Error(`Server error (${response.status}): ${errorText}`);
+        }
 
-        const data = await response.json();
+        const responseText = await response.text();
+        debugLog('Raw server response', responseText);
+        
+        // Parse the JSON response safely
+        let data;
+        try {
+            data = JSON.parse(responseText);
+        } catch (parseError) {
+            debugLog('JSON parse error', { 
+                error: parseError.message,
+                responseText: responseText.substring(0, 1000) // Log first 1000 chars
+            });
+            throw new Error(`Failed to parse server response: ${parseError.message}`);
+        }
         
         // Hide loading
         document.getElementById('optimizationLoading').classList.add('hidden');
@@ -1007,6 +1163,11 @@ async function runOptimization() {
         document.getElementById('optimizationLoading').classList.add('hidden');
         document.getElementById('preferencesForm').classList.remove('hidden');
         document.getElementById('optimizeScheduleBtn').classList.remove('hidden');
+        
+        debugLog('Optimization error', {
+            message: error.message,
+            stack: error.stack
+        });
         
         Swal.fire({
             title: 'Optimization Error',

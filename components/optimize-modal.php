@@ -6,25 +6,56 @@ function renderOptimizeModal() {
             <!-- Modal Header -->
             <div class="p-6 border-b">
                 <h2 class="text-xl font-bold">Optimize Your Schedule</h2>
-                <p class="text-gray-600 mt-2">Select days and preferences for optimization</p>
+                <p class="text-gray-600 mt-2">Select optimization style and preferences</p>
             </div>
 
             <!-- Form Section -->
             <div id="preferencesForm" class="p-6">
+                <!-- Optimization Presets -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-3">Choose Optimization Style:</label>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <button type="button" onclick="selectOptimizationPreset('default')" 
+                                class="preset-btn p-4 rounded-lg border-2 border-purple-200 hover:border-purple-500 text-center">
+                            <i class="fas fa-magic text-2xl text-purple-500 mb-2"></i>
+                            <span class="block text-sm font-medium">Default</span>
+                            <span class="text-xs text-gray-500">Balanced optimization</span>
+                        </button>
+                        <button type="button" onclick="selectOptimizationPreset('busy_week')" 
+                                class="preset-btn p-4 rounded-lg border-2 border-orange-200 hover:border-orange-500 text-center">
+                            <i class="fas fa-calendar-week text-2xl text-orange-500 mb-2"></i>
+                            <span class="block text-sm font-medium">Busy Week</span>
+                            <span class="text-xs text-gray-500">High efficiency</span>
+                        </button>
+                        <button type="button" onclick="selectOptimizationPreset('conflicts')" 
+                                class="preset-btn p-4 rounded-lg border-2 border-red-200 hover:border-red-500 text-center">
+                            <i class="fas fa-exclamation-triangle text-2xl text-red-500 mb-2"></i>
+                            <span class="block text-sm font-medium">Resolve Conflicts</span>
+                            <span class="text-xs text-gray-500">Fix overlaps</span>
+                        </button>
+                        <button type="button" onclick="selectOptimizationPreset('optimized')" 
+                                class="preset-btn p-4 rounded-lg border-2 border-green-200 hover:border-green-500 text-center">
+                            <i class="fas fa-check-circle text-2xl text-green-500 mb-2"></i>
+                            <span class="block text-sm font-medium">Best Practice</span>
+                            <span class="text-xs text-gray-500">Ideal schedule</span>
+                        </button>
+                    </div>
+                </div>
+
                 <div id="daySelection" class="mb-6">
-                    <p class="text-gray-700 mb-3">Select specific days to optimize:</p>
+                    <p class="text-gray-700 mb-3">Select days to apply optimization:</p>
                     <div class="flex space-x-4 mb-4">
-                        <button type="button" onclick="selectPreset('weekdays')" 
+                        <button type="button" onclick="selectDayPreset('weekdays')" 
                                 class="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600">
                             Weekdays
                         </button>
-                        <button type="button" onclick="selectPreset('weekends')" 
+                        <button type="button" onclick="selectDayPreset('weekends')" 
                                 class="px-4 py-2 text-white bg-green-500 rounded-lg hover:bg-green-600">
                             Weekends
                         </button>
-                        <button type="button" onclick="selectPreset('fridays')" 
+                        <button type="button" onclick="selectDayPreset('all')" 
                                 class="px-4 py-2 text-white bg-purple-500 rounded-lg hover:bg-purple-600">
-                            Fridays
+                            All Days
                         </button>
                     </div>
                     <div id="calendarDays" class="grid grid-cols-7 gap-2">

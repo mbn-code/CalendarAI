@@ -11,6 +11,7 @@ require_once __DIR__ . '/components/navbar.php';
 require_once __DIR__ . '/components/setup-wizard.php';
 require_once __DIR__ . '/components/calendar-assistant.php';
 require_once __DIR__ . '/components/optimize-modal.php';
+require_once __DIR__ . '/components/demo-controls.php';  // Add this line
 
 // Require authentication for accessing the calendar
 requireAuth();
@@ -452,6 +453,13 @@ $events = $result->fetch_all(MYSQLI_ASSOC);
                 </div>
             </div>
         </div>
+        
+        <?php
+        // Add demo controls at the end of the main content
+        if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) {
+            echo renderDemoControls();
+        }
+        ?>
     </main>
 
     <script>

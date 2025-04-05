@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../config.php';
 
 try {
+    // Create mysqli connection for backward compatibility
     $conn = new mysqli('localhost', 'root', '2671', 'calendar');
     
     if ($conn->connect_error) {
@@ -24,6 +25,11 @@ try {
         }
         throw new Exception("Error setting charset: " . $conn->error);
     }
+    
+    // Also create PDO connection for scripts that use it
+    $pdo = new PDO('mysql:host=localhost;dbname=calendar;charset=utf8mb4', 'root', '2671');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     
     if (DEBUG) {
         // Ensure test user exists in debug mode

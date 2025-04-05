@@ -28,7 +28,8 @@ try {
             SET start_date = ?,
                 end_date = ?,
                 is_ai_optimized = TRUE,
-                is_human_ai_altered = TRUE
+                is_human_ai_altered = TRUE,
+                preset_source = ?
             WHERE id = ?
         ");
 
@@ -46,10 +47,12 @@ try {
             $newStartTime = $change['new_time'];
             $duration = isset($change['duration']) ? (int)$change['duration'] * 60 : 3600; // Convert minutes to seconds, default 1 hour
             $newEndTime = date('Y-m-d H:i:s', strtotime($newStartTime) + $duration);
+            $presetSource = $data['preset'] ?? 'default';
 
-            $updateStmt->bind_param('ssi', 
+            $updateStmt->bind_param('sssi', 
                 $newStartTime,
                 $newEndTime,
+                $presetSource,
                 $change['event_id']
             );
 
@@ -64,7 +67,8 @@ try {
             debug_log('Successfully applied change', [
                 'event_id' => $change['event_id'],
                 'new_start' => $newStartTime,
-                'new_end' => $newEndTime
+                'new_end' => $newEndTime,
+                'preset_source' => $presetSource
             ]);
 
             $appliedCount++;
