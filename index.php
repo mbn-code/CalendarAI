@@ -11,7 +11,8 @@ require_once __DIR__ . '/components/navbar.php';
 require_once __DIR__ . '/components/setup-wizard.php';
 require_once __DIR__ . '/components/calendar-assistant.php';
 require_once __DIR__ . '/components/optimize-modal.php';
-require_once __DIR__ . '/components/demo-controls.php';  // Add this line
+require_once __DIR__ . '/components/demo-controls.php';
+require_once __DIR__ . '/components/debug-sidebar.php';  // Added debug sidebar component
 
 // Require authentication for accessing the calendar
 requireAuth();
@@ -293,6 +294,9 @@ $events = $result->fetch_all(MYSQLI_ASSOC);
     </style>
 </head>
 <body class="bg-gray-50">
+    <!-- Debug Sidebar -->
+    <?= renderDebugSidebar() ?>
+    
     <!-- Mobile menu toggle button -->
     <button id="mobileMenuToggle" class="md:hidden fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-vercel">
         <i class="fas fa-bars text-gray-700"></i>
