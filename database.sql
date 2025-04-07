@@ -49,6 +49,7 @@ CREATE TABLE calendar_events (
     is_ai_optimized BOOLEAN DEFAULT FALSE,
     ai_description TEXT NULL,
     is_human_ai_altered BOOLEAN DEFAULT FALSE,
+    is_immovable BOOLEAN DEFAULT FALSE,
     preset_source VARCHAR(20) DEFAULT 'default',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (category_id) REFERENCES event_categories(id),

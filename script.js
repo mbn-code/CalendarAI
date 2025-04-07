@@ -1107,13 +1107,17 @@ async function runOptimization() {
     const formData = new FormData(form);
     const preferences = Object.fromEntries(formData.entries());
 
+    // Always force auto_apply to true to ensure changes are applied immediately
+    const autoApply = true; // Force this to true regardless of checkbox state
+
     // Add selected days and preset to preferences
     preferences.days = selectedDays;
     preferences.preset = selectedOptimizationPreset;
+    preferences.auto_apply = autoApply;
 
+    debugLog('Sending optimization request', preferences);
+    
     try {
-        debugLog('Sending optimization request', preferences);
-        
         // Send optimization request
         const response = await fetch('/CalendarAI/api/optimize.php', {
             method: 'POST',
@@ -1149,9 +1153,24 @@ async function runOptimization() {
         document.getElementById('optimizationLoading').classList.add('hidden');
         
         if (data.success) {
+            // If auto-applied, show success message and reload
+            if (autoApply && data.changes_applied > 0) {
+                Swal.fire({
+                    title: 'Schedule Optimized!',
+                    text: `Successfully applied ${data.changes_applied} changes to your schedule.`,
+                    icon: 'success',
+                    confirmButtonColor: '#10B981'
+                }).then(() => {
+                    location.reload(); // Reload to show updated schedule
+                });
+                return;
+            }
+            
             // Show results and apply changes button
             document.getElementById('optimizationResults').classList.remove('hidden');
-            document.getElementById('applyChangesBtn').classList.remove('hidden');
+            if (data.changes && data.changes.length > 0) {
+                document.getElementById('applyChangesBtn').classList.remove('hidden');
+            }
             
             // Display the optimization results
             displayOptimizationResult(data);

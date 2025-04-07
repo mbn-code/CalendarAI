@@ -65760,3 +65760,1300 @@ Data: {
     "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
 }
 [06-Apr-2025 01:36:26 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 01:44:38 Europe/Berlin] [2025-04-06 01:44:38] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:44:38 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 01:44:51 Europe/Berlin] [2025-04-06 01:44:51] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:44:51 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 01:45:15 Europe/Berlin] [2025-04-06 01:45:15] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Starting optimization process
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preset":"conflicts","auto_apply":true}
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Received data: {"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preset":"conflicts","auto_apply":true}
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Selected preset: conflicts
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":30,"max_consecutive_meetings":2,"conflict_resolution_priority":"high","spacing_buffer":15,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-07
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-08
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 10 events for day: 2025-04-09
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-10
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-11
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 11 events for day: 2025-04-14
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-15
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-16
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-17
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-18
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-21
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-22
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-23
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-24
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-25
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 10 events for day: 2025-04-28
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-29
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-30
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-05-01
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-05-02
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Retrieved events count: 144
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] First event sample: {"id":"3605","user_id":"1","title":"Coffee Break","description":"Personal time","category_id":"7","start_date":"2025-04-07 07:00:00","end_date":"2025-04-07 08:00:00","all_day":"0","is_ai_optimized":"0","ai_description":null,"is_human_ai_altered":"0","preset_source":null,"created_at":"2025-04-06 01:44:44"}
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"3605","new_time":"2025-04-07 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"25","new_time":"2025-04-07 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"26","new_time":"2025-04-07 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"27","new_time":"2025-04-07 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"28","new_time":"2025-04-07 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3606","new_time":"2025-04-07 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5755","new_time":"2025-04-07 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3631","new_time":"2025-04-08 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"73","new_time":"2025-04-08 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"74","new_time":"2025-04-08 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"75","new_time":"2025-04-08 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"76","new_time":"2025-04-08 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3632","new_time":"2025-04-08 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3650","new_time":"2025-04-09 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"121","new_time":"2025-04-09 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"122","new_time":"2025-04-09 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"123","new_time":"2025-04-09 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"124","new_time":"2025-04-09 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3651","new_time":"2025-04-09 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5761","new_time":"2025-04-09 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2570","new_time":"2025-04-09 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3652","new_time":"2025-04-09 21:45:00","duration":-285,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3675","new_time":"2025-04-10 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"169","new_time":"2025-04-10 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"170","new_time":"2025-04-10 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"171","new_time":"2025-04-10 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"172","new_time":"2025-04-10 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3676","new_time":"2025-04-10 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3700","new_time":"2025-04-11 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"193","new_time":"2025-04-11 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"194","new_time":"2025-04-11 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"195","new_time":"2025-04-11 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"196","new_time":"2025-04-11 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3701","new_time":"2025-04-11 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2581","new_time":"2025-04-11 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3776","new_time":"2025-04-14 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"265","new_time":"2025-04-14 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"266","new_time":"2025-04-14 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"267","new_time":"2025-04-14 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"268","new_time":"2025-04-14 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3777","new_time":"2025-04-14 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5767","new_time":"2025-04-14 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2590","new_time":"2025-04-14 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2592","new_time":"2025-04-14 20:45:00","duration":-225,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3803","new_time":"2025-04-15 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"313","new_time":"2025-04-15 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"314","new_time":"2025-04-15 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"315","new_time":"2025-04-15 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"316","new_time":"2025-04-15 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3804","new_time":"2025-04-15 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3828","new_time":"2025-04-16 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"361","new_time":"2025-04-16 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"362","new_time":"2025-04-16 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"363","new_time":"2025-04-16 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"364","new_time":"2025-04-16 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3829","new_time":"2025-04-16 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5773","new_time":"2025-04-16 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"409","new_time":"2025-04-17 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"410","new_time":"2025-04-17 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"411","new_time":"2025-04-17 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"412","new_time":"2025-04-17 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3853","new_time":"2025-04-17 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"433","new_time":"2025-04-18 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"434","new_time":"2025-04-18 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"435","new_time":"2025-04-18 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"436","new_time":"2025-04-18 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3875","new_time":"2025-04-18 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"505","new_time":"2025-04-21 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"506","new_time":"2025-04-21 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"507","new_time":"2025-04-21 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"508","new_time":"2025-04-21 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"5779","new_time":"2025-04-21 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3951","new_time":"2025-04-21 20:45:00","duration":-225,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3971","new_time":"2025-04-22 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"553","new_time":"2025-04-22 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"554","new_time":"2025-04-22 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"555","new_time":"2025-04-22 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"556","new_time":"2025-04-22 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3972","new_time":"2025-04-22 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"601","new_time":"2025-04-23 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"602","new_time":"2025-04-23 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"603","new_time":"2025-04-23 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"604","new_time":"2025-04-23 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"5785","new_time":"2025-04-23 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4019","new_time":"2025-04-24 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"649","new_time":"2025-04-24 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"650","new_time":"2025-04-24 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"651","new_time":"2025-04-24 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"652","new_time":"2025-04-24 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4020","new_time":"2025-04-24 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5650","new_time":"2025-04-24 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4047","new_time":"2025-04-25 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"673","new_time":"2025-04-25 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"674","new_time":"2025-04-25 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"675","new_time":"2025-04-25 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"676","new_time":"2025-04-25 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4091","new_time":"2025-04-28 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"697","new_time":"2025-04-28 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"698","new_time":"2025-04-28 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"699","new_time":"2025-04-28 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"700","new_time":"2025-04-28 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4092","new_time":"2025-04-28 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5788","new_time":"2025-04-28 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2647","new_time":"2025-04-28 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2649","new_time":"2025-04-28 20:45:00","duration":-225,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4103","new_time":"2025-04-29 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"721","new_time":"2025-04-29 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"722","new_time":"2025-04-29 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"723","new_time":"2025-04-29 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"724","new_time":"2025-04-29 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4104","new_time":"2025-04-29 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"745","new_time":"2025-04-30 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"746","new_time":"2025-04-30 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"747","new_time":"2025-04-30 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"748","new_time":"2025-04-30 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"4116","new_time":"2025-04-30 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5791","new_time":"2025-04-30 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2655","new_time":"2025-04-30 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4126","new_time":"2025-05-01 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"769","new_time":"2025-05-01 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"770","new_time":"2025-05-01 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"771","new_time":"2025-05-01 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"772","new_time":"2025-05-01 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4137","new_time":"2025-05-02 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"793","new_time":"2025-05-02 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"794","new_time":"2025-05-02 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"795","new_time":"2025-05-02 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"796","new_time":"2025-05-02 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4138","new_time":"2025-05-02 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2662","new_time":"2025-05-02 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4139","new_time":"2025-05-02 21:45:00","duration":-285,"reason":"Resolved scheduling conflict (with adjusted duration)"}]
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3605 to 2025-04-07 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 25 to 2025-04-07 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 26 to 2025-04-07 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 27 to 2025-04-07 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 28 to 2025-04-07 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3606 to 2025-04-07 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5755 to 2025-04-07 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3631 to 2025-04-08 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 73 to 2025-04-08 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 74 to 2025-04-08 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 75 to 2025-04-08 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 76 to 2025-04-08 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3632 to 2025-04-08 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3650 to 2025-04-09 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 121 to 2025-04-09 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 122 to 2025-04-09 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 123 to 2025-04-09 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 124 to 2025-04-09 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3651 to 2025-04-09 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5761 to 2025-04-09 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2570 to 2025-04-09 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3652 to 2025-04-09 21:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3675 to 2025-04-10 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 169 to 2025-04-10 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 170 to 2025-04-10 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 171 to 2025-04-10 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 172 to 2025-04-10 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3676 to 2025-04-10 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3700 to 2025-04-11 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 193 to 2025-04-11 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 194 to 2025-04-11 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 195 to 2025-04-11 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 196 to 2025-04-11 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3701 to 2025-04-11 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2581 to 2025-04-11 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3776 to 2025-04-14 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 265 to 2025-04-14 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 266 to 2025-04-14 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 267 to 2025-04-14 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 268 to 2025-04-14 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3777 to 2025-04-14 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5767 to 2025-04-14 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2590 to 2025-04-14 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2592 to 2025-04-14 20:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3803 to 2025-04-15 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 313 to 2025-04-15 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 314 to 2025-04-15 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 315 to 2025-04-15 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 316 to 2025-04-15 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3804 to 2025-04-15 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3828 to 2025-04-16 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 361 to 2025-04-16 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 362 to 2025-04-16 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 363 to 2025-04-16 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 364 to 2025-04-16 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3829 to 2025-04-16 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5773 to 2025-04-16 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 409 to 2025-04-17 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 410 to 2025-04-17 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 411 to 2025-04-17 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 412 to 2025-04-17 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3853 to 2025-04-17 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 433 to 2025-04-18 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 434 to 2025-04-18 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 435 to 2025-04-18 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 436 to 2025-04-18 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3875 to 2025-04-18 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 505 to 2025-04-21 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 506 to 2025-04-21 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 507 to 2025-04-21 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 508 to 2025-04-21 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5779 to 2025-04-21 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3951 to 2025-04-21 20:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3971 to 2025-04-22 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 553 to 2025-04-22 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 554 to 2025-04-22 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 555 to 2025-04-22 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 556 to 2025-04-22 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3972 to 2025-04-22 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 601 to 2025-04-23 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 602 to 2025-04-23 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 603 to 2025-04-23 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 604 to 2025-04-23 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5785 to 2025-04-23 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4019 to 2025-04-24 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 649 to 2025-04-24 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 650 to 2025-04-24 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 651 to 2025-04-24 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 652 to 2025-04-24 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4020 to 2025-04-24 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5650 to 2025-04-24 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4047 to 2025-04-25 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 673 to 2025-04-25 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 674 to 2025-04-25 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 675 to 2025-04-25 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 676 to 2025-04-25 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4091 to 2025-04-28 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 697 to 2025-04-28 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 698 to 2025-04-28 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 699 to 2025-04-28 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 700 to 2025-04-28 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4092 to 2025-04-28 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5788 to 2025-04-28 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2647 to 2025-04-28 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2649 to 2025-04-28 20:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4103 to 2025-04-29 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 721 to 2025-04-29 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 722 to 2025-04-29 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 723 to 2025-04-29 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 724 to 2025-04-29 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4104 to 2025-04-29 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 745 to 2025-04-30 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 746 to 2025-04-30 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 747 to 2025-04-30 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 748 to 2025-04-30 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4116 to 2025-04-30 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5791 to 2025-04-30 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2655 to 2025-04-30 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4126 to 2025-05-01 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 769 to 2025-05-01 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 770 to 2025-05-01 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 771 to 2025-05-01 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 772 to 2025-05-01 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4137 to 2025-05-02 09:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 793 to 2025-05-02 11:00:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 794 to 2025-05-02 12:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 795 to 2025-05-02 14:30:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 796 to 2025-05-02 16:15:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4138 to 2025-05-02 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2662 to 2025-05-02 17:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4139 to 2025-05-02 21:45:00
+[06-Apr-2025 01:45:15 Europe/Berlin] [DEBUG] Auto-applied 131 changes to the database
+[06-Apr-2025 01:45:16 Europe/Berlin] [2025-04-06 01:45:16] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:45:16 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 01:45:17 Europe/Berlin] [2025-04-06 01:45:17] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:45:17 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 01:54:41 Europe/Berlin] [2025-04-06 01:54:41] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:54:41 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 01:54:47 Europe/Berlin] [2025-04-06 01:54:47] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:54:47 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 01:55:02 Europe/Berlin] [2025-04-06 01:55:02] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:55:02 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 01:55:18 Europe/Berlin] [2025-04-06 01:55:18] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Starting optimization process
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preset":"conflicts","auto_apply":true}
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Received data: {"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02"],"preset":"conflicts","auto_apply":true}
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Selected preset: conflicts
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":30,"max_consecutive_meetings":2,"conflict_resolution_priority":"high","spacing_buffer":15,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-07
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-08
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-09
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-10
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-11
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-14
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-15
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-16
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-17
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-18
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-21
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-22
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-23
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-24
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-25
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-28
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-29
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-30
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-05-01
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-05-02
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Retrieved events count: 146
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] First event sample: {"id":"3599","user_id":"1","title":"Coffee Break","description":"Personal time","category_id":"7","start_date":"2025-04-07 07:00:00","end_date":"2025-04-07 08:00:00","all_day":"0","is_ai_optimized":"0","ai_description":null,"is_human_ai_altered":"0","preset_source":null,"created_at":"2025-04-06 01:54:46"}
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"3599","new_time":"2025-04-07 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"25","new_time":"2025-04-07 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"26","new_time":"2025-04-07 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"27","new_time":"2025-04-07 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"28","new_time":"2025-04-07 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5755","new_time":"2025-04-07 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2559","new_time":"2025-04-07 18:00:00","duration":-60,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"3622","new_time":"2025-04-08 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"73","new_time":"2025-04-08 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"74","new_time":"2025-04-08 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"75","new_time":"2025-04-08 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"76","new_time":"2025-04-08 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"121","new_time":"2025-04-09 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"122","new_time":"2025-04-09 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"123","new_time":"2025-04-09 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"124","new_time":"2025-04-09 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"5761","new_time":"2025-04-09 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2570","new_time":"2025-04-09 18:00:00","duration":-60,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"169","new_time":"2025-04-10 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"170","new_time":"2025-04-10 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"171","new_time":"2025-04-10 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"172","new_time":"2025-04-10 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3667","new_time":"2025-04-10 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5634","new_time":"2025-04-10 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3692","new_time":"2025-04-11 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"193","new_time":"2025-04-11 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"194","new_time":"2025-04-11 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"195","new_time":"2025-04-11 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"196","new_time":"2025-04-11 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3693","new_time":"2025-04-11 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3770","new_time":"2025-04-14 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"265","new_time":"2025-04-14 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"266","new_time":"2025-04-14 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"267","new_time":"2025-04-14 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"268","new_time":"2025-04-14 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3771","new_time":"2025-04-14 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5767","new_time":"2025-04-14 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2585","new_time":"2025-04-14 18:00:00","duration":-60,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"3794","new_time":"2025-04-15 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"313","new_time":"2025-04-15 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"314","new_time":"2025-04-15 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"315","new_time":"2025-04-15 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"316","new_time":"2025-04-15 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3795","new_time":"2025-04-15 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"361","new_time":"2025-04-16 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"362","new_time":"2025-04-16 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"363","new_time":"2025-04-16 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"364","new_time":"2025-04-16 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3821","new_time":"2025-04-16 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5773","new_time":"2025-04-16 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2597","new_time":"2025-04-16 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2598","new_time":"2025-04-16 18:00:00","duration":-60,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"3850","new_time":"2025-04-17 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"409","new_time":"2025-04-17 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"410","new_time":"2025-04-17 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"411","new_time":"2025-04-17 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"412","new_time":"2025-04-17 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3851","new_time":"2025-04-17 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3875","new_time":"2025-04-18 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"433","new_time":"2025-04-18 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"434","new_time":"2025-04-18 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"435","new_time":"2025-04-18 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"436","new_time":"2025-04-18 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2601","new_time":"2025-04-18 18:00:00","duration":-60,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"505","new_time":"2025-04-21 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"506","new_time":"2025-04-21 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"507","new_time":"2025-04-21 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"508","new_time":"2025-04-21 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3950","new_time":"2025-04-21 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5779","new_time":"2025-04-21 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3971","new_time":"2025-04-22 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"553","new_time":"2025-04-22 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"554","new_time":"2025-04-22 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"555","new_time":"2025-04-22 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"556","new_time":"2025-04-22 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3972","new_time":"2025-04-22 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5649","new_time":"2025-04-22 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"601","new_time":"2025-04-23 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"602","new_time":"2025-04-23 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"603","new_time":"2025-04-23 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"604","new_time":"2025-04-23 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3993","new_time":"2025-04-23 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5785","new_time":"2025-04-23 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5883","new_time":"2025-04-24 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"4014","new_time":"2025-04-24 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"649","new_time":"2025-04-24 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"650","new_time":"2025-04-24 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"651","new_time":"2025-04-24 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"652","new_time":"2025-04-24 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4015","new_time":"2025-04-24 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"673","new_time":"2025-04-25 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"674","new_time":"2025-04-25 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"675","new_time":"2025-04-25 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"676","new_time":"2025-04-25 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"4045","new_time":"2025-04-25 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2628","new_time":"2025-04-25 18:00:00","duration":-60,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"4102","new_time":"2025-04-28 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"697","new_time":"2025-04-28 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"698","new_time":"2025-04-28 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"699","new_time":"2025-04-28 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"700","new_time":"2025-04-28 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4103","new_time":"2025-04-28 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5788","new_time":"2025-04-28 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"721","new_time":"2025-04-29 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"722","new_time":"2025-04-29 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"723","new_time":"2025-04-29 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"724","new_time":"2025-04-29 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"4116","new_time":"2025-04-29 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5653","new_time":"2025-04-29 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4127","new_time":"2025-04-30 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"745","new_time":"2025-04-30 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"746","new_time":"2025-04-30 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"747","new_time":"2025-04-30 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"748","new_time":"2025-04-30 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5791","new_time":"2025-04-30 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2637","new_time":"2025-04-30 19:00:00","duration":-120,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"4141","new_time":"2025-05-01 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"769","new_time":"2025-05-01 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"770","new_time":"2025-05-01 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"771","new_time":"2025-05-01 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"772","new_time":"2025-05-01 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4142","new_time":"2025-05-01 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5655","new_time":"2025-05-01 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4157","new_time":"2025-05-02 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"793","new_time":"2025-05-02 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"794","new_time":"2025-05-02 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"795","new_time":"2025-05-02 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"796","new_time":"2025-05-02 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4158","new_time":"2025-05-02 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2643","new_time":"2025-05-02 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2644","new_time":"2025-05-02 19:00:00","duration":-120,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"}]
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3599 to 2025-04-07 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 25 to 2025-04-07 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 26 to 2025-04-07 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 27 to 2025-04-07 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 28 to 2025-04-07 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5755 to 2025-04-07 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 2559 to 2025-04-07 18:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3622 to 2025-04-08 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 73 to 2025-04-08 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 74 to 2025-04-08 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 75 to 2025-04-08 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 76 to 2025-04-08 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 121 to 2025-04-09 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 122 to 2025-04-09 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 123 to 2025-04-09 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 124 to 2025-04-09 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5761 to 2025-04-09 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 2570 to 2025-04-09 18:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 169 to 2025-04-10 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 170 to 2025-04-10 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 171 to 2025-04-10 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 172 to 2025-04-10 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3667 to 2025-04-10 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5634 to 2025-04-10 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3692 to 2025-04-11 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 193 to 2025-04-11 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 194 to 2025-04-11 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 195 to 2025-04-11 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 196 to 2025-04-11 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3693 to 2025-04-11 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3770 to 2025-04-14 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 265 to 2025-04-14 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 266 to 2025-04-14 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 267 to 2025-04-14 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 268 to 2025-04-14 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3771 to 2025-04-14 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5767 to 2025-04-14 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 2585 to 2025-04-14 18:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3794 to 2025-04-15 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 313 to 2025-04-15 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 314 to 2025-04-15 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 315 to 2025-04-15 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 316 to 2025-04-15 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3795 to 2025-04-15 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 361 to 2025-04-16 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 362 to 2025-04-16 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 363 to 2025-04-16 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 364 to 2025-04-16 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3821 to 2025-04-16 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5773 to 2025-04-16 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 2597 to 2025-04-16 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 2598 to 2025-04-16 18:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3850 to 2025-04-17 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 409 to 2025-04-17 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 410 to 2025-04-17 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 411 to 2025-04-17 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 412 to 2025-04-17 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3851 to 2025-04-17 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3875 to 2025-04-18 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 433 to 2025-04-18 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 434 to 2025-04-18 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 435 to 2025-04-18 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 436 to 2025-04-18 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 2601 to 2025-04-18 18:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 505 to 2025-04-21 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 506 to 2025-04-21 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 507 to 2025-04-21 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 508 to 2025-04-21 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3950 to 2025-04-21 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5779 to 2025-04-21 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3971 to 2025-04-22 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 553 to 2025-04-22 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 554 to 2025-04-22 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 555 to 2025-04-22 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 556 to 2025-04-22 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3972 to 2025-04-22 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5649 to 2025-04-22 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 601 to 2025-04-23 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 602 to 2025-04-23 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 603 to 2025-04-23 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 604 to 2025-04-23 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 3993 to 2025-04-23 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5785 to 2025-04-23 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5883 to 2025-04-24 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 4014 to 2025-04-24 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 649 to 2025-04-24 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 650 to 2025-04-24 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 651 to 2025-04-24 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 652 to 2025-04-24 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 4015 to 2025-04-24 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 673 to 2025-04-25 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 674 to 2025-04-25 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 675 to 2025-04-25 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 676 to 2025-04-25 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 4045 to 2025-04-25 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 2628 to 2025-04-25 18:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 4102 to 2025-04-28 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 697 to 2025-04-28 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 698 to 2025-04-28 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 699 to 2025-04-28 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 700 to 2025-04-28 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 4103 to 2025-04-28 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5788 to 2025-04-28 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 721 to 2025-04-29 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 722 to 2025-04-29 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 723 to 2025-04-29 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 724 to 2025-04-29 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 4116 to 2025-04-29 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5653 to 2025-04-29 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 4127 to 2025-04-30 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 745 to 2025-04-30 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 746 to 2025-04-30 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 747 to 2025-04-30 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 748 to 2025-04-30 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5791 to 2025-04-30 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 2637 to 2025-04-30 19:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 4141 to 2025-05-01 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 769 to 2025-05-01 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 770 to 2025-05-01 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 771 to 2025-05-01 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 772 to 2025-05-01 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 4142 to 2025-05-01 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 5655 to 2025-05-01 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 4157 to 2025-05-02 09:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 793 to 2025-05-02 11:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 794 to 2025-05-02 12:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 795 to 2025-05-02 14:30:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 796 to 2025-05-02 16:15:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 4158 to 2025-05-02 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 2643 to 2025-05-02 17:45:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Successfully updated event ID 2644 to 2025-05-02 19:00:00
+[06-Apr-2025 01:55:18 Europe/Berlin] [DEBUG] Auto-applied 131 changes to the database
+[06-Apr-2025 01:55:20 Europe/Berlin] [2025-04-06 01:55:20] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:55:20 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 01:55:20 Europe/Berlin] [2025-04-06 01:55:20] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 01:55:20 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 02:01:04 Europe/Berlin] [2025-04-06 02:01:04] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 02:01:04 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 02:01:11 Europe/Berlin] [2025-04-06 02:01:11] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 02:01:11 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 02:01:18 Europe/Berlin] [2025-04-06 02:01:18] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 02:01:18 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 02:01:22 Europe/Berlin] [2025-04-06 02:01:22] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 02:01:22 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:12:52 Europe/Berlin] [2025-04-06 03:12:52] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:12:52 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:12:59 Europe/Berlin] [2025-04-06 03:12:59] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:12:59 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:13:05 Europe/Berlin] [2025-04-06 03:13:05] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:13:05 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:13:15 Europe/Berlin] [2025-04-06 03:13:15] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Starting optimization process
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"evening","breakDuration":"30","sessionLength":"30","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-05"],"preset":"conflicts","auto_apply":true}
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Received data: {"studyTime":"evening","breakDuration":"30","sessionLength":"30","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-05"],"preset":"conflicts","auto_apply":true}
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Selected preset: conflicts
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":30,"max_consecutive_meetings":2,"conflict_resolution_priority":"high","spacing_buffer":15,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-07
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-08
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-09
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-10
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-11
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 10 events for day: 2025-04-14
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-15
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-16
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-17
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-18
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-21
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-22
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-23
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-24
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-25
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-28
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-29
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-30
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-05-01
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-05-02
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-05-05
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Retrieved events count: 156
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] First event sample: {"id":"25","user_id":"1","title":"Data Structures","description":"Regular class session","category_id":"1","start_date":"2025-04-07 08:00:00","end_date":"2025-04-07 09:00:00","all_day":"0","is_ai_optimized":"0","ai_description":null,"is_human_ai_altered":"0","preset_source":null,"created_at":"2025-04-06 03:13:03"}
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"25","new_time":"2025-04-07 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"26","new_time":"2025-04-07 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"27","new_time":"2025-04-07 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"28","new_time":"2025-04-07 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"5755","new_time":"2025-04-07 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3634","new_time":"2025-04-08 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"73","new_time":"2025-04-08 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"74","new_time":"2025-04-08 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"75","new_time":"2025-04-08 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"76","new_time":"2025-04-08 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3657","new_time":"2025-04-09 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"121","new_time":"2025-04-09 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"122","new_time":"2025-04-09 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"123","new_time":"2025-04-09 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"124","new_time":"2025-04-09 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3658","new_time":"2025-04-09 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5761","new_time":"2025-04-09 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2567","new_time":"2025-04-09 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"169","new_time":"2025-04-10 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"170","new_time":"2025-04-10 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"171","new_time":"2025-04-10 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"172","new_time":"2025-04-10 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"5636","new_time":"2025-04-10 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3704","new_time":"2025-04-11 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"193","new_time":"2025-04-11 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"194","new_time":"2025-04-11 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"195","new_time":"2025-04-11 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"196","new_time":"2025-04-11 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3705","new_time":"2025-04-11 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2576","new_time":"2025-04-11 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3772","new_time":"2025-04-14 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"265","new_time":"2025-04-14 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"266","new_time":"2025-04-14 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"267","new_time":"2025-04-14 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"268","new_time":"2025-04-14 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3773","new_time":"2025-04-14 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5767","new_time":"2025-04-14 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2584","new_time":"2025-04-14 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2585","new_time":"2025-04-14 18:00:00","duration":-60,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"2586","new_time":"2025-04-14 19:00:00","duration":-120,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"313","new_time":"2025-04-15 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"314","new_time":"2025-04-15 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"315","new_time":"2025-04-15 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"316","new_time":"2025-04-15 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3802","new_time":"2025-04-15 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3826","new_time":"2025-04-16 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"361","new_time":"2025-04-16 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"362","new_time":"2025-04-16 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"363","new_time":"2025-04-16 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"364","new_time":"2025-04-16 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3827","new_time":"2025-04-16 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5773","new_time":"2025-04-16 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2599","new_time":"2025-04-16 18:00:00","duration":-60,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"3855","new_time":"2025-04-17 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"409","new_time":"2025-04-17 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"410","new_time":"2025-04-17 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"411","new_time":"2025-04-17 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"412","new_time":"2025-04-17 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3856","new_time":"2025-04-17 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5647","new_time":"2025-04-17 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3875","new_time":"2025-04-18 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"433","new_time":"2025-04-18 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"434","new_time":"2025-04-18 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"435","new_time":"2025-04-18 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"436","new_time":"2025-04-18 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2606","new_time":"2025-04-18 19:00:00","duration":-120,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"3949","new_time":"2025-04-21 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"505","new_time":"2025-04-21 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"506","new_time":"2025-04-21 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"507","new_time":"2025-04-21 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"508","new_time":"2025-04-21 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3950","new_time":"2025-04-21 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5779","new_time":"2025-04-21 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2620","new_time":"2025-04-21 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3976","new_time":"2025-04-22 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"553","new_time":"2025-04-22 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"554","new_time":"2025-04-22 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"555","new_time":"2025-04-22 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"556","new_time":"2025-04-22 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3977","new_time":"2025-04-22 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5652","new_time":"2025-04-22 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3997","new_time":"2025-04-23 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"601","new_time":"2025-04-23 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"602","new_time":"2025-04-23 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"603","new_time":"2025-04-23 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"604","new_time":"2025-04-23 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3998","new_time":"2025-04-23 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5785","new_time":"2025-04-23 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2629","new_time":"2025-04-23 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4024","new_time":"2025-04-24 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"649","new_time":"2025-04-24 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"650","new_time":"2025-04-24 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"651","new_time":"2025-04-24 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"652","new_time":"2025-04-24 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4025","new_time":"2025-04-24 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"673","new_time":"2025-04-25 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"674","new_time":"2025-04-25 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"675","new_time":"2025-04-25 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"676","new_time":"2025-04-25 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"4054","new_time":"2025-04-25 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2643","new_time":"2025-04-25 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2644","new_time":"2025-04-25 19:00:00","duration":-120,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"4100","new_time":"2025-04-28 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"697","new_time":"2025-04-28 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"698","new_time":"2025-04-28 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"699","new_time":"2025-04-28 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"700","new_time":"2025-04-28 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4101","new_time":"2025-04-28 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5788","new_time":"2025-04-28 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2651","new_time":"2025-04-28 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4116","new_time":"2025-04-29 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"721","new_time":"2025-04-29 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"722","new_time":"2025-04-29 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"723","new_time":"2025-04-29 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"724","new_time":"2025-04-29 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5656","new_time":"2025-04-29 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4128","new_time":"2025-04-30 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"745","new_time":"2025-04-30 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"746","new_time":"2025-04-30 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"747","new_time":"2025-04-30 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"748","new_time":"2025-04-30 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"4129","new_time":"2025-04-30 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5791","new_time":"2025-04-30 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2657","new_time":"2025-04-30 18:00:00","duration":-60,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"769","new_time":"2025-05-01 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"770","new_time":"2025-05-01 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"771","new_time":"2025-05-01 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"772","new_time":"2025-05-01 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"4142","new_time":"2025-05-01 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"793","new_time":"2025-05-02 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"794","new_time":"2025-05-02 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"795","new_time":"2025-05-02 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"796","new_time":"2025-05-02 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"4151","new_time":"2025-05-02 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2664","new_time":"2025-05-02 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2665","new_time":"2025-05-02 19:00:00","duration":-120,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"817","new_time":"2025-05-05 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"818","new_time":"2025-05-05 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"819","new_time":"2025-05-05 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"820","new_time":"2025-05-05 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"4189","new_time":"2025-05-05 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5794","new_time":"2025-05-05 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2670","new_time":"2025-05-05 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"}]
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 25 to 2025-04-07 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 26 to 2025-04-07 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 27 to 2025-04-07 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 28 to 2025-04-07 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5755 to 2025-04-07 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3634 to 2025-04-08 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 73 to 2025-04-08 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 74 to 2025-04-08 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 75 to 2025-04-08 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 76 to 2025-04-08 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3657 to 2025-04-09 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 121 to 2025-04-09 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 122 to 2025-04-09 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 123 to 2025-04-09 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 124 to 2025-04-09 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3658 to 2025-04-09 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5761 to 2025-04-09 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2567 to 2025-04-09 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 169 to 2025-04-10 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 170 to 2025-04-10 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 171 to 2025-04-10 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 172 to 2025-04-10 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5636 to 2025-04-10 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3704 to 2025-04-11 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 193 to 2025-04-11 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 194 to 2025-04-11 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 195 to 2025-04-11 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 196 to 2025-04-11 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3705 to 2025-04-11 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2576 to 2025-04-11 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3772 to 2025-04-14 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 265 to 2025-04-14 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 266 to 2025-04-14 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 267 to 2025-04-14 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 268 to 2025-04-14 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3773 to 2025-04-14 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5767 to 2025-04-14 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2584 to 2025-04-14 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2585 to 2025-04-14 18:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2586 to 2025-04-14 19:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 313 to 2025-04-15 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 314 to 2025-04-15 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 315 to 2025-04-15 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 316 to 2025-04-15 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3802 to 2025-04-15 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3826 to 2025-04-16 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 361 to 2025-04-16 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 362 to 2025-04-16 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 363 to 2025-04-16 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 364 to 2025-04-16 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3827 to 2025-04-16 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5773 to 2025-04-16 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2599 to 2025-04-16 18:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3855 to 2025-04-17 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 409 to 2025-04-17 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 410 to 2025-04-17 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 411 to 2025-04-17 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 412 to 2025-04-17 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3856 to 2025-04-17 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5647 to 2025-04-17 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3875 to 2025-04-18 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 433 to 2025-04-18 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 434 to 2025-04-18 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 435 to 2025-04-18 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 436 to 2025-04-18 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2606 to 2025-04-18 19:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3949 to 2025-04-21 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 505 to 2025-04-21 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 506 to 2025-04-21 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 507 to 2025-04-21 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 508 to 2025-04-21 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3950 to 2025-04-21 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5779 to 2025-04-21 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2620 to 2025-04-21 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3976 to 2025-04-22 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 553 to 2025-04-22 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 554 to 2025-04-22 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 555 to 2025-04-22 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 556 to 2025-04-22 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3977 to 2025-04-22 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5652 to 2025-04-22 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3997 to 2025-04-23 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 601 to 2025-04-23 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 602 to 2025-04-23 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 603 to 2025-04-23 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 604 to 2025-04-23 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 3998 to 2025-04-23 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5785 to 2025-04-23 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2629 to 2025-04-23 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4024 to 2025-04-24 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 649 to 2025-04-24 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 650 to 2025-04-24 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 651 to 2025-04-24 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 652 to 2025-04-24 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4025 to 2025-04-24 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 673 to 2025-04-25 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 674 to 2025-04-25 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 675 to 2025-04-25 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 676 to 2025-04-25 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4054 to 2025-04-25 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2643 to 2025-04-25 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2644 to 2025-04-25 19:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4100 to 2025-04-28 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 697 to 2025-04-28 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 698 to 2025-04-28 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 699 to 2025-04-28 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 700 to 2025-04-28 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4101 to 2025-04-28 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5788 to 2025-04-28 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2651 to 2025-04-28 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4116 to 2025-04-29 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 721 to 2025-04-29 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 722 to 2025-04-29 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 723 to 2025-04-29 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 724 to 2025-04-29 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5656 to 2025-04-29 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4128 to 2025-04-30 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 745 to 2025-04-30 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 746 to 2025-04-30 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 747 to 2025-04-30 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 748 to 2025-04-30 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4129 to 2025-04-30 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5791 to 2025-04-30 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2657 to 2025-04-30 18:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 769 to 2025-05-01 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 770 to 2025-05-01 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 771 to 2025-05-01 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 772 to 2025-05-01 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4142 to 2025-05-01 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 793 to 2025-05-02 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 794 to 2025-05-02 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 795 to 2025-05-02 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 796 to 2025-05-02 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4151 to 2025-05-02 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2664 to 2025-05-02 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2665 to 2025-05-02 19:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 817 to 2025-05-05 09:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 818 to 2025-05-05 11:00:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 819 to 2025-05-05 12:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 820 to 2025-05-05 14:30:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 4189 to 2025-05-05 16:15:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 5794 to 2025-05-05 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Successfully updated event ID 2670 to 2025-05-05 17:45:00
+[06-Apr-2025 03:13:15 Europe/Berlin] [DEBUG] Auto-applied 143 changes to the database
+[06-Apr-2025 03:13:16 Europe/Berlin] [2025-04-06 03:13:16] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:13:16 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:13:17 Europe/Berlin] [2025-04-06 03:13:17] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:13:17 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:13:21 Europe/Berlin] [2025-04-06 03:13:21] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:13:21 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:13:32 Europe/Berlin] [2025-04-06 03:13:32] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:13:32 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:13:54 Europe/Berlin] [2025-04-06 03:13:54] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:13:54 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:14:04 Europe/Berlin] [2025-04-06 03:14:04] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:14:04 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:14:12 Europe/Berlin] [2025-04-06 03:14:12] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Starting optimization process
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"evening","breakDuration":"30","sessionLength":"120","priority":"deadlines","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-05"],"preset":"conflicts","auto_apply":true}
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Received data: {"studyTime":"evening","breakDuration":"30","sessionLength":"120","priority":"deadlines","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-05"],"preset":"conflicts","auto_apply":true}
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Selected preset: conflicts
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":30,"max_consecutive_meetings":2,"conflict_resolution_priority":"high","spacing_buffer":15,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-07
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-08
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-09
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-10
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-11
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-14
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-15
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-16
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-17
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-18
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-21
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-22
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-23
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-24
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-25
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-28
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-29
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-30
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-05-01
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-05-02
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-05-05
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Retrieved events count: 150
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] First event sample: {"id":"5626","user_id":"1","title":"Conference","description":"Important all-day event","category_id":"8","start_date":"2025-04-07 00:00:00","end_date":null,"all_day":"1","is_ai_optimized":"0","ai_description":null,"is_human_ai_altered":"0","preset_source":null,"created_at":"2025-04-06 03:13:28"}
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"5626","new_time":"2025-04-07 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3348","new_time":"2025-04-07 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"25","new_time":"2025-04-07 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"26","new_time":"2025-04-07 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"27","new_time":"2025-04-07 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"28","new_time":"2025-04-07 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5499","new_time":"2025-04-07 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2559","new_time":"2025-04-07 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3376","new_time":"2025-04-08 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"73","new_time":"2025-04-08 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"74","new_time":"2025-04-08 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"75","new_time":"2025-04-08 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"76","new_time":"2025-04-08 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3400","new_time":"2025-04-09 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"121","new_time":"2025-04-09 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"122","new_time":"2025-04-09 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"123","new_time":"2025-04-09 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"124","new_time":"2025-04-09 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5505","new_time":"2025-04-09 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3425","new_time":"2025-04-10 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"169","new_time":"2025-04-10 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"170","new_time":"2025-04-10 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"171","new_time":"2025-04-10 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"172","new_time":"2025-04-10 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3426","new_time":"2025-04-10 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3454","new_time":"2025-04-11 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"193","new_time":"2025-04-11 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"194","new_time":"2025-04-11 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"195","new_time":"2025-04-11 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"196","new_time":"2025-04-11 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3455","new_time":"2025-04-11 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2586","new_time":"2025-04-11 18:00:00","duration":-60,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"265","new_time":"2025-04-14 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"266","new_time":"2025-04-14 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"267","new_time":"2025-04-14 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"268","new_time":"2025-04-14 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3538","new_time":"2025-04-14 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5511","new_time":"2025-04-14 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2596","new_time":"2025-04-14 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3561","new_time":"2025-04-15 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"313","new_time":"2025-04-15 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"314","new_time":"2025-04-15 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"315","new_time":"2025-04-15 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"316","new_time":"2025-04-15 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3562","new_time":"2025-04-15 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5384","new_time":"2025-04-15 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"361","new_time":"2025-04-16 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"362","new_time":"2025-04-16 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"363","new_time":"2025-04-16 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"364","new_time":"2025-04-16 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"5517","new_time":"2025-04-16 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2612","new_time":"2025-04-16 19:00:00","duration":-120,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"3611","new_time":"2025-04-17 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"409","new_time":"2025-04-17 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"410","new_time":"2025-04-17 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"411","new_time":"2025-04-17 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"412","new_time":"2025-04-17 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3612","new_time":"2025-04-17 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3640","new_time":"2025-04-18 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"433","new_time":"2025-04-18 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"434","new_time":"2025-04-18 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"435","new_time":"2025-04-18 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"436","new_time":"2025-04-18 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3641","new_time":"2025-04-18 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3716","new_time":"2025-04-21 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"505","new_time":"2025-04-21 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"506","new_time":"2025-04-21 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"507","new_time":"2025-04-21 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"508","new_time":"2025-04-21 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3717","new_time":"2025-04-21 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5523","new_time":"2025-04-21 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2632","new_time":"2025-04-21 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"553","new_time":"2025-04-22 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"554","new_time":"2025-04-22 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"555","new_time":"2025-04-22 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"556","new_time":"2025-04-22 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3742","new_time":"2025-04-22 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3768","new_time":"2025-04-23 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"601","new_time":"2025-04-23 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"602","new_time":"2025-04-23 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"603","new_time":"2025-04-23 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"604","new_time":"2025-04-23 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3769","new_time":"2025-04-23 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5529","new_time":"2025-04-23 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2643","new_time":"2025-04-23 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3794","new_time":"2025-04-24 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"649","new_time":"2025-04-24 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"650","new_time":"2025-04-24 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"651","new_time":"2025-04-24 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"652","new_time":"2025-04-24 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3816","new_time":"2025-04-25 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"673","new_time":"2025-04-25 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"674","new_time":"2025-04-25 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"675","new_time":"2025-04-25 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"676","new_time":"2025-04-25 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3817","new_time":"2025-04-25 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2650","new_time":"2025-04-25 18:00:00","duration":-60,"reason":"Split long study session into shorter focused blocks (with adjusted duration)"},{"event_id":"3865","new_time":"2025-04-28 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"697","new_time":"2025-04-28 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"698","new_time":"2025-04-28 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"699","new_time":"2025-04-28 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"700","new_time":"2025-04-28 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3866","new_time":"2025-04-28 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5532","new_time":"2025-04-28 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"721","new_time":"2025-04-29 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"722","new_time":"2025-04-29 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"723","new_time":"2025-04-29 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"724","new_time":"2025-04-29 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"3878","new_time":"2025-04-29 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"745","new_time":"2025-04-30 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"746","new_time":"2025-04-30 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"747","new_time":"2025-04-30 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"748","new_time":"2025-04-30 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"5535","new_time":"2025-04-30 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"2658","new_time":"2025-04-30 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3902","new_time":"2025-05-01 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"769","new_time":"2025-05-01 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"770","new_time":"2025-05-01 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"771","new_time":"2025-05-01 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"772","new_time":"2025-05-01 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3903","new_time":"2025-05-01 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3917","new_time":"2025-05-02 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"793","new_time":"2025-05-02 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"794","new_time":"2025-05-02 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"795","new_time":"2025-05-02 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"796","new_time":"2025-05-02 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3918","new_time":"2025-05-02 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3956","new_time":"2025-05-05 09:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"817","new_time":"2025-05-05 11:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"818","new_time":"2025-05-05 12:45:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"819","new_time":"2025-05-05 14:30:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"820","new_time":"2025-05-05 16:15:00","duration":45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"3957","new_time":"2025-05-05 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"},{"event_id":"5538","new_time":"2025-05-05 17:45:00","duration":-45,"reason":"Resolved scheduling conflict (with adjusted duration)"}]
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 5626 to 2025-04-07 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3348 to 2025-04-07 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 25 to 2025-04-07 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 26 to 2025-04-07 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 27 to 2025-04-07 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 28 to 2025-04-07 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 5499 to 2025-04-07 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 2559 to 2025-04-07 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3376 to 2025-04-08 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 73 to 2025-04-08 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 74 to 2025-04-08 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 75 to 2025-04-08 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 76 to 2025-04-08 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3400 to 2025-04-09 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 121 to 2025-04-09 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 122 to 2025-04-09 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 123 to 2025-04-09 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 124 to 2025-04-09 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 5505 to 2025-04-09 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3425 to 2025-04-10 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 169 to 2025-04-10 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 170 to 2025-04-10 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 171 to 2025-04-10 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 172 to 2025-04-10 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3426 to 2025-04-10 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3454 to 2025-04-11 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 193 to 2025-04-11 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 194 to 2025-04-11 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 195 to 2025-04-11 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 196 to 2025-04-11 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3455 to 2025-04-11 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 2586 to 2025-04-11 18:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 265 to 2025-04-14 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 266 to 2025-04-14 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 267 to 2025-04-14 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 268 to 2025-04-14 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3538 to 2025-04-14 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 5511 to 2025-04-14 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 2596 to 2025-04-14 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3561 to 2025-04-15 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 313 to 2025-04-15 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 314 to 2025-04-15 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 315 to 2025-04-15 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 316 to 2025-04-15 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3562 to 2025-04-15 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 5384 to 2025-04-15 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 361 to 2025-04-16 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 362 to 2025-04-16 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 363 to 2025-04-16 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 364 to 2025-04-16 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 5517 to 2025-04-16 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 2612 to 2025-04-16 19:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3611 to 2025-04-17 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 409 to 2025-04-17 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 410 to 2025-04-17 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 411 to 2025-04-17 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 412 to 2025-04-17 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3612 to 2025-04-17 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3640 to 2025-04-18 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 433 to 2025-04-18 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 434 to 2025-04-18 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 435 to 2025-04-18 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 436 to 2025-04-18 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3641 to 2025-04-18 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3716 to 2025-04-21 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 505 to 2025-04-21 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 506 to 2025-04-21 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 507 to 2025-04-21 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 508 to 2025-04-21 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3717 to 2025-04-21 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 5523 to 2025-04-21 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 2632 to 2025-04-21 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 553 to 2025-04-22 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 554 to 2025-04-22 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 555 to 2025-04-22 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 556 to 2025-04-22 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3742 to 2025-04-22 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3768 to 2025-04-23 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 601 to 2025-04-23 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 602 to 2025-04-23 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 603 to 2025-04-23 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 604 to 2025-04-23 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3769 to 2025-04-23 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 5529 to 2025-04-23 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 2643 to 2025-04-23 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3794 to 2025-04-24 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 649 to 2025-04-24 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 650 to 2025-04-24 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 651 to 2025-04-24 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 652 to 2025-04-24 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3816 to 2025-04-25 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 673 to 2025-04-25 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 674 to 2025-04-25 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 675 to 2025-04-25 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 676 to 2025-04-25 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3817 to 2025-04-25 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 2650 to 2025-04-25 18:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3865 to 2025-04-28 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 697 to 2025-04-28 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 698 to 2025-04-28 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 699 to 2025-04-28 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 700 to 2025-04-28 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3866 to 2025-04-28 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 5532 to 2025-04-28 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 721 to 2025-04-29 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 722 to 2025-04-29 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 723 to 2025-04-29 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 724 to 2025-04-29 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3878 to 2025-04-29 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 745 to 2025-04-30 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 746 to 2025-04-30 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 747 to 2025-04-30 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 748 to 2025-04-30 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 5535 to 2025-04-30 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 2658 to 2025-04-30 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3902 to 2025-05-01 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 769 to 2025-05-01 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 770 to 2025-05-01 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 771 to 2025-05-01 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 772 to 2025-05-01 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3903 to 2025-05-01 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3917 to 2025-05-02 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 793 to 2025-05-02 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 794 to 2025-05-02 12:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 795 to 2025-05-02 14:30:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 796 to 2025-05-02 16:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3918 to 2025-05-02 17:45:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 3956 to 2025-05-05 09:15:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 817 to 2025-05-05 11:00:00
+[06-Apr-2025 03:14:12 Europe/Berlin] [DEBUG] Successfully updated event ID 818 to 2025-05-05 12:45:00
+[06-Apr-2025 03:14:13 Europe/Berlin] [DEBUG] Successfully updated event ID 819 to 2025-05-05 14:30:00
+[06-Apr-2025 03:14:13 Europe/Berlin] [DEBUG] Successfully updated event ID 820 to 2025-05-05 16:15:00
+[06-Apr-2025 03:14:13 Europe/Berlin] [DEBUG] Successfully updated event ID 3957 to 2025-05-05 17:45:00
+[06-Apr-2025 03:14:13 Europe/Berlin] [DEBUG] Successfully updated event ID 5538 to 2025-05-05 17:45:00
+[06-Apr-2025 03:14:13 Europe/Berlin] [DEBUG] Auto-applied 134 changes to the database
+[06-Apr-2025 03:14:14 Europe/Berlin] [2025-04-06 03:14:14] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:14:14 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:14:14 Europe/Berlin] [2025-04-06 03:14:14] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:14:14 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:14:39 Europe/Berlin] [2025-04-06 03:14:39] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:14:39 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:14:53 Europe/Berlin] [2025-04-06 03:14:53] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Starting optimization process
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines","autoApply":"on","days":["2025-04-06","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05"],"preset":"busy_week","auto_apply":true}
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Received data: {"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines","autoApply":"on","days":["2025-04-06","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05"],"preset":"busy_week","auto_apply":true}
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Selected preset: busy_week
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":15,"max_consecutive_meetings":3,"preferred_meeting_duration":45,"focus_block_duration":90,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-06
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-07
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-08
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-09
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-10
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-11
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-12
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-13
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-14
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-15
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-16
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-17
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-18
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-19
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-20
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-21
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-22
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-23
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-24
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-25
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-26
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-27
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-28
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-29
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-30
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-05-01
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-05-02
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-03
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-05-04
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-05-05
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Retrieved events count: 169
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] First event sample: {"id":"3325","user_id":"1","title":"Reading","description":"Personal time","category_id":"7","start_date":"2025-04-06 07:00:00","end_date":"2025-04-06 08:00:00","all_day":"0","is_ai_optimized":"0","ai_description":null,"is_human_ai_altered":"0","preset_source":null,"created_at":"2025-04-06 03:13:28"}
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"3326","new_time":"2025-04-06 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3401","new_time":"2025-04-09 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3427","new_time":"2025-04-10 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"2586","new_time":"2025-04-11 17:30:00","duration":-60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3456","new_time":"2025-04-11 17:00:00","duration":0,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3483","new_time":"2025-04-12 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3484","new_time":"2025-04-12 10:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3513","new_time":"2025-04-13 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3563","new_time":"2025-04-15 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"2612","new_time":"2025-04-16 17:30:00","duration":-120,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3590","new_time":"2025-04-16 16:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3613","new_time":"2025-04-17 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3642","new_time":"2025-04-18 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3665","new_time":"2025-04-19 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3666","new_time":"2025-04-19 10:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3692","new_time":"2025-04-20 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3693","new_time":"2025-04-20 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3718","new_time":"2025-04-21 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3743","new_time":"2025-04-22 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3770","new_time":"2025-04-23 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3795","new_time":"2025-04-24 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"2650","new_time":"2025-04-25 17:30:00","duration":-60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3841","new_time":"2025-04-26 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3842","new_time":"2025-04-26 10:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3855","new_time":"2025-04-27 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3867","new_time":"2025-04-28 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3889","new_time":"2025-04-30 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3904","new_time":"2025-05-01 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3919","new_time":"2025-05-02 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3932","new_time":"2025-05-03 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3945","new_time":"2025-05-04 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3958","new_time":"2025-05-05 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"}]
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3326 to 2025-04-06 08:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3401 to 2025-04-09 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3427 to 2025-04-10 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 2586 to 2025-04-11 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3456 to 2025-04-11 17:00:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3483 to 2025-04-12 08:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3484 to 2025-04-12 10:00:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3513 to 2025-04-13 08:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3563 to 2025-04-15 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 2612 to 2025-04-16 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3590 to 2025-04-16 16:00:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3613 to 2025-04-17 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3642 to 2025-04-18 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3665 to 2025-04-19 08:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3666 to 2025-04-19 10:00:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3692 to 2025-04-20 09:15:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3693 to 2025-04-20 10:45:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3718 to 2025-04-21 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3743 to 2025-04-22 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3770 to 2025-04-23 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3795 to 2025-04-24 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 2650 to 2025-04-25 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3841 to 2025-04-26 08:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3842 to 2025-04-26 10:00:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3855 to 2025-04-27 09:15:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3867 to 2025-04-28 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3889 to 2025-04-30 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3904 to 2025-05-01 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3919 to 2025-05-02 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3932 to 2025-05-03 08:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3945 to 2025-05-04 09:15:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Successfully updated event ID 3958 to 2025-05-05 17:30:00
+[06-Apr-2025 03:14:53 Europe/Berlin] [DEBUG] Auto-applied 32 changes to the database
+[06-Apr-2025 03:14:53 Europe/Berlin] [2025-04-06 03:14:53] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:14:53 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:14:54 Europe/Berlin] [2025-04-06 03:14:54] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:14:54 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:15:07 Europe/Berlin] [2025-04-06 03:15:07] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:15:07 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:15:22 Europe/Berlin] [2025-04-06 03:15:22] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:15:22 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:15:23 Europe/Berlin] [2025-04-06 03:15:23] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:15:23 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:15:34 Europe/Berlin] [2025-04-06 03:15:34] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Starting optimization process
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"evening","breakDuration":"15","sessionLength":"240","priority":"deadlines","autoApply":"on","days":["2025-04-06","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05"],"preset":"busy_week","auto_apply":true}
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Received data: {"studyTime":"evening","breakDuration":"15","sessionLength":"240","priority":"deadlines","autoApply":"on","days":["2025-04-06","2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05"],"preset":"busy_week","auto_apply":true}
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Selected preset: busy_week
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":15,"max_consecutive_meetings":3,"preferred_meeting_duration":45,"focus_block_duration":90,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-06
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-07
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-08
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-09
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-10
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-11
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-12
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-13
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 10 events for day: 2025-04-14
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-15
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-16
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-17
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-18
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-19
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-20
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-21
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-22
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-04-23
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-04-24
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 10 events for day: 2025-04-25
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-26
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-27
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 8 events for day: 2025-04-28
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-04-29
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 10 events for day: 2025-04-30
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 6 events for day: 2025-05-01
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 7 events for day: 2025-05-02
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-03
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-04
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Found 9 events for day: 2025-05-05
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Retrieved events count: 178
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] First event sample: {"id":"3581","user_id":"1","title":"Lunch Break","description":"Personal time","category_id":"7","start_date":"2025-04-06 07:00:00","end_date":"2025-04-06 08:00:00","all_day":"0","is_ai_optimized":"0","ai_description":null,"is_human_ai_altered":"0","preset_source":null,"created_at":"2025-04-06 03:15:22"}
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"3582","new_time":"2025-04-06 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3583","new_time":"2025-04-06 10:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2559","new_time":"2025-04-08 09:00:00","duration":120,"reason":"Moved to 2025-04-08 to better balance workload"},{"event_id":"3609","new_time":"2025-04-07 15:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3636","new_time":"2025-04-08 12:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"5761","new_time":"2025-04-09 12:30:00","duration":120,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2569","new_time":"2025-04-09 15:00:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2570","new_time":"2025-04-10 09:00:00","duration":120,"reason":"Moved to 2025-04-10 to better balance workload"},{"event_id":"3664","new_time":"2025-04-09 17:00:00","duration":0,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3687","new_time":"2025-04-10 12:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3715","new_time":"2025-04-11 13:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3738","new_time":"2025-04-12 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3739","new_time":"2025-04-12 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3764","new_time":"2025-04-13 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2592","new_time":"2025-04-15 09:00:00","duration":120,"reason":"Moved to 2025-04-15 to better balance workload"},{"event_id":"2593","new_time":"2025-04-16 09:00:00","duration":120,"reason":"Moved to 2025-04-16 to better balance workload"},{"event_id":"3792","new_time":"2025-04-14 15:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"5635","new_time":"2025-04-15 13:30:00","duration":120,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3821","new_time":"2025-04-15 16:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"5773","new_time":"2025-04-16 12:30:00","duration":120,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2604","new_time":"2025-04-16 15:00:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3844","new_time":"2025-04-16 17:00:00","duration":0,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"3891","new_time":"2025-04-18 12:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3918","new_time":"2025-04-19 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3944","new_time":"2025-04-20 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2619","new_time":"2025-04-22 09:00:00","duration":120,"reason":"Moved to 2025-04-22 to better balance workload"},{"event_id":"3971","new_time":"2025-04-21 15:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"553","new_time":"2025-04-22 01:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"554","new_time":"2025-04-22 03:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"555","new_time":"2025-04-22 04:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"556","new_time":"2025-04-22 06:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"3991","new_time":"2025-04-22 07:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2631","new_time":"2025-04-24 09:00:00","duration":120,"reason":"Moved to 2025-04-24 to better balance workload"},{"event_id":"4022","new_time":"2025-04-23 15:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4048","new_time":"2025-04-24 13:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4068","new_time":"2025-04-25 01:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"673","new_time":"2025-04-25 03:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"674","new_time":"2025-04-25 04:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"675","new_time":"2025-04-25 06:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"676","new_time":"2025-04-25 07:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4069","new_time":"2025-04-25 09:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2644","new_time":"2025-04-25 10:30:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2645","new_time":"2025-04-26 09:00:00","duration":120,"reason":"Moved to 2025-04-26 to better balance workload"},{"event_id":"4070","new_time":"2025-04-25 12:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4097","new_time":"2025-04-26 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4111","new_time":"2025-04-27 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4125","new_time":"2025-04-28 15:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2655","new_time":"2025-05-01 09:00:00","duration":120,"reason":"Moved to 2025-05-01 to better balance workload"},{"event_id":"2656","new_time":"2025-05-02 09:00:00","duration":120,"reason":"Moved to 2025-05-02 to better balance workload"},{"event_id":"2657","new_time":"2025-05-01 09:00:00","duration":120,"reason":"Moved to 2025-05-01 to better balance workload"},{"event_id":"2662","new_time":"2025-05-02 13:30:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4190","new_time":"2025-05-03 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4203","new_time":"2025-05-04 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"4204","new_time":"2025-05-04 10:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2667","new_time":"2025-05-05 15:30:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"2668","new_time":"2025-05-06 09:00:00","duration":120,"reason":"Moved to 2025-05-06 to better balance workload"},{"event_id":"4215","new_time":"2025-05-05 17:30:00","duration":-30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"}]
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3582 to 2025-04-06 08:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3583 to 2025-04-06 10:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2559 to 2025-04-08 09:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3609 to 2025-04-07 15:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3636 to 2025-04-08 12:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 5761 to 2025-04-09 12:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2569 to 2025-04-09 15:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2570 to 2025-04-10 09:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3664 to 2025-04-09 17:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3687 to 2025-04-10 12:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3715 to 2025-04-11 13:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3738 to 2025-04-12 09:15:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3739 to 2025-04-12 10:45:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3764 to 2025-04-13 08:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2592 to 2025-04-15 09:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2593 to 2025-04-16 09:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3792 to 2025-04-14 15:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 5635 to 2025-04-15 13:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3821 to 2025-04-15 16:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 5773 to 2025-04-16 12:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2604 to 2025-04-16 15:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3844 to 2025-04-16 17:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3891 to 2025-04-18 12:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3918 to 2025-04-19 08:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3944 to 2025-04-20 08:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2619 to 2025-04-22 09:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3971 to 2025-04-21 15:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 553 to 2025-04-22 01:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 554 to 2025-04-22 03:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 555 to 2025-04-22 04:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 556 to 2025-04-22 06:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 3991 to 2025-04-22 07:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2631 to 2025-04-24 09:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 4022 to 2025-04-23 15:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 4048 to 2025-04-24 13:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 4068 to 2025-04-25 01:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 673 to 2025-04-25 03:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 674 to 2025-04-25 04:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 675 to 2025-04-25 06:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 676 to 2025-04-25 07:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 4069 to 2025-04-25 09:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2644 to 2025-04-25 10:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2645 to 2025-04-26 09:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 4070 to 2025-04-25 12:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 4097 to 2025-04-26 08:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 4111 to 2025-04-27 08:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 4125 to 2025-04-28 15:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2655 to 2025-05-01 09:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2656 to 2025-05-02 09:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2657 to 2025-05-01 09:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2662 to 2025-05-02 13:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 4190 to 2025-05-03 08:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 4203 to 2025-05-04 08:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 4204 to 2025-05-04 10:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2667 to 2025-05-05 15:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 2668 to 2025-05-06 09:00:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Successfully updated event ID 4215 to 2025-05-05 17:30:00
+[06-Apr-2025 03:15:34 Europe/Berlin] [DEBUG] Auto-applied 57 changes to the database
+[06-Apr-2025 03:15:35 Europe/Berlin] [2025-04-06 03:15:35] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:15:35 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:15:35 Europe/Berlin] [2025-04-06 03:15:35] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:15:35 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 03:16:27 Europe/Berlin] [2025-04-06 03:16:27] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 03:16:27 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[06-Apr-2025 13:09:25 Europe/Berlin] [2025-04-06 13:09:25] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 13:09:26 Europe/Berlin] [2025-04-06 13:09:26] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 21:10:04 Europe/Berlin] [2025-04-06 21:10:04] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[06-Apr-2025 21:10:04 Europe/Berlin] [2025-04-06 21:10:04] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:33:54 Europe/Berlin] [2025-04-07 00:33:54] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:33:54 Europe/Berlin] [2025-04-07 00:33:54] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:34:40 Europe/Berlin] [2025-04-07 00:34:40] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:34:40 Europe/Berlin] [2025-04-07 00:34:40] login.php:43 - User not found
+Data: {
+    "username": "johndoe@greenwood.edu"
+}
+[07-Apr-2025 00:34:43 Europe/Berlin] [2025-04-07 00:34:43] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:34:44 Europe/Berlin] [2025-04-07 00:34:44] login.php:25 - Login attempt
+Data: {
+    "username": "admin",
+    "stored_hash": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi",
+    "password_verify_result": false
+}
+[07-Apr-2025 00:35:18 Europe/Berlin] [2025-04-07 00:35:18] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:35:18 Europe/Berlin] [2025-04-07 00:35:18] login.php:25 - Login attempt
+Data: {
+    "username": "admin",
+    "stored_hash": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi",
+    "password_verify_result": true
+}
+[07-Apr-2025 00:35:18 Europe/Berlin] [2025-04-07 00:35:18] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:35:18 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 00:35:23 Europe/Berlin] [2025-04-07 00:35:23] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:35:23 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 00:35:25 Europe/Berlin] [2025-04-07 00:35:25] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:35:25 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 00:35:28 Europe/Berlin] [2025-04-07 00:35:28] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:35:28 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 00:35:35 Europe/Berlin] [2025-04-07 00:35:35] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:35:36 Europe/Berlin] [2025-04-07 00:35:36] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:35:36 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 00:46:16 Europe/Berlin] [2025-04-07 00:46:16] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:46:16 Europe/Berlin] [2025-04-07 00:46:16] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 00:59:08 Europe/Berlin] [2025-04-07 00:59:08] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 01:25:00 Europe/Berlin] [2025-04-07 01:25:00] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 01:25:05 Europe/Berlin] [2025-04-07 01:25:05] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 01:25:05 Europe/Berlin] [2025-04-07 01:25:05] login.php:25 - Login attempt
+Data: {
+    "username": "mbn",
+    "stored_hash": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi",
+    "password_verify_result": false
+}
+[07-Apr-2025 01:25:10 Europe/Berlin] [2025-04-07 01:25:10] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 01:25:10 Europe/Berlin] [2025-04-07 01:25:10] login.php:25 - Login attempt
+Data: {
+    "username": "mbn",
+    "stored_hash": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi",
+    "password_verify_result": true
+}
+[07-Apr-2025 01:25:10 Europe/Berlin] [2025-04-07 01:25:10] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 01:25:10 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 01:25:14 Europe/Berlin] [2025-04-07 01:25:14] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 01:25:14 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 01:25:15 Europe/Berlin] [2025-04-07 01:25:15] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 01:25:15 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 01:25:17 Europe/Berlin] [2025-04-07 01:25:17] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 01:25:17 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 01:25:20 Europe/Berlin] [2025-04-07 01:25:20] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 01:25:20 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:13:09 Europe/Berlin] [2025-04-07 02:13:09] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:13:09 Europe/Berlin] [2025-04-07 02:13:09] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:13:13 Europe/Berlin] [2025-04-07 02:13:13] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:13:13 Europe/Berlin] [2025-04-07 02:13:13] login.php:25 - Login attempt
+Data: {
+    "username": "mbn",
+    "stored_hash": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi",
+    "password_verify_result": true
+}
+[07-Apr-2025 02:13:13 Europe/Berlin] [2025-04-07 02:13:13] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:13:13 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:19:20 Europe/Berlin] [2025-04-07 02:19:20] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:19:20 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:24:20 Europe/Berlin] [2025-04-07 02:24:20] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:24:20 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:24:23 Europe/Berlin] [2025-04-07 02:24:23] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:24:23 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:24:59 Europe/Berlin] [2025-04-07 02:24:59] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:24:59 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:25:10 Europe/Berlin] [2025-04-07 02:25:10] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Starting optimization process
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"busy_week","auto_apply":true}
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Received data: {"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"busy_week","auto_apply":true}
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Selected preset: busy_week
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":15,"max_consecutive_meetings":3,"preferred_meeting_duration":45,"focus_block_duration":90,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-07
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-08
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-09
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-10
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-11
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-12
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-13
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-14
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-15
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-16
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-17
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-18
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-19
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-20
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] No events found for day: 2025-04-21
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-22
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-23
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-24
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-25
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-26
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-27
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-28
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-29
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-30
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-05-01
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-05-02
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-03
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-04
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-05-05
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-06
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Retrieved events count: 72
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] First event sample: {"id":"4","user_id":"7","title":"3D-vejledning","description":"3D guidance in fifth lesson","category_id":"13","start_date":"2025-04-07 14:00:00","end_date":"2025-04-07 15:30:00","all_day":"0","is_ai_optimized":"0","ai_description":null,"is_human_ai_altered":"0","is_immovable":"1","preset_source":"default","created_at":"2025-04-07 02:19:18"}
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"4","new_time":"2025-04-07 09:15:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"66","new_time":"2025-04-07 11:15:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"6","new_time":"2025-04-08 11:30:00","duration":40,"reason":"Compacted schedule for higher efficiency"},{"event_id":"103","new_time":"2025-04-09 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"104","new_time":"2025-04-09 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"67","new_time":"2025-04-10 09:15:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"131","new_time":"2025-04-11 01:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"132","new_time":"2025-04-11 03:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"133","new_time":"2025-04-11 04:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"151","new_time":"2025-04-12 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"166","new_time":"2025-04-13 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"167","new_time":"2025-04-13 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"188","new_time":"2025-04-14 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"68","new_time":"2025-04-14 10:00:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"189","new_time":"2025-04-14 12:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"203","new_time":"2025-04-15 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"219","new_time":"2025-04-16 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"220","new_time":"2025-04-16 10:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"234","new_time":"2025-04-17 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"69","new_time":"2025-04-17 10:00:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"267","new_time":"2025-04-19 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"268","new_time":"2025-04-19 10:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"70","new_time":"2025-04-20 08:30:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"11","new_time":"2025-04-22 11:30:00","duration":40,"reason":"Compacted schedule for higher efficiency"},{"event_id":"9","new_time":"2025-04-22 12:40:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"15","new_time":"2025-04-25 01:30:00","duration":420,"reason":"Compacted schedule for higher efficiency"},{"event_id":"17","new_time":"2025-04-25 16:30:00","duration":30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"363","new_time":"2025-04-26 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"24","new_time":"2025-04-29 11:30:00","duration":40,"reason":"Compacted schedule for higher efficiency"},{"event_id":"28","new_time":"2025-05-01 01:30:00","duration":420,"reason":"Compacted schedule for higher efficiency"},{"event_id":"32","new_time":"2025-05-02 01:30:00","duration":420,"reason":"Compacted schedule for higher efficiency"},{"event_id":"35","new_time":"2025-05-02 16:30:00","duration":30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"391","new_time":"2025-05-03 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"404","new_time":"2025-05-04 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"71","new_time":"2025-05-04 10:00:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"38","new_time":"2025-05-06 11:30:00","duration":40,"reason":"Compacted schedule for higher efficiency"}]
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 4 to 2025-04-07 09:15:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 66 to 2025-04-07 11:15:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 6 to 2025-04-08 11:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 103 to 2025-04-09 09:15:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 104 to 2025-04-09 10:45:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 67 to 2025-04-10 09:15:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 131 to 2025-04-11 01:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 132 to 2025-04-11 03:00:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 133 to 2025-04-11 04:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 151 to 2025-04-12 08:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 166 to 2025-04-13 09:15:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 167 to 2025-04-13 10:45:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 188 to 2025-04-14 08:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 68 to 2025-04-14 10:00:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 189 to 2025-04-14 12:00:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 203 to 2025-04-15 08:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 219 to 2025-04-16 08:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 220 to 2025-04-16 10:00:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 234 to 2025-04-17 08:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 69 to 2025-04-17 10:00:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 267 to 2025-04-19 08:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 268 to 2025-04-19 10:00:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 70 to 2025-04-20 08:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 11 to 2025-04-22 11:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 9 to 2025-04-22 12:40:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 15 to 2025-04-25 01:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 17 to 2025-04-25 16:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 363 to 2025-04-26 08:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 24 to 2025-04-29 11:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 28 to 2025-05-01 01:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 32 to 2025-05-02 01:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 35 to 2025-05-02 16:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 391 to 2025-05-03 08:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 404 to 2025-05-04 08:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 71 to 2025-05-04 10:00:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Successfully updated event ID 38 to 2025-05-06 11:30:00
+[07-Apr-2025 02:25:10 Europe/Berlin] [DEBUG] Auto-applied 36 changes to the database
+[07-Apr-2025 02:25:10 Europe/Berlin] [2025-04-07 02:25:10] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:25:10 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:25:11 Europe/Berlin] [2025-04-07 02:25:11] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:25:11 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:25:12 Europe/Berlin] [2025-04-07 02:25:12] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:25:12 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:27:45 Europe/Berlin] [2025-04-07 02:27:45] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:27:45 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171

@@ -40,6 +40,9 @@ try {
         $preset = 'default';
     }
     
+    // Check if we should auto-apply changes
+    $autoApply = isset($data['auto_apply']) ? (bool)$data['auto_apply'] : false;
+    
     // Validate days array
     $days = $data['days'] ?? [];
     if (!is_array($days)) {
@@ -181,6 +184,13 @@ try {
     // Generate insights based on changes and health metrics
     $insights = generateInsights($changes, $schedule_health, $preset);
 
+    // Apply changes directly to the database if auto_apply is enabled
+    $appliedChanges = 0;
+    if ($autoApply && !empty($changes)) {
+        $appliedChanges = applyChangesToDatabase($changes, $preset);
+        error_log("[DEBUG] Auto-applied $appliedChanges changes to the database");
+    }
+
     // Create response data structure
     $responseData = [
         'success' => true,
@@ -189,11 +199,9 @@ try {
             'schedule_health' => $schedule_health,
             'insights' => $insights
         ],
-        'preset_used' => $preset
+        'preset_used' => $preset,
+        'changes_applied' => $autoApply ? $appliedChanges : 0
     ];
-
-    // Step 5: Test with dummy data if needed
-    // For debugging: $responseData = ['success' => true, 'message' => 'Test output'];
 
     // Use JSON_THROW_ON_ERROR flag to catch JSON encoding errors
     $jsonResponse = json_encode($responseData, JSON_THROW_ON_ERROR);
@@ -233,6 +241,165 @@ try {
 ob_end_flush();
 
 /**
+ * Apply optimization changes directly to the database
+ * 
+ * @param array $changes List of changes to apply
+ * @param string $preset The optimization preset used
+ * @return int Number of changes successfully applied
+ */
+function applyChangesToDatabase($changes, $preset) {
+    global $pdo;
+    $appliedCount = 0;
+    
+    try {
+        // Start a transaction for database consistency
+        $pdo->beginTransaction();
+        
+        // Prepare SQL statements for different operations
+        $updateStmt = $pdo->prepare("
+            UPDATE calendar_events 
+            SET start_date = :start_date,
+                end_date = :end_date,
+                is_ai_optimized = TRUE,
+                is_human_ai_altered = FALSE,
+                preset_source = :preset
+            WHERE id = :id
+        ");
+        
+        $createStmt = $pdo->prepare("
+            INSERT INTO calendar_events 
+            (title, description, start_date, end_date, user_id, is_ai_optimized, is_human_ai_altered, preset_source, is_break, category)
+            VALUES 
+            (:title, :description, :start_date, :end_date, :user_id, TRUE, FALSE, :preset, :is_break, :category)
+        ");
+        
+        $deleteStmt = $pdo->prepare("
+            DELETE FROM calendar_events WHERE id = :id
+        ");
+        
+        $userId = $_SESSION['user_id'] ?? 1; // Default to user 1 if not set
+        
+        foreach ($changes as $change) {
+            // Skip changes without necessary data
+            if (!isset($change['new_time'])) {
+                error_log("[ERROR] Missing new_time in change: " . json_encode($change));
+                continue;
+            }
+            
+            // Different handling based on action type
+            if (isset($change['action']) && $change['action'] === 'create') {
+                // This is a new event (break or split event)
+                $newStartTime = $change['new_time'];
+                $duration = isset($change['duration']) ? (int)$change['duration'] * 60 : 900; // Default 15 min for breaks
+                $newEndTime = date('Y-m-d H:i:s', strtotime($newStartTime) + $duration);
+                $title = $change['title'] ?? 'Untitled Event';
+                
+                // Determine if this is a break or a regular event
+                $isBreak = ($change['event_id'] === 'new_break');
+                $category = $isBreak ? 'Break' : 'Study';
+                $description = $change['reason'] ?? ($isBreak ? 'Auto-generated break' : 'Auto-generated split event');
+                
+                $createStmt->bindParam(':title', $title);
+                $createStmt->bindParam(':description', $description);
+                $createStmt->bindParam(':start_date', $newStartTime);
+                $createStmt->bindParam(':end_date', $newEndTime);
+                $createStmt->bindParam(':user_id', $userId);
+                $createStmt->bindParam(':preset', $preset);
+                $createStmt->bindParam(':is_break', $isBreak, PDO::PARAM_BOOL);
+                $createStmt->bindParam(':category', $category);
+                
+                if ($createStmt->execute()) {
+                    $appliedCount++;
+                    error_log("[DEBUG] Successfully created new event '$title' at $newStartTime");
+                } else {
+                    error_log("[ERROR] Failed to create new event: " . json_encode($createStmt->errorInfo()));
+                }
+            } 
+            // Handle delete operations
+            elseif (isset($change['action']) && $change['action'] === 'delete') {
+                if (!isset($change['event_id']) || $change['event_id'] === 'new_break' || $change['event_id'] === 'new_split_event') {
+                    continue; // Skip if not a valid event ID
+                }
+                
+                $deleteStmt->bindParam(':id', $change['event_id']);
+                
+                if ($deleteStmt->execute()) {
+                    $appliedCount++;
+                    error_log("[DEBUG] Successfully deleted event ID {$change['event_id']}");
+                } else {
+                    error_log("[ERROR] Failed to delete event ID {$change['event_id']}: " . json_encode($deleteStmt->errorInfo()));
+                }
+            }
+            // Standard update for existing events
+            elseif (isset($change['event_id']) && $change['event_id'] !== 'new_break' && $change['event_id'] !== 'new_split_event') {
+                $newStartTime = $change['new_time'];
+                $duration = isset($change['duration']) ? (int)$change['duration'] * 60 : 3600; // Default 1 hour in seconds
+                $newEndTime = date('Y-m-d H:i:s', strtotime($newStartTime) + $duration);
+                
+                $updateStmt->bindParam(':start_date', $newStartTime);
+                $updateStmt->bindParam(':end_date', $newEndTime);
+                $updateStmt->bindParam(':preset', $preset);
+                $updateStmt->bindParam(':id', $change['event_id']);
+                
+                if ($updateStmt->execute()) {
+                    $appliedCount++;
+                    error_log("[DEBUG] Successfully updated event ID {$change['event_id']} to $newStartTime");
+                } else {
+                    error_log("[ERROR] Failed to update event ID {$change['event_id']}: " . json_encode($updateStmt->errorInfo()));
+                }
+            }
+        }
+        
+        // Log the optimization in the chat history
+        $breakCount = count(array_filter($changes, function($change) {
+            return isset($change['event_id']) && $change['event_id'] === 'new_break';
+        }));
+        
+        $splitCount = count(array_filter($changes, function($change) {
+            return isset($change['event_id']) && $change['event_id'] === 'new_split_event';
+        }));
+        
+        $moveCount = count(array_filter($changes, function($change) {
+            return isset($change['event_id']) && 
+                   $change['event_id'] !== 'new_break' && 
+                   $change['event_id'] !== 'new_split_event' &&
+                   (!isset($change['action']) || $change['action'] !== 'delete');
+        }));
+        
+        $deleteCount = count(array_filter($changes, function($change) {
+            return isset($change['action']) && $change['action'] === 'delete';
+        }));
+        
+        $message = "AI optimization applied: $moveCount events moved";
+        if ($breakCount > 0) $message .= ", $breakCount breaks added";
+        if ($splitCount > 0) $message .= ", $splitCount events split across days";
+        if ($deleteCount > 0) $message .= ", $deleteCount events removed";
+        
+        $chatStmt = $pdo->prepare("
+            INSERT INTO assistant_chat (user_id, message, is_user, created_at)
+            VALUES (:user_id, :message, 0, NOW())
+        ");
+        
+        $chatStmt->bindParam(':user_id', $userId);
+        $chatStmt->bindParam(':message', $message);
+        $chatStmt->execute();
+        
+        // Commit the changes
+        $pdo->commit();
+        
+        return $appliedCount;
+        
+    } catch (PDOException $e) {
+        // Roll back the transaction on error
+        if ($pdo->inTransaction()) {
+            $pdo->rollBack();
+        }
+        error_log("[ERROR] Database error while applying changes: " . $e->getMessage());
+        return 0;
+    }
+}
+
+/**
  * Optimizes a day's schedule based on given parameters and preset
  *
  * @param array $events List of events for the day
@@ -242,8 +409,15 @@ ob_end_flush();
  */
 function optimizeDaySchedule($events, $params, $preset) {
     $changes = [];
+    $breaks_to_add = [];
+    $events_to_move_days = [];
     $workday_start = strtotime($params['optimal_day_start'] ?? '09:00');
     $workday_end = strtotime($params['optimal_day_end'] ?? '17:00');
+    
+    // Extract user preferences
+    $focus_block_duration = ($params['focus_block_duration'] ?? 60) * 60; // In seconds
+    $min_break = ($params['min_break'] ?? 15) * 60; // Convert to seconds
+    $break_frequency = $params['break_frequency'] ?? 3; // Events before a break
     
     // Step 1: Validate all events and collect valid ones
     $validEvents = [];
@@ -265,6 +439,11 @@ function optimizeDaySchedule($events, $params, $preset) {
         
         // Extract the original date (YYYY-MM-DD) to preserve it
         $originalDate = date('Y-m-d', $start);
+        
+        // Determine event type (study session vs other)
+        $isStudy = (stripos($event['title'] ?? '', 'study') !== false) || 
+                   (stripos($event['category'] ?? '', 'study') !== false) ||
+                   (stripos($event['description'] ?? '', 'study') !== false);
             
         // Add to valid events with parsed timestamps
         $validEvents[] = [
@@ -272,7 +451,8 @@ function optimizeDaySchedule($events, $params, $preset) {
             'start' => $start,
             'end' => $end,
             'duration' => $end - $start,
-            'originalDate' => $originalDate
+            'originalDate' => $originalDate,
+            'isStudy' => $isStudy
         ];
     }
     
@@ -283,25 +463,56 @@ function optimizeDaySchedule($events, $params, $preset) {
     
     // Step 3: Process events in sequence with proper spacing
     $last_end_time = $workday_start;
-    $min_break = ($params['min_break'] ?? 15) * 60; // Convert to seconds
     $currentDate = null;
+    $consecutive_events = 0; // Track consecutive events for break insertion
+    $daily_load = []; // Track total hours by day for potential day shifting
     
-    foreach ($validEvents as $eventData) {
+    foreach ($validEvents as $index => $eventData) {
         $event = $eventData['event'];
         $start = $eventData['start'];
         $end = $eventData['end'];
         $duration = $eventData['duration'];
         $originalDate = $eventData['originalDate'];
+        $isStudy = $eventData['isStudy'];
+        
+        // Initialize daily load tracker if needed
+        if (!isset($daily_load[$originalDate])) {
+            $daily_load[$originalDate] = 0;
+        }
+        
+        // Add this event's duration to the daily load
+        $daily_load[$originalDate] += $duration / 3600; // Convert to hours
         
         // Reset last_end_time if we're on a new date
         if ($currentDate !== $originalDate) {
             $currentDate = $originalDate;
             $last_end_time = strtotime($originalDate . ' ' . date('H:i:s', $workday_start));
+            $consecutive_events = 0;
         }
         
         $needs_rescheduling = false;
         $new_start = null;
         $reason = '';
+        $adjust_duration = false;
+        $split_event = false;
+        $move_to_another_day = false;
+        $new_duration = $duration;
+        
+        // Check if this is a study session that needs to be adjusted based on preference
+        if ($isStudy && $duration > $focus_block_duration + 10*60) { // Allow 10 min buffer
+            // Study session is longer than preferred focus block duration
+            $adjust_duration = true;
+            $new_duration = $focus_block_duration;
+            $reason = 'Split long study session into shorter focused blocks';
+            
+            // If study session is very long, consider moving part to another day
+            if ($duration > 2 * $focus_block_duration) {
+                $split_event = true;
+            }
+        }
+        
+        // Count consecutive events for break insertion
+        $consecutive_events++;
         
         // Apply preset-specific optimizations
         switch ($preset) {
@@ -311,6 +522,12 @@ function optimizeDaySchedule($events, $params, $preset) {
                     $needs_rescheduling = true;
                     $new_start = $last_end_time + 15 * 60;
                     $reason = 'Compacted schedule for higher efficiency';
+                }
+                
+                // If we've scheduled too many events in one day, try to move some
+                if ($daily_load[$originalDate] > 9 && $isStudy) { // More than 9 hours in a day
+                    $move_to_another_day = true;
+                    $reason = 'Moved to balance daily workload';
                 }
                 break;
 
@@ -325,11 +542,33 @@ function optimizeDaySchedule($events, $params, $preset) {
 
             case 'optimized':
                 // Apply ideal spacing and timing
-                $optimal_start = $last_end_time + 30 * 60; // 30-minute spacing
+                $optimal_start = $last_end_time + 15 * 60; // 15-minute spacing
                 if (abs($start - $optimal_start) > 5 * 60) { // If more than 5 minutes off from optimal
                     $needs_rescheduling = true;
                     $new_start = $optimal_start;
                     $reason = 'Optimized for ideal spacing and energy levels';
+                }
+                
+                // Insert breaks after multiple consecutive events
+                if ($consecutive_events >= $break_frequency) {
+                    // Add a break after this event
+                    $break_start = $end + 5*60; // 5 min after this event
+                    $break_end = $break_start + $min_break;
+                    
+                    // Check if break fits within workday
+                    $dayEndTime = strtotime($originalDate . ' ' . date('H:i:s', $workday_end));
+                    if ($break_end <= $dayEndTime) {
+                        $breaks_to_add[] = [
+                            'title' => 'Break',
+                            'start_date' => date('Y-m-d H:i:s', $break_start),
+                            'end_date' => date('Y-m-d H:i:s', $break_end),
+                            'originalDate' => $originalDate,
+                            'reason' => 'Added scheduled break to improve productivity'
+                        ];
+                        
+                        // Reset consecutive events counter
+                        $consecutive_events = 0;
+                    }
                 }
                 break;
 
@@ -342,35 +581,115 @@ function optimizeDaySchedule($events, $params, $preset) {
                 }
         }
         
-        // Apply rescheduling if needed
+        // Handle event that needs to move to another day
+        if ($move_to_another_day && $isStudy) {
+            // Find a day with less load
+            $tomorrow = date('Y-m-d', strtotime($originalDate . ' +1 day'));
+            $dayAfter = date('Y-m-d', strtotime($originalDate . ' +2 days'));
+            
+            // Initialize load counters if needed
+            if (!isset($daily_load[$tomorrow])) $daily_load[$tomorrow] = 0;
+            if (!isset($daily_load[$dayAfter])) $daily_load[$dayAfter] = 0;
+            
+            // Choose the day with less load
+            $target_date = ($daily_load[$tomorrow] <= $daily_load[$dayAfter]) ? $tomorrow : $dayAfter;
+            
+            // Create a change to move this event to another day
+            $new_start_time = date('Y-m-d', strtotime($target_date)) . ' ' . date('H:i:s', $workday_start);
+            $changes[] = [
+                'event_id' => $event['id'],
+                'new_time' => $new_start_time,
+                'duration' => round($duration / 60),
+                'reason' => "Moved to $target_date to better balance workload"
+            ];
+            
+            // Update the daily load
+            $daily_load[$target_date] += $duration / 3600;
+            $daily_load[$originalDate] -= $duration / 3600;
+            
+            // Skip further processing of this event
+            continue;
+        }
+        
+        // Apply duration adjustment if needed
+        if ($adjust_duration) {
+            $needs_rescheduling = true;
+            if (!$new_start) {
+                $new_start = $start; // Keep original start time if not already changed
+            }
+            
+            // If we need to split this into multiple events
+            if ($split_event) {
+                // First part stays here
+                $changes[] = [
+                    'event_id' => $event['id'],
+                    'new_time' => date('Y-m-d H:i:s', $new_start),
+                    'duration' => round($new_duration / 60),
+                    'reason' => $reason
+                ];
+                
+                // Second part moves to tomorrow
+                $tomorrow = date('Y-m-d', strtotime($originalDate . ' +1 day'));
+                $tomorrow_start = $tomorrow . ' ' . date('H:i:s', $workday_start);
+                
+                // Create a new event for the second part
+                $events_to_move_days[] = [
+                    'title' => $event['title'] . ' (continued)',
+                    'start_date' => $tomorrow_start,
+                    'end_date' => date('Y-m-d H:i:s', strtotime($tomorrow_start) + ($duration - $new_duration)),
+                    'parent_event_id' => $event['id'],
+                    'reason' => 'Split long study session across days'
+                ];
+                
+                // Update tracking variables
+                $last_end_time = $new_start + $new_duration;
+                
+                // Skip to next event
+                continue;
+            }
+        }
+        
+        // Apply standard rescheduling if needed
         if ($needs_rescheduling) {
             // Calculate end of workday for the current date
             $dayEndTime = strtotime($originalDate . ' ' . date('H:i:s', $workday_end));
             
             // Ensure the new end time doesn't exceed workday_end
-            if ($new_start + $duration > $dayEndTime) {
+            if ($new_start + $new_duration > $dayEndTime) {
                 // If it would exceed, try to fit it by reducing duration if over 30 minutes
-                if ($duration > 30 * 60) {
-                    $new_duration = min($duration, ($dayEndTime - $new_start));
+                if ($new_duration > 30 * 60) {
+                    $adjusted_duration = min($new_duration, ($dayEndTime - $new_start));
                     $changes[] = [
                         'event_id' => $event['id'],
                         'new_time' => date('Y-m-d H:i:s', $new_start),
-                        'duration' => round($new_duration / 60),
+                        'duration' => round($adjusted_duration / 60),
                         'reason' => $reason . ' (with adjusted duration)'
                     ];
-                    $last_end_time = $new_start + $new_duration;
+                    $last_end_time = $new_start + $adjusted_duration;
                 } else {
-                    // Log warning that event couldn't fit
-                    error_log("[WARNING] Event ID {$event['id']} couldn't fit in optimized schedule for date $originalDate");
+                    // Move to next day if it's too small to reduce
+                    $tomorrow = date('Y-m-d', strtotime($originalDate . ' +1 day'));
+                    $tomorrow_start = $tomorrow . ' ' . date('H:i:s', $workday_start);
+                    
+                    $changes[] = [
+                        'event_id' => $event['id'],
+                        'new_time' => $tomorrow_start,
+                        'duration' => round($new_duration / 60),
+                        'reason' => 'Moved to next day to fit workday boundaries'
+                    ];
+                    
+                    // Initialize next day's load if needed
+                    if (!isset($daily_load[$tomorrow])) $daily_load[$tomorrow] = 0;
+                    $daily_load[$tomorrow] += $new_duration / 3600;
                 }
             } else {
                 $changes[] = [
                     'event_id' => $event['id'],
                     'new_time' => date('Y-m-d H:i:s', $new_start),
-                    'duration' => round($duration / 60),
+                    'duration' => round($new_duration / 60),
                     'reason' => $reason
                 ];
-                $last_end_time = $new_start + $duration;
+                $last_end_time = $new_start + $new_duration;
             }
         } else {
             // Event doesn't need rescheduling, update last_end_time
@@ -379,6 +698,32 @@ function optimizeDaySchedule($events, $params, $preset) {
         
         // Ensure minimum break between events
         $last_end_time += $min_break;
+    }
+    
+    // Process breaks to add
+    foreach ($breaks_to_add as $break) {
+        // Use a special key to indicate this is a new event to be created
+        $changes[] = [
+            'event_id' => 'new_break',
+            'title' => $break['title'],
+            'new_time' => $break['start_date'],
+            'duration' => round((strtotime($break['end_date']) - strtotime($break['start_date'])) / 60),
+            'reason' => $break['reason'],
+            'action' => 'create'
+        ];
+    }
+    
+    // Process events that need to be moved to different days
+    foreach ($events_to_move_days as $new_event) {
+        $changes[] = [
+            'event_id' => 'new_split_event',
+            'title' => $new_event['title'],
+            'new_time' => $new_event['start_date'],
+            'duration' => round((strtotime($new_event['end_date']) - strtotime($new_event['start_date'])) / 60),
+            'reason' => $new_event['reason'],
+            'parent_id' => $new_event['parent_event_id'],
+            'action' => 'create'
+        ];
     }
     
     return $changes;

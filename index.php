@@ -219,6 +219,21 @@ $events = $result->fetch_all(MYSQLI_ASSOC);
             font-size: 10px;
         }
         
+        .event-pill.immovable {
+            background-color: #fef9c3 !important;
+            border-color: #fde047 !important;
+            color: #854d0e !important;
+        }
+        
+        .event-pill.immovable::after {
+            content: '📌';
+            position: absolute;
+            right: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 10px;
+        }
+        
         .event-pill:hover {
             transform: scale(1.02);
         }
@@ -434,7 +449,18 @@ $events = $result->fetch_all(MYSQLI_ASSOC);
                             $eventTitle = htmlspecialchars($event['title']);
                             $isOptimized = isset($event['is_ai_optimized']) && $event['is_ai_optimized'] == 1;
                             $isHumanAltered = isset($event['is_human_ai_altered']) && $event['is_human_ai_altered'] == 1;
-                            $optimizedClass = $isOptimized ? 'ai-optimized' : ($isHumanAltered ? 'human-ai-altered' : '');
+                            $isImmovable = isset($event['is_immovable']) && $event['is_immovable'] == 1;
+                            
+                            // Priority order for class: immovable first, then AI optimized, then human altered
+                            $optimizedClass = '';
+                            if ($isImmovable) {
+                                $optimizedClass = 'immovable';
+                            } elseif ($isOptimized) {
+                                $optimizedClass = 'ai-optimized';
+                            } elseif ($isHumanAltered) {
+                                $optimizedClass = 'human-ai-altered';
+                            }
+                            
                             $eventTime = date('H:i', strtotime($event['start_date']));
                             
                             echo "<div class='event-pill px-2 py-1 rounded-md bg-blue-50 text-blue-700 
@@ -682,9 +708,12 @@ $events = $result->fetch_all(MYSQLI_ASSOC);
                     const event = data.event;
                     const isOptimized = event.is_ai_optimized == 1;
                     const isHumanAltered = event.is_human_ai_altered == 1;
+                    const isImmovable = event.is_immovable == 1;
                     
                     let badgeHtml = '';
-                    if (isOptimized) {
+                    if (isImmovable) {
+                        badgeHtml = '<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-yellow-100 text-yellow-800 ml-2">📌 Immovable</span>';
+                    } else if (isOptimized) {
                         badgeHtml = '<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-purple-100 text-purple-800 ml-2">✨ AI Optimized</span>';
                     } else if (isHumanAltered) {
                         badgeHtml = '<span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800 ml-2">👤 Human Adjusted</span>';
@@ -697,6 +726,7 @@ $events = $result->fetch_all(MYSQLI_ASSOC);
                                 <p class="mb-2"><strong>Date:</strong> ${new Date(event.start_date).toLocaleDateString()}</p>
                                 <p class="mb-2"><strong>Time:</strong> ${new Date(event.start_date).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
                                 <p class="mb-4"><strong>Description:</strong> ${event.description || 'No description'}</p>
+                                ${isImmovable ? '<p class="mb-4 text-yellow-800 bg-yellow-50 p-2 rounded"><strong>Note:</strong> This event cannot be moved or optimized.</p>' : ''}
                                 <div class="border-t pt-4">
                                     <p class="text-sm text-gray-500">Created on ${new Date(event.created_at).toLocaleDateString()}</p>
                                 </div>

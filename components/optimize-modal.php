@@ -93,6 +93,13 @@ function renderOptimizeModal() {
                             <option value="flexible">Flexible Learning</option>
                         </select>
                     </div>
+                    
+                    <div class="flex items-center mt-4">
+                        <input type="checkbox" id="autoApply" name="autoApply" class="h-5 w-5 rounded border-gray-300 text-purple-600 focus:ring-purple-500">
+                        <label for="autoApply" class="ml-2 block text-sm text-gray-700">
+                            Automatically apply changes immediately <span class="text-xs text-gray-500">(Skip preview)</span>
+                        </label>
+                    </div>
                 </form>
             </div>
 

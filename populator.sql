@@ -34,20 +34,179 @@ INSERT INTO user_preferences (user_id, focus_start_time, focus_end_time, chill_s
 
 -- Populate categories
 INSERT INTO event_categories (name, color) VALUES 
-('Classes', '#FF4444'),         -- Red for important classes
-('Assignments', '#F6BF26'),     -- Yellow for deadlines
-('Study Group', '#33B679'),     -- Green for collaborative work
-('Project Work', '#039BE5'),    -- Blue for development work
-('Lab Sessions', '#7986CB'),    -- Purple for practical work
-('Events', '#8E24AA'),         -- Deep Purple for special events
-('Personal', '#616161'),        -- Gray for personal items
-('Exams', '#D50000'),          -- Deep Red for critical items
-('Meetings', '#0B8043'),        -- Dark Green for meetings
-('Workshops', '#3F51B5'),       -- Indigo for workshops
-('Research', '#795548'),        -- Brown for research activities
-('Tutorials', '#FF5722');       -- Deep Orange for tutorials
+('Classes', '#FF4444'),         -- Red for important classes - ID: 1
+('Assignments', '#F6BF26'),     -- Yellow for deadlines - ID: 2 
+('Study Group', '#33B679'),     -- Green for collaborative work - ID: 3
+('Project Work', '#039BE5'),    -- Blue for development work - ID: 4
+('Lab Sessions', '#7986CB'),    -- Purple for practical work - ID: 5
+('Events', '#8E24AA'),          -- Deep Purple for special events - ID: 6
+('Personal', '#616161'),        -- Gray for personal items - ID: 7
+('Exams', '#D50000'),           -- Deep Red for critical items - ID: 8
+('Meetings', '#0B8043'),        -- Dark Green for meetings - ID: 9
+('Workshops', '#3F51B5'),       -- Indigo for workshops - ID: 10
+('Research', '#795548'),        -- Brown for research activities - ID: 11
+('Tutorials', '#FF5722'),       -- Deep Orange for tutorials - ID: 12
+('School', '#009688'),          -- Teal for school events (immovable) - ID: 13
+('Study', '#4CAF50');           -- Light Green for study sessions (can be optimized) - ID: 14
 
--- Generate date series for 4 months
+-- Clear any existing school schedule
+DELETE FROM calendar_events WHERE category_id IN (1, 5, 8, 10, 11, 12, 13, 14);
+
+-- Insert actual school schedule for April-June 2025
+-- These are immovable school events
+
+-- April 2025
+INSERT INTO calendar_events (user_id, title, description, category_id, start_date, end_date, all_day, is_immovable) VALUES
+-- April 1
+(7, 'Fysik', 'Regular physics class', 13, '2025-04-01 09:00:00', '2025-04-01 11:00:00', 0, TRUE),
+(7, 'Fysik forsøg 1', 'Physics experiment 1', 13, '2025-04-01 12:00:00', '2025-04-01 12:40:00', 0, TRUE),
+
+-- April 4
+(7, 'Temafest', 'Theme party', 6, '2025-04-04 00:00:00', NULL, 1, FALSE),
+
+-- April 7
+(7, '3D-vejledning', '3D guidance in fifth lesson', 13, '2025-04-07 14:00:00', '2025-04-07 15:30:00', 0, TRUE),
+
+-- April 8
+(7, 'Fysik', 'Regular physics class', 13, '2025-04-08 09:00:00', '2025-04-08 11:00:00', 0, TRUE),
+(7, 'Fysik forsøg 1', 'Physics experiment 1', 13, '2025-04-08 12:00:00', '2025-04-08 12:40:00', 0, TRUE),
+
+-- April 11
+(7, 'Arnolds + Friendsdagscafé', 'Social event', 6, '2025-04-11 00:00:00', NULL, 1, FALSE),
+
+-- April 22
+(7, '3.årg Teknikfag værkstedsuge', 'Technical subject workshop week', 13, '2025-04-22 09:00:00', '2025-04-22 16:00:00', 0, TRUE),
+(7, '3D-vejledning', '3D guidance in fifth lesson', 13, '2025-04-22 14:00:00', '2025-04-22 15:30:00', 0, TRUE),
+(7, 'Fysik', 'Regular physics class', 13, '2025-04-22 09:00:00', '2025-04-22 11:00:00', 0, TRUE),
+(7, 'Fysik forsøg 1', 'Physics experiment 1', 13, '2025-04-22 12:00:00', '2025-04-22 12:40:00', 0, TRUE),
+
+-- April 23
+(7, '3.årg Teknikfag værkstedsuge', 'Technical subject workshop week', 13, '2025-04-23 09:00:00', '2025-04-23 16:00:00', 0, TRUE),
+
+-- April 24
+(7, '3.årg Teknikfag værkstedsuge', 'Technical subject workshop week', 13, '2025-04-24 09:00:00', '2025-04-24 16:00:00', 0, TRUE),
+
+-- April 25
+(7, '2. årg. Aflevering af Matematik B projektrapport', 'Math B project report deadline', 2, '2025-04-25 00:00:00', NULL, 1, TRUE),
+(7, '2.årg Teknologi B skrivedag', 'Technology B writing day', 13, '2025-04-25 09:00:00', '2025-04-25 16:00:00', 0, TRUE),
+(7, '3.årg Teknikfag værkstedsuge', 'Technical subject workshop week', 13, '2025-04-25 09:00:00', '2025-04-25 16:00:00', 0, TRUE),
+(7, 'Lounge', 'Social event', 6, '2025-04-25 17:00:00', '2025-04-25 21:00:00', 0, FALSE),
+
+-- April 28
+(7, '2.årg Teknologi B skrivedag', 'Technology B writing day', 13, '2025-04-28 09:00:00', '2025-04-28 16:00:00', 0, TRUE),
+(7, '3.årg Teknikfag', 'Technical subject', 13, '2025-04-28 09:00:00', '2025-04-28 11:00:00', 0, TRUE),
+
+-- April 29
+(7, '1.årg SO Naturvidenskabelig uge', 'Science week', 13, '2025-04-29 09:00:00', '2025-04-29 16:00:00', 0, TRUE),
+(7, '2.årg Teknologi B skrivedag', 'Technology B writing day', 13, '2025-04-29 09:00:00', '2025-04-29 16:00:00', 0, TRUE),
+(7, '3.årg Skrivedag teknikfag', 'Technical subject writing day', 13, '2025-04-29 09:00:00', '2025-04-29 16:00:00', 0, TRUE),
+(7, 'Fysik', 'Regular physics class', 13, '2025-04-29 09:00:00', '2025-04-29 11:00:00', 0, TRUE),
+(7, 'Fysik forsøg 1', 'Physics experiment 1', 13, '2025-04-29 12:00:00', '2025-04-29 12:40:00', 0, TRUE),
+
+-- April 30
+(7, '1.årg SO Naturvidenskabelig uge', 'Science week', 13, '2025-04-30 09:00:00', '2025-04-30 16:00:00', 0, TRUE),
+(7, '2.årg Teknologi B skrivedag', 'Technology B writing day', 13, '2025-04-30 09:00:00', '2025-04-30 16:00:00', 0, TRUE),
+(7, '3.årg Skrivedag teknikfag', 'Technical subject writing day', 13, '2025-04-30 09:00:00', '2025-04-30 16:00:00', 0, TRUE),
+
+-- May 1
+(7, '1.årg SO Naturvidenskabelig uge', 'Science week', 13, '2025-05-01 09:00:00', '2025-05-01 16:00:00', 0, TRUE),
+(7, '2. årg. Aflevering af Teknologi B projektrapport', 'Technology B project report deadline', 2, '2025-05-01 00:00:00', NULL, 1, TRUE),
+(7, '2.årg Teknologi B skrivedag', 'Technology B writing day', 13, '2025-05-01 09:00:00', '2025-05-01 16:00:00', 0, TRUE),
+(7, '3.årg Skrivedag teknikfag', 'Technical subject writing day', 13, '2025-05-01 09:00:00', '2025-05-01 16:00:00', 0, TRUE),
+
+-- May 2
+(7, '1.årg SO Naturvidenskabelig uge', 'Science week', 13, '2025-05-02 09:00:00', '2025-05-02 16:00:00', 0, TRUE),
+(7, '3.årg Aflevering af teknikfags eksamensprojekt', 'Technical subject exam project deadline', 2, '2025-05-02 00:00:00', NULL, 1, TRUE),
+(7, '3.årg Skrivedag teknikfag', 'Technical subject writing day', 13, '2025-05-02 09:00:00', '2025-05-02 16:00:00', 0, TRUE),
+(7, 'LAN', 'LAN party Friday to Sunday', 6, '2025-05-02 17:00:00', '2025-05-04 17:00:00', 0, FALSE),
+
+-- May 5
+(7, '1.årg SO Naturvidenskabelig uge', 'Science week', 13, '2025-05-05 09:00:00', '2025-05-05 16:00:00', 0, TRUE),
+
+-- May 6
+(7, 'Fysik', 'Regular physics class', 13, '2025-05-06 09:00:00', '2025-05-06 11:00:00', 0, TRUE),
+(7, 'Fysik forsøg 1', 'Physics experiment 1', 13, '2025-05-06 12:00:00', '2025-05-06 12:40:00', 0, TRUE),
+
+-- May 7
+(7, 'Sundhedstjek', 'Health check', 7, '2025-05-07 10:00:00', '2025-05-07 11:00:00', 0, TRUE),
+
+-- May 9
+(7, 'GALLA', 'Formal gala', 6, '2025-05-09 18:00:00', '2025-05-09 23:59:00', 0, FALSE),
+
+-- May 12
+(7, 'Alle årg. Delvis Offentliggørelse af prøveplan', 'Partial release of exam schedule', 8, '2025-05-12 12:00:00', '2025-05-12 12:30:00', 0, TRUE),
+(7, 'Alle: Oprydningsdag', 'Cleanup day', 7, '2025-05-12 09:00:00', '2025-05-12 16:00:00', 0, TRUE),
+(7, 'Sundhedstjek', 'Health check', 7, '2025-05-12 10:00:00', '2025-05-12 11:00:00', 0, TRUE),
+
+-- May 13
+(7, 'Fysik', 'Regular physics class', 13, '2025-05-13 09:00:00', '2025-05-13 11:00:00', 0, TRUE),
+(7, 'Fysik forsøg 1', 'Physics experiment 1', 13, '2025-05-13 12:00:00', '2025-05-13 12:40:00', 0, TRUE),
+
+-- May 16
+(7, 'Alle årg. Offentliggørelse af prøveplanen kl.', 'Publication of exam schedule', 8, '2025-05-16 12:00:00', '2025-05-16 12:30:00', 0, TRUE),
+(7, 'Sidste fredagscafé', 'Last Friday cafe', 6, '2025-05-16 15:00:00', '2025-05-16 19:00:00', 0, FALSE),
+
+-- May 19
+(7, '3. årg. Skr eksamen Dansk A', 'Written exam Danish A', 13, '2025-05-19 09:00:00', '2025-05-19 14:00:00', 0, TRUE),
+(7, 'Alle årg. Første mulige prøvedag', 'First possible exam day', 8, '2025-05-19 08:00:00', '2025-05-19 08:30:00', 0, TRUE),
+
+-- May 20
+(7, '2.årg Skr. årsprøve Dansk A', 'Written annual test Danish A', 13, '2025-05-20 09:00:00', '2025-05-20 14:00:00', 0, TRUE),
+(7, '3. årg. Matematik A Udlevering af forberedelsesmateriale', 'Math A preparation material release', 13, '2025-05-20 09:00:00', '2025-05-20 11:00:00', 0, TRUE),
+
+-- May 21
+(7, '2.årg. Skr. årsprøve Fysik A, kemi A, Geo A', 'Written annual test Physics A, Chemistry A, Geo A', 13, '2025-05-21 09:00:00', '2025-05-21 13:00:00', 0, TRUE),
+
+-- May 22
+(7, '3.årg. Skr eksamen Matematik A', 'Written exam Math A', 13, '2025-05-22 09:00:00', '2025-05-22 14:00:00', 0, TRUE),
+
+-- May 23
+(7, '2. årg. Skr. eksamen Engelsk B', 'Written exam English B', 13, '2025-05-23 09:00:00', '2025-05-23 13:00:00', 0, TRUE),
+(7, '3. årg. Skr. eksamen Engelsk A', 'Written exam English A', 13, '2025-05-23 09:00:00', '2025-05-23 14:00:00', 0, TRUE),
+
+-- May 27
+(7, '3. årg. Skr eksamen Geovidenskab A, Biologi A', 'Written exam Geoscience A, Biology A', 13, '2025-05-27 09:00:00', '2025-05-27 14:00:00', 0, TRUE),
+
+-- May 28
+(7, '3. årg. Skr eksamen Fysik A', 'Written exam Physics A', 13, '2025-05-28 09:00:00', '2025-05-28 14:00:00', 0, TRUE),
+
+-- June 2
+(7, '3. årg. Skr eksamen Kemi A', 'Written exam Chemistry A', 13, '2025-06-02 09:00:00', '2025-06-02 13:00:00', 0, TRUE),
+
+-- June 13
+(7, 'Censormøde', 'Examiner meeting', 13, '2025-06-13 09:00:00', '2025-06-13 15:00:00', 0, TRUE),
+
+-- June 16-17
+(7, 'Censormøde', 'Examiner meeting', 13, '2025-06-16 09:00:00', '2025-06-16 15:00:00', 0, TRUE),
+(7, 'Censormøde', 'Examiner meeting', 13, '2025-06-17 09:00:00', '2025-06-17 15:00:00', 0, TRUE),
+
+-- June 25
+(7, 'Alle årg. Sidste mulige prøvedag', 'Last possible exam day', 8, '2025-06-25 09:00:00', '2025-06-25 15:00:00', 0, TRUE),
+
+-- June 27
+(7, 'Translokation', 'Graduation ceremony', 13, '2025-06-27 10:00:00', '2025-06-27 14:00:00', 0, TRUE);
+
+-- Insert study sessions that CAN be optimized
+INSERT INTO calendar_events (user_id, title, description, category_id, start_date, end_date, all_day, is_immovable) VALUES
+-- Study sessions for April
+(7, 'Study: Physics', 'Review physics concepts', 14, '2025-04-02 16:00:00', '2025-04-02 18:00:00', 0, FALSE),
+(7, 'Study: Mathematics', 'Work on math problems', 14, '2025-04-03 17:00:00', '2025-04-03 19:00:00', 0, FALSE),
+(7, 'Study: Technical subjects', 'Prepare for technical classes', 14, '2025-04-07 19:00:00', '2025-04-07 21:00:00', 0, FALSE),
+(7, 'Study: Physics exam prep', 'Prepare for upcoming physics tests', 14, '2025-04-10 16:00:00', '2025-04-10 18:00:00', 0, FALSE),
+(7, 'Study: Project work', 'Work on ongoing projects', 14, '2025-04-14 17:00:00', '2025-04-14 19:30:00', 0, FALSE),
+(7, 'Study: Report writing', 'Work on report drafts', 14, '2025-04-17 16:00:00', '2025-04-17 18:00:00', 0, FALSE),
+(7, 'Study: Math B project', 'Preparation for Math B project', 14, '2025-04-20 14:00:00', '2025-04-20 17:00:00', 0, FALSE),
+
+-- Study sessions for May
+(7, 'Study: Exam revision', 'General exam preparation', 14, '2025-05-04 15:00:00', '2025-05-04 18:00:00', 0, FALSE),
+(7, 'Study: Physics formulas', 'Memorize key physics formulas', 14, '2025-05-08 16:00:00', '2025-05-08 18:00:00', 0, FALSE),
+(7, 'Study: Danish essay practice', 'Practice for Danish A exam', 14, '2025-05-10 14:00:00', '2025-05-10 16:00:00', 0, FALSE),
+(7, 'Study: Math problems', 'Advanced math problem solving', 14, '2025-05-14 17:00:00', '2025-05-14 19:00:00', 0, FALSE),
+(7, 'Study: English writing', 'Practice English writing skills', 14, '2025-05-17 13:00:00', '2025-05-17 15:00:00', 0, FALSE),
+(7, 'Study: Chemistry review', 'Review chemistry concepts', 14, '2025-05-24 14:00:00', '2025-05-24 16:30:00', 0, FALSE),
+(7, 'Study: Biology review', 'Review biology topics for exam', 14, '2025-05-25 15:00:00', '2025-05-25 17:30:00', 0, FALSE);
+
+-- Generate date series for 4 months - keep this for non-school days to have some regular activities
 CREATE TEMPORARY TABLE date_series (date_value DATE);
 INSERT INTO date_series
 SELECT DATE_ADD(CURDATE(), INTERVAL nums.num DAY)
@@ -59,96 +218,8 @@ FROM (
     WHERE a.N + b.N * 10 + c.N * 100 < 120
 ) nums;
 
--- Insert regular weekday classes (Monday-Friday)
-INSERT INTO calendar_events (user_id, title, description, category_id, start_date, end_date, all_day)
-SELECT 
-    u.id,
-    CASE DAYOFWEEK(d.date_value)
-        WHEN 2 THEN 'Data Structures'
-        WHEN 3 THEN 'Algorithms'
-        WHEN 4 THEN 'Database Systems'
-        WHEN 5 THEN 'Computer Networks'
-        WHEN 6 THEN 'Software Engineering'
-    END,
-    'Regular class session',
-    1,
-    DATE_ADD(d.date_value, INTERVAL h.hour HOUR),
-    DATE_ADD(d.date_value, INTERVAL h.hour + 1 HOUR),
-    0
-FROM date_series d
-CROSS JOIN (SELECT 8 AS hour UNION SELECT 9 UNION SELECT 10 UNION SELECT 11) h
-CROSS JOIN users u
-WHERE DAYOFWEEK(d.date_value) BETWEEN 2 AND 6
-AND u.is_active = TRUE;
-
--- Insert lab sessions
-INSERT INTO calendar_events (user_id, title, description, category_id, start_date, end_date, all_day)
-SELECT 
-    u.id,
-    CONCAT(
-        CASE DAYOFWEEK(d.date_value)
-            WHEN 2 THEN 'Programming'
-            WHEN 3 THEN 'Database'
-            WHEN 4 THEN 'Networks'
-            WHEN 5 THEN 'Systems'
-            WHEN 6 THEN 'Web Dev'
-        END,
-        ' Lab'
-    ),
-    'Practical session',
-    5,
-    DATE_ADD(d.date_value, INTERVAL h.hour HOUR),
-    DATE_ADD(d.date_value, INTERVAL h.hour + 2 HOUR),
-    0
-FROM date_series d
-CROSS JOIN (SELECT 13 AS hour UNION SELECT 15) h
-CROSS JOIN users u
-WHERE DAYOFWEEK(d.date_value) BETWEEN 2 AND 6
-AND u.is_active = TRUE
-AND u.id IN (2, 3, 4); -- Only some users have labs
-
--- Insert study groups with random user assignments
-INSERT INTO calendar_events (user_id, title, description, category_id, start_date, end_date, all_day)
-SELECT 
-    u.id,
-    CONCAT(
-        ELT(FLOOR(1 + RAND() * 5), 'Algorithm', 'Project', 'Theory', 'Systems', 'Research'),
-        ' Study Group'
-    ),
-    'Group study session',
-    3,
-    DATE_ADD(d.date_value, INTERVAL h.hour HOUR),
-    DATE_ADD(d.date_value, INTERVAL h.hour + 1.5 HOUR),
-    0
-FROM date_series d
-CROSS JOIN (SELECT 17 AS hour UNION SELECT 18 UNION SELECT 19) h
-CROSS JOIN users u
-WHERE DAYOFWEEK(d.date_value) IN (2, 4, 6)
-AND u.is_active = TRUE
-AND RAND() < 0.3; -- Only 30% chance for each user to have study group
-
--- Insert project work sessions
-INSERT INTO calendar_events (user_id, title, description, category_id, start_date, end_date, all_day)
-SELECT 
-    u.id,
-    CONCAT(
-        ELT(FLOOR(1 + RAND() * 4), 'Frontend', 'Backend', 'Database', 'Testing'),
-        ' Development'
-    ),
-    'Project development work',
-    4,
-    DATE_ADD(d.date_value, INTERVAL h.hour HOUR),
-    DATE_ADD(d.date_value, INTERVAL h.hour + 2 HOUR),
-    0
-FROM date_series d
-CROSS JOIN (SELECT 14 AS hour UNION SELECT 16) h
-CROSS JOIN users u
-WHERE DAYOFWEEK(d.date_value) IN (2, 3, 5)
-AND u.is_active = TRUE
-AND u.id != 1; -- Everyone except admin has project work
-
--- Insert daily personal activities
-INSERT INTO calendar_events (user_id, title, description, category_id, start_date, end_date, all_day)
+-- Insert daily personal activities (but not on exam days)
+INSERT INTO calendar_events (user_id, title, description, category_id, start_date, end_date, all_day, is_immovable)
 SELECT 
     u.id,
     ELT(FLOOR(1 + RAND() * 5), 'Gym Session', 'Lunch Break', 'Coffee Break', 'Reading', 'Meditation'),
@@ -156,65 +227,18 @@ SELECT
     7,
     DATE_ADD(d.date_value, INTERVAL h.hour HOUR),
     DATE_ADD(d.date_value, INTERVAL h.hour + 1 HOUR),
-    0
+    0,
+    FALSE
 FROM date_series d
 CROSS JOIN (SELECT 7 AS hour UNION SELECT 12 UNION SELECT 20) h
 CROSS JOIN users u
 WHERE u.is_active = TRUE
-AND RAND() < 0.7; -- 70% chance for each user to have personal activities
-
--- Insert workshops (Tuesday and Thursday)
-INSERT INTO calendar_events (user_id, title, description, category_id, start_date, end_date, all_day)
-SELECT 
-    u.id,
-    CASE DAYOFWEEK(date_value)
-        WHEN 3 THEN 'Tech Workshop'
-        WHEN 5 THEN 'Research Seminar'
-    END,
-    'Weekly session',
-    10,
-    DATE_ADD(date_value, INTERVAL 15 HOUR),
-    DATE_ADD(date_value, INTERVAL 17 HOUR),
-    0
-FROM date_series d
-CROSS JOIN users u
-WHERE DAYOFWEEK(date_value) IN (3, 5)
-AND u.is_active = TRUE
-AND RAND() < 0.4; -- 40% chance for each user to attend workshops
-
--- Insert research activities (Monday and Wednesday)
-INSERT INTO calendar_events (user_id, title, description, category_id, start_date, end_date, all_day)
-SELECT 
-    u.id,
-    'Research Work',
-    'Paper review and research',
-    11,
-    DATE_ADD(date_value, INTERVAL 13 HOUR),
-    DATE_ADD(date_value, INTERVAL 15 HOUR),
-    0
-FROM date_series d
-CROSS JOIN users u
-WHERE DAYOFWEEK(date_value) IN (2, 4)
-AND u.is_active = TRUE
-AND u.id IN (1, 2, 5); -- Only admin, John, and Alice do research
-
--- Insert random all-day events
-INSERT INTO calendar_events (user_id, title, description, category_id, start_date, all_day)
-SELECT 
-    u.id,
-    ELT(FLOOR(1 + RAND() * 5), 'Project Deadline', 'Assignment Due', 'Exam Day', 'Hackathon', 'Conference'),
-    'Important all-day event',
-    FLOOR(1 + RAND() * 8),
-    DATE_ADD(CURDATE(), INTERVAL FLOOR(RAND() * 120) DAY),
-    1
-FROM (
-    SELECT a.n FROM 
-    (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3) a,
-    (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3) b
-) numbers
-CROSS JOIN users u
-WHERE u.is_active = TRUE
-AND RAND() < 0.6; -- 60% chance for each user to have all-day events
+AND RAND() < 0.5 -- 50% chance for each user to have personal activities
+AND DATE_FORMAT(d.date_value, '%Y-%m-%d') NOT IN (
+    SELECT DATE_FORMAT(start_date, '%Y-%m-%d') 
+    FROM calendar_events 
+    WHERE category_id = 13
+);
 
 -- Clean up
 DROP TEMPORARY TABLE IF EXISTS date_series;
