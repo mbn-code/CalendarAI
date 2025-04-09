@@ -3,7 +3,7 @@ require_once __DIR__ . '/../config.php';
 
 try {
     // Create mysqli connection for backward compatibility
-    $conn = new mysqli('localhost', 'root', '2671', 'calendar');
+    $conn = new mysqli('localhost', 'root', '2671', 'calendar_ai');
     
     if ($conn->connect_error) {
         if (DEBUG) {
@@ -27,7 +27,7 @@ try {
     }
     
     // Also create PDO connection for scripts that use it
-    $pdo = new PDO('mysql:host=localhost;dbname=calendar;charset=utf8mb4', 'root', '2671');
+    $pdo = new PDO('mysql:host=localhost;dbname=calendar_ai;charset=utf8mb4', 'root', '2671');
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     

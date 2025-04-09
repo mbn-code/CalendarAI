@@ -13,6 +13,7 @@ error_reporting(E_ERROR);
 ob_clean();
 
 require_once '../backend/db.php';
+require_once '../backend/ScheduleOptimizerV2.php';
 require_once '../config.php'; // Include config for debug functions
 header('Content-Type: application/json');
 
@@ -58,54 +59,6 @@ try {
     // Log the received data
     error_log("[DEBUG] Received data: " . json_encode($data));
 
-    // Load preset-specific optimization parameters
-    $optimizationParams = [];
-    switch ($preset) {
-        case 'busy_week':
-            $optimizationParams = [
-                'min_break' => 15,
-                'max_consecutive_meetings' => 3,
-                'preferred_meeting_duration' => 45,
-                'focus_block_duration' => 90,
-                'optimal_day_start' => '09:00',
-                'optimal_day_end' => '17:00'
-            ];
-            break;
-        case 'conflicts':
-            $optimizationParams = [
-                'min_break' => 30,
-                'max_consecutive_meetings' => 2,
-                'conflict_resolution_priority' => 'high',
-                'spacing_buffer' => 15,
-                'optimal_day_start' => '09:00',
-                'optimal_day_end' => '17:00'
-            ];
-            break;
-        case 'optimized':
-            $optimizationParams = [
-                'min_break' => 30,
-                'max_consecutive_meetings' => 2,
-                'focus_block_duration' => 120,
-                'break_frequency' => 3,
-                'optimal_day_start' => '09:00',
-                'optimal_day_end' => '17:00'
-            ];
-            break;
-        default:
-            $optimizationParams = [
-                'min_break' => 15,
-                'max_consecutive_meetings' => 3,
-                'focus_block_duration' => 60,
-                'break_frequency' => 4,
-                'optimal_day_start' => '09:00',
-                'optimal_day_end' => '17:00'
-            ];
-    }
-
-    // Log the selected preset and parameters
-    error_log("[DEBUG] Selected preset: $preset");
-    error_log("[DEBUG] Optimization parameters: " . json_encode($optimizationParams));
-
     // Get events for the selected days
     $events = [];
     $userId = $_SESSION['user_id'] ?? 1; // Default to user 1 if not set
@@ -115,108 +68,73 @@ try {
     $userPrefStmt->execute([$userId]);
     $userPrefs = $userPrefStmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($userPrefs) {
-        // Build dynamic parameters from the user's preferences
-        $dynamicParams = [
-            'min_break' => (int)$userPrefs['break_duration'],
-            'focus_block_duration' => (int)$userPrefs['session_length'],
-            'optimal_day_start' => $userPrefs['focus_start_time'] ?? '09:00',
-            'optimal_day_end'   => $userPrefs['focus_end_time'] ?? '17:00'
-        ];
-
-        // Merge dynamic parameters with preset defaults (dynamic takes precedence)
-        $presetDefaults = $optimizationParams; // already set via switch-case
-        $optimizationParams = array_merge($presetDefaults, $dynamicParams);
-    }
-
-    // Step 3: Verify Database Connection and Queries
-    foreach ($days as $day) {
-        try {
-            $stmt = $pdo->prepare("
-                SELECT * FROM calendar_events 
-                WHERE DATE(start_date) = ? 
-                AND user_id = ? 
-                ORDER BY start_date ASC
-            ");
-            $stmt->execute([$day, $userId]);
-            $dayEvents = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            
-            if ($dayEvents) {
-                error_log("[DEBUG] Found " . count($dayEvents) . " events for day: $day");
-            } else {
-                error_log("[DEBUG] No events found for day: $day");
-            }
-            
-            $events = array_merge($events, $dayEvents);
-        } catch (PDOException $e) {
-            // Log the error but continue
-            error_log("[ERROR] Database error in optimize.php: " . $e->getMessage());
-        }
-    }
-
-    // Log the retrieved events
-    error_log("[DEBUG] Retrieved events count: " . count($events));
-    if (count($events) > 0) {
-        error_log("[DEBUG] First event sample: " . json_encode($events[0]));
-    }
-
-    // Apply optimization based on preset
-    $changes = [];
-    $insights = [];
-    $schedule_health = [
-        'focus_time_utilization' => 70,
-        'break_compliance' => 80,
-        'conflict_score' => 2,
-        'balance_score' => 75
-    ];
-
-    // Group events by day for processing
-    $eventsByDay = [];
-    foreach ($events as $event) {
-        // Step 4: Validate Date Fields
-        if (empty($event['start_date'])) {
-            error_log("[ERROR] Event is missing start_date field: " . json_encode($event));
-            continue;
-        }
+    // Step 2: Use a more optimized query to get all events for all days at once
+    try {
+        // Using an IN clause for better performance with multiple days
+        $placeholders = implode(',', array_fill(0, count($days), '?'));
+        $params = array_merge($days, [$userId]); // All days + userId
         
-        $date = date('Y-m-d', strtotime($event['start_date']));
-        if ($date === false) {
-            error_log("[ERROR] Invalid date format for event ID " . $event['id']);
-            continue;
-        }
+        $stmt = $pdo->prepare("
+            SELECT * FROM calendar_events 
+            WHERE DATE(start_date) IN ($placeholders)
+            AND user_id = ? 
+            ORDER BY start_date ASC
+        ");
+        $stmt->execute($params);
+        $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
-        $eventsByDay[$date][] = $event;
+        error_log("[DEBUG] Retrieved events count: " . count($events));
+        if (count($events) > 0) {
+            error_log("[DEBUG] First event sample: " . json_encode($events[0]));
+        }
+    } catch (PDOException $e) {
+        error_log("[ERROR] Database error in optimize.php: " . $e->getMessage());
+        throw new Exception("Error retrieving events: " . $e->getMessage());
     }
 
-    // Process each day
-    foreach ($eventsByDay as $date => $dayEvents) {
-        $dayChanges = optimizeDaySchedule($dayEvents, $optimizationParams, $preset);
-        $changes = array_merge($changes, $dayChanges);
-    }
-
-    // Log the suggested changes
-    error_log("[DEBUG] Suggested changes: " . json_encode($changes));
-
-    // Calculate schedule health metrics
-    $schedule_health = calculateScheduleHealth($events, $changes, $optimizationParams);
-
+    // Step 3: Create and configure the optimizer
+    // Initialize our new optimizer with user preferences
+    $optimizer = new ScheduleOptimizerV2($userPrefs ?: [], $preset);
+    
+    // Add all events to the optimizer
+    $optimizer->addEvents($events);
+    
+    // Run the optimization process
+    $optimizer->optimize($preset);
+    
+    // Get the resulting changes
+    $changes = $optimizer->getChanges();
+    
+    // Calculate schedule health metrics using the optimizer
+    $schedule_health = $optimizer->calculateScheduleHealth();
+    
     // Generate insights based on changes and health metrics
-    $insights = generateInsights($changes, $schedule_health, $preset);
-
-    // Apply changes directly to the database if auto_apply is enabled
+    $insights = $optimizer->generateInsights($preset);
+    
+    // Log the suggested changes
+    error_log("[DEBUG] Suggested changes: " . json_encode($changes));    // Apply changes directly to the database if auto_apply is enabled
     $appliedChanges = 0;
     if ($autoApply && !empty($changes)) {
         $appliedChanges = applyChangesToDatabase($changes, $preset);
         error_log("[DEBUG] Auto-applied $appliedChanges changes to the database");
     }
 
-    // Create response data structure
+    // Get metrics about the optimization process
+    $metrics = $optimizer->getMetrics();
+
+    // Create response data structure with enhanced metrics
     $responseData = [
         'success' => true,
         'changes' => $changes,
         'analysis' => [
             'schedule_health' => $schedule_health,
-            'insights' => $insights
+            'insights' => $insights,
+            'metrics' => [
+                'conflicts_resolved' => $metrics['conflicts_resolved'] ?? 0,
+                'breaks_added' => $metrics['breaks_added'] ?? 0,
+                'events_moved' => $metrics['events_moved'] ?? 0,
+                'events_split' => $metrics['events_split'] ?? 0
+            ]
         ],
         'preset_used' => $preset,
         'changes_applied' => $autoApply ? $appliedChanges : 0
@@ -269,45 +187,103 @@ ob_end_flush();
 function applyChangesToDatabase($changes, $preset) {
     global $pdo;
     $appliedCount = 0;
+    $changeLog = [];
     
     try {
         // Start a transaction for database consistency
         $pdo->beginTransaction();
         
-        // Prepare SQL statements for different operations
-        $updateStmt = $pdo->prepare("
-            UPDATE calendar_events 
-            SET start_date = :start_date,
-                end_date = :end_date,
-                is_ai_optimized = TRUE,
-                is_human_ai_altered = FALSE,
-                preset_source = :preset
-            WHERE id = :id
-        ");
-        
-        $createStmt = $pdo->prepare("
-            INSERT INTO calendar_events 
-            (title, description, start_date, end_date, user_id, is_ai_optimized, is_human_ai_altered, preset_source, is_break, category)
-            VALUES 
-            (:title, :description, :start_date, :end_date, :user_id, TRUE, FALSE, :preset, :is_break, :category)
-        ");
-        
-        $deleteStmt = $pdo->prepare("
-            DELETE FROM calendar_events WHERE id = :id
-        ");
-        
-        $userId = $_SESSION['user_id'] ?? 1; // Default to user 1 if not set
+        // Batch similar changes for more efficient processing
+        $updates = [];
+        $creations = [];
+        $deletions = [];
         
         foreach ($changes as $change) {
             // Skip changes without necessary data
-            if (!isset($change['new_time'])) {
-                error_log("[ERROR] Missing new_time in change: " . json_encode($change));
+            if (!isset($change['new_time']) && !isset($change['action'])) {
+                error_log("[ERROR] Missing required data in change: " . json_encode($change));
                 continue;
             }
             
-            // Different handling based on action type
+            // Group by operation type
             if (isset($change['action']) && $change['action'] === 'create') {
-                // This is a new event (break or split event)
+                $creations[] = $change;
+            } elseif (isset($change['action']) && $change['action'] === 'delete') {
+                $deletions[] = $change;
+            } elseif (isset($change['event_id']) && $change['event_id'] !== 'new_break' && $change['event_id'] !== 'new_split_event') {
+                $updates[] = $change;
+            }
+        }
+        
+        // Process updates - prepare batch update if multiple similar changes
+        if (!empty($updates)) {
+            $updateStmt = $pdo->prepare("
+                UPDATE calendar_events 
+                SET start_date = :start_date,
+                    end_date = :end_date,
+                    is_ai_optimized = TRUE,
+                    is_human_ai_altered = FALSE,
+                    preset_source = :preset,
+                    ai_description = :reason
+                WHERE id = :id
+            ");
+            
+            foreach ($updates as $change) {
+                $newStartTime = $change['new_time'];
+                $duration = isset($change['duration']) ? (int)$change['duration'] * 60 : 3600; // Default 1 hour in seconds
+                $newEndTime = date('Y-m-d H:i:s', strtotime($newStartTime) + $duration);
+                $reason = $change['reason'] ?? 'Schedule optimized';
+                
+                $updateStmt->bindParam(':start_date', $newStartTime);
+                $updateStmt->bindParam(':end_date', $newEndTime);
+                $updateStmt->bindParam(':preset', $preset);
+                $updateStmt->bindParam(':reason', $reason);
+                $updateStmt->bindParam(':id', $change['event_id']);
+                
+                try {
+                    if ($updateStmt->execute()) {
+                        $appliedCount++;
+                        $changeLog[] = [
+                            'type' => 'update',
+                            'event_id' => $change['event_id'],
+                            'new_time' => $newStartTime,
+                            'status' => 'success'
+                        ];
+                        error_log("[DEBUG] Successfully updated event ID {$change['event_id']} to $newStartTime");
+                    } else {
+                        $changeLog[] = [
+                            'type' => 'update',
+                            'event_id' => $change['event_id'],
+                            'status' => 'failed',
+                            'error' => json_encode($updateStmt->errorInfo())
+                        ];
+                        error_log("[ERROR] Failed to update event ID {$change['event_id']}: " . json_encode($updateStmt->errorInfo()));
+                    }
+                } catch (PDOException $e) {
+                    // Log individual errors but continue with other changes
+                    $changeLog[] = [
+                        'type' => 'update',
+                        'event_id' => $change['event_id'],
+                        'status' => 'failed',
+                        'error' => $e->getMessage()
+                    ];
+                    error_log("[ERROR] Exception updating event ID {$change['event_id']}: " . $e->getMessage());
+                }
+            }
+        }
+        
+        // Process creations (breaks and split events)
+        if (!empty($creations)) {
+            $createStmt = $pdo->prepare("
+                INSERT INTO calendar_events 
+                (title, description, start_date, end_date, user_id, is_ai_optimized, is_human_ai_altered, preset_source, is_break, category)
+                VALUES 
+                (:title, :description, :start_date, :end_date, :user_id, TRUE, FALSE, :preset, :is_break, :category)
+            ");
+            
+            $userId = $_SESSION['user_id'] ?? 1; // Default to user 1 if not set
+            
+            foreach ($creations as $change) {
                 $newStartTime = $change['new_time'];
                 $duration = isset($change['duration']) ? (int)$change['duration'] * 60 : 900; // Default 15 min for breaks
                 $newEndTime = date('Y-m-d H:i:s', strtotime($newStartTime) + $duration);
@@ -318,58 +294,94 @@ function applyChangesToDatabase($changes, $preset) {
                 $category = $isBreak ? 'Break' : 'Study';
                 $description = $change['reason'] ?? ($isBreak ? 'Auto-generated break' : 'Auto-generated split event');
                 
-                $createStmt->bindParam(':title', $title);
-                $createStmt->bindParam(':description', $description);
-                $createStmt->bindParam(':start_date', $newStartTime);
-                $createStmt->bindParam(':end_date', $newEndTime);
-                $createStmt->bindParam(':user_id', $userId);
-                $createStmt->bindParam(':preset', $preset);
-                $createStmt->bindParam(':is_break', $isBreak, PDO::PARAM_BOOL);
-                $createStmt->bindParam(':category', $category);
-                
-                if ($createStmt->execute()) {
-                    $appliedCount++;
-                    error_log("[DEBUG] Successfully created new event '$title' at $newStartTime");
-                } else {
-                    error_log("[ERROR] Failed to create new event: " . json_encode($createStmt->errorInfo()));
-                }
-            } 
-            // Handle delete operations
-            elseif (isset($change['action']) && $change['action'] === 'delete') {
-                if (!isset($change['event_id']) || $change['event_id'] === 'new_break' || $change['event_id'] === 'new_split_event') {
-                    continue; // Skip if not a valid event ID
-                }
-                
-                $deleteStmt->bindParam(':id', $change['event_id']);
-                
-                if ($deleteStmt->execute()) {
-                    $appliedCount++;
-                    error_log("[DEBUG] Successfully deleted event ID {$change['event_id']}");
-                } else {
-                    error_log("[ERROR] Failed to delete event ID {$change['event_id']}: " . json_encode($deleteStmt->errorInfo()));
-                }
-            }
-            // Standard update for existing events
-            elseif (isset($change['event_id']) && $change['event_id'] !== 'new_break' && $change['event_id'] !== 'new_split_event') {
-                $newStartTime = $change['new_time'];
-                $duration = isset($change['duration']) ? (int)$change['duration'] * 60 : 3600; // Default 1 hour in seconds
-                $newEndTime = date('Y-m-d H:i:s', strtotime($newStartTime) + $duration);
-                
-                $updateStmt->bindParam(':start_date', $newStartTime);
-                $updateStmt->bindParam(':end_date', $newEndTime);
-                $updateStmt->bindParam(':preset', $preset);
-                $updateStmt->bindParam(':id', $change['event_id']);
-                
-                if ($updateStmt->execute()) {
-                    $appliedCount++;
-                    error_log("[DEBUG] Successfully updated event ID {$change['event_id']} to $newStartTime");
-                } else {
-                    error_log("[ERROR] Failed to update event ID {$change['event_id']}: " . json_encode($updateStmt->errorInfo()));
+                try {
+                    $createStmt->bindParam(':title', $title);
+                    $createStmt->bindParam(':description', $description);
+                    $createStmt->bindParam(':start_date', $newStartTime);
+                    $createStmt->bindParam(':end_date', $newEndTime);
+                    $createStmt->bindParam(':user_id', $userId);
+                    $createStmt->bindParam(':preset', $preset);
+                    $createStmt->bindParam(':is_break', $isBreak, PDO::PARAM_BOOL);
+                    $createStmt->bindParam(':category', $category);
+                    
+                    if ($createStmt->execute()) {
+                        $appliedCount++;
+                        $changeLog[] = [
+                            'type' => 'create',
+                            'title' => $title,
+                            'new_time' => $newStartTime,
+                            'status' => 'success'
+                        ];
+                        error_log("[DEBUG] Successfully created new event '$title' at $newStartTime");
+                    } else {
+                        $changeLog[] = [
+                            'type' => 'create',
+                            'title' => $title,
+                            'status' => 'failed',
+                            'error' => json_encode($createStmt->errorInfo())
+                        ];
+                        error_log("[ERROR] Failed to create new event: " . json_encode($createStmt->errorInfo()));
+                    }
+                } catch (PDOException $e) {
+                    $changeLog[] = [
+                        'type' => 'create',
+                        'title' => $title,
+                        'status' => 'failed',
+                        'error' => $e->getMessage()
+                    ];
+                    error_log("[ERROR] Exception creating event '$title': " . $e->getMessage());
                 }
             }
         }
         
-        // Log the optimization in the chat history
+        // Process deletions - if applicable
+        if (!empty($deletions)) {
+            $deleteIDs = [];
+            foreach ($deletions as $change) {
+                if (!isset($change['event_id']) || $change['event_id'] === 'new_break' || $change['event_id'] === 'new_split_event') {
+                    continue; // Skip if not a valid event ID
+                }
+                $deleteIDs[] = $change['event_id'];
+            }
+            
+            if (!empty($deleteIDs)) {
+                // More efficient to delete multiple events in one query if possible
+                $placeholders = implode(',', array_fill(0, count($deleteIDs), '?'));
+                $deleteStmt = $pdo->prepare("DELETE FROM calendar_events WHERE id IN ($placeholders)");
+                
+                try {
+                    if ($deleteStmt->execute($deleteIDs)) {
+                        $deleteCount = $deleteStmt->rowCount();
+                        $appliedCount += $deleteCount;
+                        $changeLog[] = [
+                            'type' => 'delete',
+                            'event_ids' => $deleteIDs,
+                            'count' => $deleteCount,
+                            'status' => 'success'
+                        ];
+                        error_log("[DEBUG] Successfully deleted $deleteCount events");
+                    } else {
+                        $changeLog[] = [
+                            'type' => 'delete',
+                            'event_ids' => $deleteIDs,
+                            'status' => 'failed',
+                            'error' => json_encode($deleteStmt->errorInfo())
+                        ];
+                        error_log("[ERROR] Failed to delete events: " . json_encode($deleteStmt->errorInfo()));
+                    }
+                } catch (PDOException $e) {
+                    $changeLog[] = [
+                        'type' => 'delete',
+                        'event_ids' => $deleteIDs,
+                        'status' => 'failed',
+                        'error' => $e->getMessage()
+                    ];
+                    error_log("[ERROR] Exception deleting events: " . $e->getMessage());
+                }
+            }
+        }
+        
+        // Generate summary statistics for chat log
         $breakCount = count(array_filter($changes, function($change) {
             return isset($change['event_id']) && $change['event_id'] === 'new_break';
         }));
@@ -389,6 +401,8 @@ function applyChangesToDatabase($changes, $preset) {
             return isset($change['action']) && $change['action'] === 'delete';
         }));
         
+        // Log to chat history
+        $userId = $_SESSION['user_id'] ?? 1;
         $message = "AI optimization applied: $moveCount events moved";
         if ($breakCount > 0) $message .= ", $breakCount breaks added";
         if ($splitCount > 0) $message .= ", $splitCount events split across days";
@@ -403,7 +417,17 @@ function applyChangesToDatabase($changes, $preset) {
         $chatStmt->bindParam(':message', $message);
         $chatStmt->execute();
         
-        // Commit the changes
+        // Write detailed change log to database for auditing/history
+        $logJson = json_encode($changeLog);
+        $logStmt = $pdo->prepare("
+            INSERT INTO system_prompts (user_id, prompt_text, is_active)
+            VALUES (:user_id, :log_data, 0)
+        ");
+        $logStmt->bindParam(':user_id', $userId);
+        $logStmt->bindParam(':log_data', $logJson);
+        $logStmt->execute();
+        
+        // Commit all changes at once
         $pdo->commit();
         
         return $appliedCount;
