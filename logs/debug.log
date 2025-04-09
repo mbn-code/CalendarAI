@@ -67057,3 +67057,1446 @@ Data: {
     "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
 }
 [07-Apr-2025 02:27:45 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:28:18 Europe/Berlin] [2025-04-07 02:28:18] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:28:18 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:28:22 Europe/Berlin] [2025-04-07 02:28:22] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Starting optimization process
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"busy_week","auto_apply":true}
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Received data: {"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"busy_week","auto_apply":true}
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Selected preset: busy_week
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":15,"max_consecutive_meetings":3,"preferred_meeting_duration":45,"focus_block_duration":90,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-07
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-08
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-09
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-10
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-11
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-12
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-13
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-14
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] No events found for day: 2025-04-15
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-16
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-17
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-18
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-19
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-20
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-21
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-22
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-23
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-24
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-25
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] No events found for day: 2025-04-26
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-27
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-28
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-29
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-30
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-05-01
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-05-02
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-03
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-05-04
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-05-05
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-06
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Retrieved events count: 67
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] First event sample: {"id":"4","user_id":"7","title":"3D-vejledning","description":"3D guidance in fifth lesson","category_id":"13","start_date":"2025-04-07 14:00:00","end_date":"2025-04-07 15:30:00","all_day":"0","is_ai_optimized":"0","ai_description":null,"is_human_ai_altered":"0","is_immovable":"1","preset_source":"default","created_at":"2025-04-07 02:27:42"}
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"4","new_time":"2025-04-07 09:15:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"66","new_time":"2025-04-07 11:15:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"6","new_time":"2025-04-08 11:30:00","duration":40,"reason":"Compacted schedule for higher efficiency"},{"event_id":"110","new_time":"2025-04-09 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"129","new_time":"2025-04-10 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"67","new_time":"2025-04-10 10:45:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"130","new_time":"2025-04-10 12:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"146","new_time":"2025-04-11 01:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"147","new_time":"2025-04-11 03:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"167","new_time":"2025-04-12 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"168","new_time":"2025-04-12 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"185","new_time":"2025-04-13 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"186","new_time":"2025-04-13 10:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"205","new_time":"2025-04-14 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"68","new_time":"2025-04-14 10:45:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"206","new_time":"2025-04-14 12:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"242","new_time":"2025-04-16 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"243","new_time":"2025-04-16 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"69","new_time":"2025-04-17 08:30:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"258","new_time":"2025-04-17 10:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"272","new_time":"2025-04-18 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"295","new_time":"2025-04-19 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"296","new_time":"2025-04-19 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"70","new_time":"2025-04-20 09:15:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"335","new_time":"2025-04-21 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"336","new_time":"2025-04-21 10:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"11","new_time":"2025-04-22 11:30:00","duration":40,"reason":"Compacted schedule for higher efficiency"},{"event_id":"9","new_time":"2025-04-22 12:40:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"15","new_time":"2025-04-25 01:30:00","duration":420,"reason":"Compacted schedule for higher efficiency"},{"event_id":"17","new_time":"2025-04-25 16:30:00","duration":30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"24","new_time":"2025-04-29 11:30:00","duration":40,"reason":"Compacted schedule for higher efficiency"},{"event_id":"28","new_time":"2025-05-01 01:30:00","duration":420,"reason":"Compacted schedule for higher efficiency"},{"event_id":"32","new_time":"2025-05-02 01:30:00","duration":420,"reason":"Compacted schedule for higher efficiency"},{"event_id":"35","new_time":"2025-05-02 16:30:00","duration":30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"408","new_time":"2025-05-03 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"71","new_time":"2025-05-04 09:15:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"38","new_time":"2025-05-06 11:30:00","duration":40,"reason":"Compacted schedule for higher efficiency"}]
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 4 to 2025-04-07 09:15:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 66 to 2025-04-07 11:15:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 6 to 2025-04-08 11:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 110 to 2025-04-09 09:15:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 129 to 2025-04-10 09:15:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 67 to 2025-04-10 10:45:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 130 to 2025-04-10 12:45:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 146 to 2025-04-11 01:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 147 to 2025-04-11 03:00:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 167 to 2025-04-12 09:15:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 168 to 2025-04-12 10:45:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 185 to 2025-04-13 08:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 186 to 2025-04-13 10:00:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 205 to 2025-04-14 09:15:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 68 to 2025-04-14 10:45:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 206 to 2025-04-14 12:45:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 242 to 2025-04-16 09:15:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 243 to 2025-04-16 10:45:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 69 to 2025-04-17 08:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 258 to 2025-04-17 10:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 272 to 2025-04-18 08:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 295 to 2025-04-19 09:15:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 296 to 2025-04-19 10:45:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 70 to 2025-04-20 09:15:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 335 to 2025-04-21 08:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 336 to 2025-04-21 10:00:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 11 to 2025-04-22 11:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 9 to 2025-04-22 12:40:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 15 to 2025-04-25 01:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 17 to 2025-04-25 16:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 24 to 2025-04-29 11:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 28 to 2025-05-01 01:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 32 to 2025-05-02 01:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 35 to 2025-05-02 16:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 408 to 2025-05-03 08:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 71 to 2025-05-04 09:15:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Successfully updated event ID 38 to 2025-05-06 11:30:00
+[07-Apr-2025 02:28:22 Europe/Berlin] [DEBUG] Auto-applied 37 changes to the database
+[07-Apr-2025 02:28:23 Europe/Berlin] [2025-04-07 02:28:23] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:28:23 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:28:24 Europe/Berlin] [2025-04-07 02:28:24] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:28:24 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:28:36 Europe/Berlin] [2025-04-07 02:28:36] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:28:36 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:28:53 Europe/Berlin] [2025-04-07 02:28:53] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Starting optimization process
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"busy_week","auto_apply":true}
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Received data: {"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"busy_week","auto_apply":true}
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Selected preset: busy_week
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":15,"max_consecutive_meetings":3,"preferred_meeting_duration":45,"focus_block_duration":90,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-07
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-08
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-09
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-10
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-11
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] No events found for day: 2025-04-12
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-13
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-14
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-15
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-16
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-17
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-18
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] No events found for day: 2025-04-19
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-20
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-21
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-22
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-23
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-24
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-25
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-26
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-27
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-28
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-29
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-30
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-05-01
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-05-02
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-03
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-04
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-05-05
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-06
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Retrieved events count: 73
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] First event sample: {"id":"4","user_id":"7","title":"3D-vejledning","description":"3D guidance in fifth lesson","category_id":"13","start_date":"2025-04-07 14:00:00","end_date":"2025-04-07 15:30:00","all_day":"0","is_ai_optimized":"0","ai_description":null,"is_human_ai_altered":"0","is_immovable":"1","preset_source":"default","created_at":"2025-04-07 02:28:34"}
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"4","new_time":"2025-04-07 09:15:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"66","new_time":"2025-04-07 11:15:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"6","new_time":"2025-04-08 11:30:00","duration":40,"reason":"Compacted schedule for higher efficiency"},{"event_id":"103","new_time":"2025-04-09 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"104","new_time":"2025-04-09 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"116","new_time":"2025-04-10 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"67","new_time":"2025-04-10 10:00:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"131","new_time":"2025-04-11 01:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"132","new_time":"2025-04-11 03:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"133","new_time":"2025-04-11 04:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"158","new_time":"2025-04-13 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"176","new_time":"2025-04-14 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"68","new_time":"2025-04-14 10:00:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"190","new_time":"2025-04-15 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"191","new_time":"2025-04-15 10:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"214","new_time":"2025-04-16 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"232","new_time":"2025-04-17 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"69","new_time":"2025-04-17 10:00:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"233","new_time":"2025-04-17 12:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"248","new_time":"2025-04-18 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"249","new_time":"2025-04-18 10:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"70","new_time":"2025-04-20 08:30:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"311","new_time":"2025-04-21 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"312","new_time":"2025-04-21 10:00:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"11","new_time":"2025-04-22 11:30:00","duration":40,"reason":"Compacted schedule for higher efficiency"},{"event_id":"9","new_time":"2025-04-22 12:40:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"15","new_time":"2025-04-25 01:30:00","duration":420,"reason":"Compacted schedule for higher efficiency"},{"event_id":"17","new_time":"2025-04-25 16:30:00","duration":30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"363","new_time":"2025-04-26 09:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"385","new_time":"2025-04-27 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"24","new_time":"2025-04-29 11:30:00","duration":40,"reason":"Compacted schedule for higher efficiency"},{"event_id":"28","new_time":"2025-05-01 01:30:00","duration":420,"reason":"Compacted schedule for higher efficiency"},{"event_id":"32","new_time":"2025-05-02 01:30:00","duration":420,"reason":"Compacted schedule for higher efficiency"},{"event_id":"35","new_time":"2025-05-02 16:30:00","duration":30,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"395","new_time":"2025-05-03 08:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"71","new_time":"2025-05-04 08:30:00","duration":90,"reason":"Compacted schedule for higher efficiency"},{"event_id":"406","new_time":"2025-05-04 10:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"38","new_time":"2025-05-06 11:30:00","duration":40,"reason":"Compacted schedule for higher efficiency"}]
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 4 to 2025-04-07 09:15:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 66 to 2025-04-07 11:15:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 6 to 2025-04-08 11:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 103 to 2025-04-09 09:15:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 104 to 2025-04-09 10:45:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 116 to 2025-04-10 08:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 67 to 2025-04-10 10:00:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 131 to 2025-04-11 01:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 132 to 2025-04-11 03:00:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 133 to 2025-04-11 04:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 158 to 2025-04-13 08:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 176 to 2025-04-14 08:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 68 to 2025-04-14 10:00:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 190 to 2025-04-15 08:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 191 to 2025-04-15 10:00:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 214 to 2025-04-16 08:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 232 to 2025-04-17 08:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 69 to 2025-04-17 10:00:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 233 to 2025-04-17 12:00:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 248 to 2025-04-18 09:15:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 249 to 2025-04-18 10:45:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 70 to 2025-04-20 08:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 311 to 2025-04-21 08:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 312 to 2025-04-21 10:00:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 11 to 2025-04-22 11:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 9 to 2025-04-22 12:40:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 15 to 2025-04-25 01:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 17 to 2025-04-25 16:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 363 to 2025-04-26 09:15:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 385 to 2025-04-27 08:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 24 to 2025-04-29 11:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 28 to 2025-05-01 01:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 32 to 2025-05-02 01:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 35 to 2025-05-02 16:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 395 to 2025-05-03 08:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 71 to 2025-05-04 08:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 406 to 2025-05-04 10:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Successfully updated event ID 38 to 2025-05-06 11:30:00
+[07-Apr-2025 02:28:53 Europe/Berlin] [DEBUG] Auto-applied 38 changes to the database
+[07-Apr-2025 02:28:54 Europe/Berlin] [2025-04-07 02:28:54] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:28:54 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:29:21 Europe/Berlin] [2025-04-07 02:29:21] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:29:21 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:29:51 Europe/Berlin] [2025-04-07 02:29:51] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Starting optimization process
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"optimized","auto_apply":true}
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Received data: {"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"optimized","auto_apply":true}
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Selected preset: optimized
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":30,"max_consecutive_meetings":2,"focus_block_duration":120,"break_frequency":3,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-07
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-08
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-09
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-10
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-11
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] No events found for day: 2025-04-12
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-13
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-14
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-15
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-16
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-17
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-18
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] No events found for day: 2025-04-19
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-20
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-21
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-22
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-23
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-24
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-25
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-26
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-27
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-28
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-29
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-30
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-05-01
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-05-02
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-03
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-04
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-05-05
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-06
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Retrieved events count: 73
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] First event sample: {"id":"4","user_id":"7","title":"3D-vejledning","description":"3D guidance in fifth lesson","category_id":"13","start_date":"2025-04-07 09:15:00","end_date":"2025-04-07 10:45:00","all_day":"0","is_ai_optimized":"1","ai_description":null,"is_human_ai_altered":"0","is_immovable":"1","preset_source":"busy_week","created_at":"2025-04-07 02:28:34"}
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"66","new_time":"2025-04-07 11:30:00","duration":90,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"5","new_time":"2025-04-08 09:15:00","duration":120,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"6","new_time":"2025-04-08 12:00:00","duration":40,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"104","new_time":"2025-04-09 11:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"115","new_time":"2025-04-10 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"116","new_time":"2025-04-10 11:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"67","new_time":"2025-04-10 12:45:00","duration":90,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"new_break","title":"Break","new_time":"2025-04-10 11:35:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"7","new_time":"2025-04-11 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"131","new_time":"2025-04-11 11:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"132","new_time":"2025-04-11 12:45:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"133","new_time":"2025-04-11 14:30:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"new_break","title":"Break","new_time":"2025-04-11 04:05:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"157","new_time":"2025-04-13 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"158","new_time":"2025-04-13 11:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"175","new_time":"2025-04-14 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"176","new_time":"2025-04-14 11:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"68","new_time":"2025-04-14 12:45:00","duration":90,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"new_break","title":"Break","new_time":"2025-04-14 11:35:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"189","new_time":"2025-04-15 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"190","new_time":"2025-04-15 11:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"191","new_time":"2025-04-15 12:45:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"new_break","title":"Break","new_time":"2025-04-15 11:05:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"213","new_time":"2025-04-16 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"214","new_time":"2025-04-16 11:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"231","new_time":"2025-04-17 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"232","new_time":"2025-04-17 11:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"69","new_time":"2025-04-17 12:45:00","duration":90,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"233","new_time":"2025-04-17 15:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"new_break","title":"Break","new_time":"2025-04-17 11:35:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"249","new_time":"2025-04-18 11:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"288","new_time":"2025-04-20 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"70","new_time":"2025-04-20 11:00:00","duration":90,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"310","new_time":"2025-04-21 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"311","new_time":"2025-04-21 11:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"312","new_time":"2025-04-21 12:45:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"new_break","title":"Break","new_time":"2025-04-21 11:05:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"8","new_time":"2025-04-22 09:15:00","duration":420,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"10","new_time":"2025-04-22 17:00:00","duration":0,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"11","new_time":"2025-04-22 17:45:00","duration":-45,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"9","new_time":"2025-04-22 17:45:00","duration":-45,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"new_break","title":"Break","new_time":"2025-04-22 12:15:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"12","new_time":"2025-04-23 09:15:00","duration":420,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"13","new_time":"2025-04-24 09:15:00","duration":420,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"14","new_time":"2025-04-25 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"15","new_time":"2025-04-25 11:00:00","duration":360,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"16","new_time":"2025-04-25 17:45:00","duration":-45,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"17","new_time":"2025-04-26 09:00:00","duration":30,"reason":"Moved to next day to fit workday boundaries"},{"event_id":"new_break","title":"Break","new_time":"2025-04-25 16:05:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"384","new_time":"2025-04-27 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"385","new_time":"2025-04-27 11:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"18","new_time":"2025-04-28 09:15:00","duration":420,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"19","new_time":"2025-04-28 17:00:00","duration":0,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"20","new_time":"2025-04-29 09:15:00","duration":420,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"21","new_time":"2025-04-29 17:00:00","duration":0,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"22","new_time":"2025-04-29 17:45:00","duration":-45,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"23","new_time":"2025-04-29 17:45:00","duration":-45,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"24","new_time":"2025-04-29 17:45:00","duration":-45,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"new_break","title":"Break","new_time":"2025-04-29 16:05:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"25","new_time":"2025-04-30 09:15:00","duration":420,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"26","new_time":"2025-04-30 17:00:00","duration":0,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"27","new_time":"2025-04-30 17:45:00","duration":-45,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"new_break","title":"Break","new_time":"2025-04-30 16:05:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"29","new_time":"2025-05-01 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"28","new_time":"2025-05-01 11:00:00","duration":360,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"30","new_time":"2025-05-01 17:45:00","duration":-45,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"31","new_time":"2025-05-01 17:45:00","duration":-45,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"new_break","title":"Break","new_time":"2025-05-01 16:05:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"33","new_time":"2025-05-02 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"32","new_time":"2025-05-02 11:00:00","duration":360,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"34","new_time":"2025-05-02 17:45:00","duration":-45,"reason":"Optimized for ideal spacing and energy levels (with adjusted duration)"},{"event_id":"35","new_time":"2025-05-03 09:00:00","duration":30,"reason":"Moved to next day to fit workday boundaries"},{"event_id":"new_break","title":"Break","new_time":"2025-05-02 16:05:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"394","new_time":"2025-05-03 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"395","new_time":"2025-05-03 11:00:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"405","new_time":"2025-05-04 09:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"71","new_time":"2025-05-04 11:00:00","duration":90,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"406","new_time":"2025-05-04 13:15:00","duration":60,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"new_break","title":"Break","new_time":"2025-05-04 11:35:00","duration":30,"reason":"Added scheduled break to improve productivity","action":"create"},{"event_id":"36","new_time":"2025-05-05 09:15:00","duration":420,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"37","new_time":"2025-05-06 09:15:00","duration":120,"reason":"Optimized for ideal spacing and energy levels"},{"event_id":"38","new_time":"2025-05-06 12:00:00","duration":40,"reason":"Optimized for ideal spacing and energy levels"}]
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Successfully updated event ID 66 to 2025-04-07 11:30:00
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Successfully updated event ID 5 to 2025-04-08 09:15:00
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Successfully updated event ID 6 to 2025-04-08 12:00:00
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Successfully updated event ID 104 to 2025-04-09 11:00:00
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Successfully updated event ID 115 to 2025-04-10 09:15:00
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Successfully updated event ID 116 to 2025-04-10 11:00:00
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Successfully updated event ID 67 to 2025-04-10 12:45:00
+[07-Apr-2025 02:29:51 Europe/Berlin] [ERROR] Database error while applying changes: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_break' in 'INSERT INTO'
+[07-Apr-2025 02:29:51 Europe/Berlin] [DEBUG] Auto-applied 0 changes to the database
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:7 - Starting to apply changes
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:18 - Initiating changes application
+Data: {
+    "changes_count": 82
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:22 - Started database transaction
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "66",
+    "new_time": "2025-04-07 11:30:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "66",
+    "new_start": "2025-04-07 11:30:00",
+    "new_end": "2025-04-07 13:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "5",
+    "new_time": "2025-04-08 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "5",
+    "new_start": "2025-04-08 09:15:00",
+    "new_end": "2025-04-08 11:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "6",
+    "new_time": "2025-04-08 12:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "6",
+    "new_start": "2025-04-08 12:00:00",
+    "new_end": "2025-04-08 12:40:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "104",
+    "new_time": "2025-04-09 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "104",
+    "new_start": "2025-04-09 11:00:00",
+    "new_end": "2025-04-09 12:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "115",
+    "new_time": "2025-04-10 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "115",
+    "new_start": "2025-04-10 09:15:00",
+    "new_end": "2025-04-10 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "116",
+    "new_time": "2025-04-10 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "116",
+    "new_start": "2025-04-10 11:00:00",
+    "new_end": "2025-04-10 12:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "67",
+    "new_time": "2025-04-10 12:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "67",
+    "new_start": "2025-04-10 12:45:00",
+    "new_end": "2025-04-10 14:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-04-10 11:35:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-04-10 11:35:00",
+    "new_end": "2025-04-10 12:05:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "7",
+    "new_time": "2025-04-11 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "7",
+    "new_start": "2025-04-11 09:15:00",
+    "new_end": "2025-04-11 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "131",
+    "new_time": "2025-04-11 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "131",
+    "new_start": "2025-04-11 11:00:00",
+    "new_end": "2025-04-11 12:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "132",
+    "new_time": "2025-04-11 12:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "132",
+    "new_start": "2025-04-11 12:45:00",
+    "new_end": "2025-04-11 13:45:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "133",
+    "new_time": "2025-04-11 14:30:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "133",
+    "new_start": "2025-04-11 14:30:00",
+    "new_end": "2025-04-11 15:30:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-04-11 04:05:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-04-11 04:05:00",
+    "new_end": "2025-04-11 04:35:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "157",
+    "new_time": "2025-04-13 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "157",
+    "new_start": "2025-04-13 09:15:00",
+    "new_end": "2025-04-13 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "158",
+    "new_time": "2025-04-13 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "158",
+    "new_start": "2025-04-13 11:00:00",
+    "new_end": "2025-04-13 12:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "175",
+    "new_time": "2025-04-14 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "175",
+    "new_start": "2025-04-14 09:15:00",
+    "new_end": "2025-04-14 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "176",
+    "new_time": "2025-04-14 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "176",
+    "new_start": "2025-04-14 11:00:00",
+    "new_end": "2025-04-14 12:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "68",
+    "new_time": "2025-04-14 12:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "68",
+    "new_start": "2025-04-14 12:45:00",
+    "new_end": "2025-04-14 14:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-04-14 11:35:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-04-14 11:35:00",
+    "new_end": "2025-04-14 12:05:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "189",
+    "new_time": "2025-04-15 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "189",
+    "new_start": "2025-04-15 09:15:00",
+    "new_end": "2025-04-15 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "190",
+    "new_time": "2025-04-15 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "190",
+    "new_start": "2025-04-15 11:00:00",
+    "new_end": "2025-04-15 12:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "191",
+    "new_time": "2025-04-15 12:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "191",
+    "new_start": "2025-04-15 12:45:00",
+    "new_end": "2025-04-15 13:45:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-04-15 11:05:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-04-15 11:05:00",
+    "new_end": "2025-04-15 11:35:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "213",
+    "new_time": "2025-04-16 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "213",
+    "new_start": "2025-04-16 09:15:00",
+    "new_end": "2025-04-16 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "214",
+    "new_time": "2025-04-16 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "214",
+    "new_start": "2025-04-16 11:00:00",
+    "new_end": "2025-04-16 12:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "231",
+    "new_time": "2025-04-17 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "231",
+    "new_start": "2025-04-17 09:15:00",
+    "new_end": "2025-04-17 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "232",
+    "new_time": "2025-04-17 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "232",
+    "new_start": "2025-04-17 11:00:00",
+    "new_end": "2025-04-17 12:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "69",
+    "new_time": "2025-04-17 12:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "69",
+    "new_start": "2025-04-17 12:45:00",
+    "new_end": "2025-04-17 14:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "233",
+    "new_time": "2025-04-17 15:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "233",
+    "new_start": "2025-04-17 15:00:00",
+    "new_end": "2025-04-17 16:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-04-17 11:35:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-04-17 11:35:00",
+    "new_end": "2025-04-17 12:05:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "249",
+    "new_time": "2025-04-18 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "249",
+    "new_start": "2025-04-18 11:00:00",
+    "new_end": "2025-04-18 12:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "288",
+    "new_time": "2025-04-20 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "288",
+    "new_start": "2025-04-20 09:15:00",
+    "new_end": "2025-04-20 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "70",
+    "new_time": "2025-04-20 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "70",
+    "new_start": "2025-04-20 11:00:00",
+    "new_end": "2025-04-20 12:30:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "310",
+    "new_time": "2025-04-21 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "310",
+    "new_start": "2025-04-21 09:15:00",
+    "new_end": "2025-04-21 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "311",
+    "new_time": "2025-04-21 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "311",
+    "new_start": "2025-04-21 11:00:00",
+    "new_end": "2025-04-21 12:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "312",
+    "new_time": "2025-04-21 12:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "312",
+    "new_start": "2025-04-21 12:45:00",
+    "new_end": "2025-04-21 13:45:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-04-21 11:05:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-04-21 11:05:00",
+    "new_end": "2025-04-21 11:35:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "8",
+    "new_time": "2025-04-22 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "8",
+    "new_start": "2025-04-22 09:15:00",
+    "new_end": "2025-04-22 16:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "10",
+    "new_time": "2025-04-22 17:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "10",
+    "new_start": "2025-04-22 17:00:00",
+    "new_end": "2025-04-22 18:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "11",
+    "new_time": "2025-04-22 17:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "11",
+    "new_start": "2025-04-22 17:45:00",
+    "new_end": "2025-04-22 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "9",
+    "new_time": "2025-04-22 17:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "9",
+    "new_start": "2025-04-22 17:45:00",
+    "new_end": "2025-04-22 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-04-22 12:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-04-22 12:15:00",
+    "new_end": "2025-04-22 12:45:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "12",
+    "new_time": "2025-04-23 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "12",
+    "new_start": "2025-04-23 09:15:00",
+    "new_end": "2025-04-23 16:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "13",
+    "new_time": "2025-04-24 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "13",
+    "new_start": "2025-04-24 09:15:00",
+    "new_end": "2025-04-24 16:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "14",
+    "new_time": "2025-04-25 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "14",
+    "new_start": "2025-04-25 09:15:00",
+    "new_end": "2025-04-25 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "15",
+    "new_time": "2025-04-25 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "15",
+    "new_start": "2025-04-25 11:00:00",
+    "new_end": "2025-04-25 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "16",
+    "new_time": "2025-04-25 17:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "16",
+    "new_start": "2025-04-25 17:45:00",
+    "new_end": "2025-04-25 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "17",
+    "new_time": "2025-04-26 09:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "17",
+    "new_start": "2025-04-26 09:00:00",
+    "new_end": "2025-04-26 09:30:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-04-25 16:05:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-04-25 16:05:00",
+    "new_end": "2025-04-25 16:35:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "384",
+    "new_time": "2025-04-27 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "384",
+    "new_start": "2025-04-27 09:15:00",
+    "new_end": "2025-04-27 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "385",
+    "new_time": "2025-04-27 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "385",
+    "new_start": "2025-04-27 11:00:00",
+    "new_end": "2025-04-27 12:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "18",
+    "new_time": "2025-04-28 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "18",
+    "new_start": "2025-04-28 09:15:00",
+    "new_end": "2025-04-28 16:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "19",
+    "new_time": "2025-04-28 17:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "19",
+    "new_start": "2025-04-28 17:00:00",
+    "new_end": "2025-04-28 18:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "20",
+    "new_time": "2025-04-29 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "20",
+    "new_start": "2025-04-29 09:15:00",
+    "new_end": "2025-04-29 16:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "21",
+    "new_time": "2025-04-29 17:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "21",
+    "new_start": "2025-04-29 17:00:00",
+    "new_end": "2025-04-29 18:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "22",
+    "new_time": "2025-04-29 17:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "22",
+    "new_start": "2025-04-29 17:45:00",
+    "new_end": "2025-04-29 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "23",
+    "new_time": "2025-04-29 17:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "23",
+    "new_start": "2025-04-29 17:45:00",
+    "new_end": "2025-04-29 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "24",
+    "new_time": "2025-04-29 17:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "24",
+    "new_start": "2025-04-29 17:45:00",
+    "new_end": "2025-04-29 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-04-29 16:05:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-04-29 16:05:00",
+    "new_end": "2025-04-29 16:35:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "25",
+    "new_time": "2025-04-30 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "25",
+    "new_start": "2025-04-30 09:15:00",
+    "new_end": "2025-04-30 16:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "26",
+    "new_time": "2025-04-30 17:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "26",
+    "new_start": "2025-04-30 17:00:00",
+    "new_end": "2025-04-30 18:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "27",
+    "new_time": "2025-04-30 17:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "27",
+    "new_start": "2025-04-30 17:45:00",
+    "new_end": "2025-04-30 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-04-30 16:05:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-04-30 16:05:00",
+    "new_end": "2025-04-30 16:35:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "29",
+    "new_time": "2025-05-01 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "29",
+    "new_start": "2025-05-01 09:15:00",
+    "new_end": "2025-05-01 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "28",
+    "new_time": "2025-05-01 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "28",
+    "new_start": "2025-05-01 11:00:00",
+    "new_end": "2025-05-01 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "30",
+    "new_time": "2025-05-01 17:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "30",
+    "new_start": "2025-05-01 17:45:00",
+    "new_end": "2025-05-01 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "31",
+    "new_time": "2025-05-01 17:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "31",
+    "new_start": "2025-05-01 17:45:00",
+    "new_end": "2025-05-01 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-05-01 16:05:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-05-01 16:05:00",
+    "new_end": "2025-05-01 16:35:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "33",
+    "new_time": "2025-05-02 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "33",
+    "new_start": "2025-05-02 09:15:00",
+    "new_end": "2025-05-02 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "32",
+    "new_time": "2025-05-02 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "32",
+    "new_start": "2025-05-02 11:00:00",
+    "new_end": "2025-05-02 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "34",
+    "new_time": "2025-05-02 17:45:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "34",
+    "new_start": "2025-05-02 17:45:00",
+    "new_end": "2025-05-02 17:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "35",
+    "new_time": "2025-05-03 09:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "35",
+    "new_start": "2025-05-03 09:00:00",
+    "new_end": "2025-05-03 09:30:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-05-02 16:05:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-05-02 16:05:00",
+    "new_end": "2025-05-02 16:35:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "394",
+    "new_time": "2025-05-03 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "394",
+    "new_start": "2025-05-03 09:15:00",
+    "new_end": "2025-05-03 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "395",
+    "new_time": "2025-05-03 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "395",
+    "new_start": "2025-05-03 11:00:00",
+    "new_end": "2025-05-03 12:00:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "405",
+    "new_time": "2025-05-04 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "405",
+    "new_start": "2025-05-04 09:15:00",
+    "new_end": "2025-05-04 10:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "71",
+    "new_time": "2025-05-04 11:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "71",
+    "new_start": "2025-05-04 11:00:00",
+    "new_end": "2025-05-04 12:30:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "406",
+    "new_time": "2025-05-04 13:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "406",
+    "new_start": "2025-05-04 13:15:00",
+    "new_end": "2025-05-04 14:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "new_break",
+    "new_time": "2025-05-04 11:35:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "new_break",
+    "new_start": "2025-05-04 11:35:00",
+    "new_end": "2025-05-04 12:05:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "36",
+    "new_time": "2025-05-05 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "36",
+    "new_start": "2025-05-05 09:15:00",
+    "new_end": "2025-05-05 16:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "37",
+    "new_time": "2025-05-06 09:15:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "37",
+    "new_start": "2025-05-06 09:15:00",
+    "new_end": "2025-05-06 11:15:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:44 - Processing change
+Data: {
+    "event_id": "38",
+    "new_time": "2025-05-06 12:00:00"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:71 - Successfully applied change
+Data: {
+    "event_id": "38",
+    "new_start": "2025-05-06 12:00:00",
+    "new_end": "2025-05-06 12:40:00",
+    "preset_source": "default"
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:83 - Logging optimization action
+Data: {
+    "user_id": 1,
+    "changes_applied": 82
+}
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:95 - Committed database transaction
+[07-Apr-2025 02:29:53 Europe/Berlin] [2025-04-07 02:29:53] apply-changes.php:98 - Successfully completed all changes
+Data: {
+    "total_applied": 82
+}
+[07-Apr-2025 02:29:55 Europe/Berlin] [2025-04-07 02:29:55] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:29:55 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:30:27 Europe/Berlin] [2025-04-07 02:30:27] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Starting optimization process
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"conflicts","auto_apply":true}
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Received data: {"studyTime":"morning","breakDuration":"30","sessionLength":"120","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"conflicts","auto_apply":true}
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Selected preset: conflicts
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":30,"max_consecutive_meetings":2,"conflict_resolution_priority":"high","spacing_buffer":15,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-07
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-08
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-09
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-10
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-11
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] No events found for day: 2025-04-12
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-13
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-14
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-15
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-16
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-17
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-18
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] No events found for day: 2025-04-19
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-20
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-21
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-22
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-23
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-24
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-25
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-26
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-27
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-28
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-29
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-30
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-05-01
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-02
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-03
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-04
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-05-05
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-06
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Retrieved events count: 73
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] First event sample: {"id":"4","user_id":"7","title":"3D-vejledning","description":"3D guidance in fifth lesson","category_id":"13","start_date":"2025-04-07 09:15:00","end_date":"2025-04-07 10:45:00","all_day":"0","is_ai_optimized":"1","ai_description":null,"is_human_ai_altered":"0","is_immovable":"1","preset_source":"busy_week","created_at":"2025-04-07 02:28:34"}
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"66","new_time":"2025-04-07 11:30:00","duration":60,"reason":"Split long study session into shorter focused blocks"},{"event_id":"67","new_time":"2025-04-10 12:45:00","duration":60,"reason":"Split long study session into shorter focused blocks"},{"event_id":"68","new_time":"2025-04-14 12:45:00","duration":60,"reason":"Split long study session into shorter focused blocks"},{"event_id":"69","new_time":"2025-04-17 12:45:00","duration":60,"reason":"Split long study session into shorter focused blocks"},{"event_id":"70","new_time":"2025-04-20 11:00:00","duration":60,"reason":"Split long study session into shorter focused blocks"},{"event_id":"9","new_time":"2025-04-23 09:00:00","duration":-45,"reason":"Moved to next day to fit workday boundaries"},{"event_id":"11","new_time":"2025-04-23 09:00:00","duration":-45,"reason":"Moved to next day to fit workday boundaries"},{"event_id":"363","new_time":"2025-04-26 10:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"22","new_time":"2025-04-30 09:00:00","duration":-45,"reason":"Moved to next day to fit workday boundaries"},{"event_id":"23","new_time":"2025-04-30 09:00:00","duration":-45,"reason":"Moved to next day to fit workday boundaries"},{"event_id":"24","new_time":"2025-04-30 09:00:00","duration":-45,"reason":"Moved to next day to fit workday boundaries"},{"event_id":"27","new_time":"2025-05-01 09:00:00","duration":-45,"reason":"Moved to next day to fit workday boundaries"},{"event_id":"394","new_time":"2025-05-03 10:15:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"395","new_time":"2025-05-03 12:00:00","duration":60,"reason":"Resolved scheduling conflict"},{"event_id":"71","new_time":"2025-05-04 11:00:00","duration":60,"reason":"Split long study session into shorter focused blocks"}]
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 66 to 2025-04-07 11:30:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 67 to 2025-04-10 12:45:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 68 to 2025-04-14 12:45:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 69 to 2025-04-17 12:45:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 70 to 2025-04-20 11:00:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 9 to 2025-04-23 09:00:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 11 to 2025-04-23 09:00:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 363 to 2025-04-26 10:15:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 22 to 2025-04-30 09:00:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 23 to 2025-04-30 09:00:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 24 to 2025-04-30 09:00:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 27 to 2025-05-01 09:00:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 394 to 2025-05-03 10:15:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 395 to 2025-05-03 12:00:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Successfully updated event ID 71 to 2025-05-04 11:00:00
+[07-Apr-2025 02:30:27 Europe/Berlin] [DEBUG] Auto-applied 15 changes to the database
+[07-Apr-2025 02:30:28 Europe/Berlin] [2025-04-07 02:30:28] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:30:28 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:30:28 Europe/Berlin] [2025-04-07 02:30:28] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:30:28 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:30:46 Europe/Berlin] [2025-04-07 02:30:46] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:30:46 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:31:21 Europe/Berlin] [2025-04-07 02:31:21] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Starting optimization process
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"afternoon","breakDuration":"30","sessionLength":"120","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"default","auto_apply":true}
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Received data: {"studyTime":"afternoon","breakDuration":"30","sessionLength":"120","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"default","auto_apply":true}
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Selected preset: default
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":15,"max_consecutive_meetings":3,"focus_block_duration":60,"break_frequency":4,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-07
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-08
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-09
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-10
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-11
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] No events found for day: 2025-04-12
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-13
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-14
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-15
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-16
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-17
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-18
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] No events found for day: 2025-04-19
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-20
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-21
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-22
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-23
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-24
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-25
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-26
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-27
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-28
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-29
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-30
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-05-01
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-02
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-03
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-04
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-05-05
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-06
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Retrieved events count: 73
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] First event sample: {"id":"4","user_id":"7","title":"3D-vejledning","description":"3D guidance in fifth lesson","category_id":"13","start_date":"2025-04-07 09:15:00","end_date":"2025-04-07 10:45:00","all_day":"0","is_ai_optimized":"1","ai_description":null,"is_human_ai_altered":"0","is_immovable":"1","preset_source":"busy_week","created_at":"2025-04-07 02:28:34"}
+[07-Apr-2025 02:31:21 Europe/Berlin] [DEBUG] Suggested changes: []
+[07-Apr-2025 02:31:27 Europe/Berlin] [2025-04-07 02:31:27] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:31:27 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:31:35 Europe/Berlin] [2025-04-07 02:31:35] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Starting optimization process
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"afternoon","breakDuration":"324","sessionLength":"3546","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"busy_week","auto_apply":true}
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Received data: {"studyTime":"afternoon","breakDuration":"324","sessionLength":"3546","priority":"deadlines","autoApply":"on","days":["2025-04-07","2025-04-08","2025-04-09","2025-04-10","2025-04-11","2025-04-12","2025-04-13","2025-04-14","2025-04-15","2025-04-16","2025-04-17","2025-04-18","2025-04-19","2025-04-20","2025-04-21","2025-04-22","2025-04-23","2025-04-24","2025-04-25","2025-04-26","2025-04-27","2025-04-28","2025-04-29","2025-04-30","2025-05-01","2025-05-02","2025-05-03","2025-05-04","2025-05-05","2025-05-06"],"preset":"busy_week","auto_apply":true}
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Selected preset: busy_week
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Optimization parameters: {"min_break":15,"max_consecutive_meetings":3,"preferred_meeting_duration":45,"focus_block_duration":90,"optimal_day_start":"09:00","optimal_day_end":"17:00"}
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-07
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-08
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-09
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-10
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-11
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] No events found for day: 2025-04-12
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-13
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-14
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-15
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-16
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 4 events for day: 2025-04-17
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-18
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] No events found for day: 2025-04-19
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-20
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-21
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-22
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-23
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-04-24
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-04-25
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-26
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-27
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-28
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-04-29
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-04-30
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 5 events for day: 2025-05-01
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-02
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-03
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 3 events for day: 2025-05-04
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 1 events for day: 2025-05-05
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Found 2 events for day: 2025-05-06
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Retrieved events count: 73
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] First event sample: {"id":"4","user_id":"7","title":"3D-vejledning","description":"3D guidance in fifth lesson","category_id":"13","start_date":"2025-04-07 09:15:00","end_date":"2025-04-07 10:45:00","all_day":"0","is_ai_optimized":"1","ai_description":null,"is_human_ai_altered":"0","is_immovable":"1","preset_source":"busy_week","created_at":"2025-04-07 02:28:34"}
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Suggested changes: [{"event_id":"233","new_time":"2025-04-17 14:15:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"12","new_time":"2025-04-23 08:45:00","duration":420,"reason":"Compacted schedule for higher efficiency"},{"event_id":"25","new_time":"2025-04-30 08:45:00","duration":420,"reason":"Compacted schedule for higher efficiency"},{"event_id":"26","new_time":"2025-04-30 16:15:00","duration":45,"reason":"Compacted schedule for higher efficiency (with adjusted duration)"},{"event_id":"29","new_time":"2025-05-01 08:45:00","duration":60,"reason":"Compacted schedule for higher efficiency"},{"event_id":"28","new_time":"2025-05-01 10:15:00","duration":360,"reason":"Compacted schedule for higher efficiency"},{"event_id":"30","new_time":"2025-05-01 16:45:00","duration":-45,"reason":"Compacted schedule for higher efficiency"},{"event_id":"31","new_time":"2025-05-01 16:30:00","duration":-45,"reason":"Compacted schedule for higher efficiency"},{"event_id":"406","new_time":"2025-05-04 12:30:00","duration":60,"reason":"Compacted schedule for higher efficiency"}]
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Successfully updated event ID 233 to 2025-04-17 14:15:00
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Successfully updated event ID 12 to 2025-04-23 08:45:00
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Successfully updated event ID 25 to 2025-04-30 08:45:00
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Successfully updated event ID 26 to 2025-04-30 16:15:00
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Successfully updated event ID 29 to 2025-05-01 08:45:00
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Successfully updated event ID 28 to 2025-05-01 10:15:00
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Successfully updated event ID 30 to 2025-05-01 16:45:00
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Successfully updated event ID 31 to 2025-05-01 16:30:00
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Successfully updated event ID 406 to 2025-05-04 12:30:00
+[07-Apr-2025 02:31:35 Europe/Berlin] [DEBUG] Auto-applied 9 changes to the database
+[07-Apr-2025 02:31:36 Europe/Berlin] [2025-04-07 02:31:36] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:31:36 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 02:31:36 Europe/Berlin] [2025-04-07 02:31:36] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 02:31:36 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[07-Apr-2025 18:34:03 Europe/Berlin] [2025-04-07 18:34:03] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[07-Apr-2025 18:34:03 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[08-Apr-2025 21:15:45 Europe/Berlin] [2025-04-08 21:15:45] db.php:39 - Error creating test user
+Data: {
+    "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
+}
+[08-Apr-2025 21:15:45 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171

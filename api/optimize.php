@@ -110,6 +110,25 @@ try {
     $events = [];
     $userId = $_SESSION['user_id'] ?? 1; // Default to user 1 if not set
     
+    // Fetch user-specific optimization preferences
+    $userPrefStmt = $pdo->prepare("SELECT * FROM user_preferences WHERE user_id = ?");
+    $userPrefStmt->execute([$userId]);
+    $userPrefs = $userPrefStmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($userPrefs) {
+        // Build dynamic parameters from the user's preferences
+        $dynamicParams = [
+            'min_break' => (int)$userPrefs['break_duration'],
+            'focus_block_duration' => (int)$userPrefs['session_length'],
+            'optimal_day_start' => $userPrefs['focus_start_time'] ?? '09:00',
+            'optimal_day_end'   => $userPrefs['focus_end_time'] ?? '17:00'
+        ];
+
+        // Merge dynamic parameters with preset defaults (dynamic takes precedence)
+        $presetDefaults = $optimizationParams; // already set via switch-case
+        $optimizationParams = array_merge($presetDefaults, $dynamicParams);
+    }
+
     // Step 3: Verify Database Connection and Queries
     foreach ($days as $day) {
         try {

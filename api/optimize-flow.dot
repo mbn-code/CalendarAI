@@ -1,0 +1,53 @@
+digraph OptimizeFlow {
+    rankdir=LR;
+    node [shape=box, style=rounded];
+
+    // Start of the process
+    Start [label="Start Optimization Process"];
+    ValidateInput [label="Validate Incoming Request Data"];
+    ParseJSON [label="Parse JSON Input"];
+    CheckPreset [label="Check Preset Parameter"];
+    LoadPresetParams [label="Load Preset Parameters"];
+    FetchUserPrefs [label="Fetch User Preferences from DB"];
+    MergeParams [label="Merge Preset and User Preferences"];
+    ValidateDays [label="Validate Days Array"];
+    FetchEvents [label="Fetch Events for Selected Days"];
+    GroupEvents [label="Group Events by Day"];
+    ProcessEvents [label="Process Events for Each Day"];
+    ApplyChanges [label="Apply Changes to DB (if auto_apply)"];
+    GenerateInsights [label="Generate Insights"];
+    CalculateHealth [label="Calculate Schedule Health"];
+    OutputResponse [label="Output JSON Response"];
+    End [label="End Process"];
+
+    // Error handling
+    Error [label="Error Handling", shape=diamond, style=filled, color=red];
+
+    // Flow connections
+    Start -> ValidateInput;
+    ValidateInput -> ParseJSON [label="Valid"];
+    ParseJSON -> CheckPreset [label="Valid JSON"];
+    ParseJSON -> Error [label="Invalid JSON"];
+    CheckPreset -> LoadPresetParams;
+    LoadPresetParams -> FetchUserPrefs;
+    FetchUserPrefs -> MergeParams [label="Preferences Found"];
+    FetchUserPrefs -> MergeParams [label="No Preferences"];
+    MergeParams -> ValidateDays;
+    ValidateDays -> FetchEvents [label="Valid Days"];
+    ValidateDays -> Error [label="Invalid Days"];
+    FetchEvents -> GroupEvents;
+    GroupEvents -> ProcessEvents;
+    ProcessEvents -> ApplyChanges [label="Auto Apply Enabled"];
+    ProcessEvents -> GenerateInsights [label="Auto Apply Disabled"];
+    ApplyChanges -> GenerateInsights;
+    GenerateInsights -> CalculateHealth;
+    CalculateHealth -> OutputResponse;
+    OutputResponse -> End;
+
+    // Error flow
+    ValidateInput -> Error [label="Invalid Input"];
+    FetchEvents -> Error [label="DB Error"];
+    ProcessEvents -> Error [label="Processing Error"];
+    ApplyChanges -> Error [label="DB Error"];
+    OutputResponse -> Error [label="Response Error"];
+}
