@@ -175,9 +175,7 @@ $events = $result->fetch_all(MYSQLI_ASSOC);
         .calendar-day:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Event pill styling */
+        }        /* Event pill styling */
         .event-pill {
             transition: all 0.2s ease;
             font-size: 0.75rem;
@@ -186,52 +184,79 @@ $events = $result->fetch_all(MYSQLI_ASSOC);
             text-overflow: ellipsis;
             margin-bottom: 0.25rem;
             position: relative;
-            padding-right: 20px;
+            padding-right: 8px;
+            border-left-width: 3px;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
         
+        /* Category specific colors */
+        .event-pill.category-1 { /* Classes */
+            background-color: rgba(255, 68, 68, 0.1);
+            border-color: #FF4444;
+            color: #B71C1C;
+        }
+        
+        .event-pill.category-2 { /* Assignments */
+            background-color: rgba(246, 191, 38, 0.1);
+            border-color: #F6BF26;
+            color: #8D6E00;
+        }
+        
+        .event-pill.category-3 { /* Study Group */
+            background-color: rgba(51, 182, 121, 0.1);
+            border-color: #33B679;
+            color: #14724B;
+        }
+        
+        .event-pill.category-4 { /* Project Work */
+            background-color: rgba(3, 155, 229, 0.1);
+            border-color: #039BE5;
+            color: #0F609B;
+        }
+        
+        .event-pill.category-5 { /* Lab Sessions */
+            background-color: rgba(121, 134, 203, 0.1);
+            border-color: #7986CB;
+            color: #3C4888;
+        }
+        
+        .event-pill.category-6 { /* Events */
+            background-color: rgba(142, 36, 170, 0.1);
+            border-color: #8E24AA;
+            color: #56146E;
+        }
+        
+        .event-pill.category-7 { /* Personal */
+            background-color: rgba(97, 97, 97, 0.1);
+            border-color: #616161;
+            color: #323232;
+        }
+        
+        .event-pill.category-8 { /* Exams */
+            background-color: rgba(213, 0, 0, 0.1);
+            border-color: #D50000;
+            color: #8F0000;
+        }
+        
+        /* Optimization state styling with gradients instead of dots */
         .event-pill.ai-optimized {
-            background-color: #f0ebfe !important;
-            border-color: #d8ccfd !important;
-            color: #6941c6 !important;
-        }
-        
-        .event-pill.ai-optimized::after {
-            content: '✨';
-            position: absolute;
-            right: 4px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 10px;
+            background-image: linear-gradient(to right, transparent 70%, rgba(124, 58, 237, 0.08) 100%);
+            box-shadow: 0 0 4px rgba(124, 58, 237, 0.15);
+            border-right: 2px solid rgba(124, 58, 237, 0.3);
         }
         
         .event-pill.human-ai-altered {
-            background-color: #ecfdf5 !important;
-            border-color: #6ee7b7 !important;
-            color: #047857 !important;
-        }
-        
-        .event-pill.human-ai-altered::after {
-            content: '👤';
-            position: absolute;
-            right: 4px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 10px;
+            background-image: linear-gradient(to right, transparent 70%, rgba(16, 185, 129, 0.08) 100%);
+            box-shadow: 0 0 4px rgba(16, 185, 129, 0.15);
+            border-right: 2px solid rgba(16, 185, 129, 0.3);
         }
         
         .event-pill.immovable {
-            background-color: #fef9c3 !important;
-            border-color: #fde047 !important;
-            color: #854d0e !important;
-        }
-        
-        .event-pill.immovable::after {
-            content: '📌';
-            position: absolute;
-            right: 4px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 10px;
+            background-image: linear-gradient(to right, transparent 70%, rgba(245, 158, 11, 0.08) 100%);
+            box-shadow: 0 0 4px rgba(245, 158, 11, 0.15);
+            border-right: 2px solid rgba(245, 158, 11, 0.3);
         }
         
         .event-pill:hover {

@@ -18,8 +18,7 @@ class ScheduleOptimizerV2 {
         'spacing_buffer' => 15,        // Default spacing between events in minutes
         'preferred_meeting_duration' => 45 // Preferred meeting duration in minutes
     ];
-    
-    // Current parameters (merged from defaults and user preferences)
+      // Current parameters (merged from defaults and user preferences)
     private $params;
     
     // Events grouped by date
@@ -34,11 +33,15 @@ class ScheduleOptimizerV2 {
         'breaks_added' => 0,
         'events_moved' => 0,
         'events_split' => 0,
-        'events_shortened' => 0
+        'events_shortened' => 0,
+        'paired_moves' => 0
     ];
     
     // List of generated changes
     private $changes = [];
+    
+    // Track paired events for animation
+    private $pairedEvents = [];
 
     /**
      * Constructor
@@ -651,18 +654,18 @@ class ScheduleOptimizerV2 {
         if (!isset($this->eventsByDate[$date])) {
             $this->eventsByDate[$date] = [];
         }
-    }
-    
-    /**
+    }    /**
      * Move an event to another day with less load
      * 
      * @param array $event Event to move
      * @param string $currentDate Current date
+     * @param string $pairId Optional ID for pairing events in the animation
+     * @return string The pair ID used (new or provided)
      */
-    private function moveEventToAnotherDay($event, $currentDate) {
+    private function moveEventToAnotherDay($event, $currentDate, $pairId = null) {
         // Only move non-immovable events
         if ($event['isImmovable']) {
-            return;
+            return null;
         }
         
         // Find a day with less load in the next 3 days
@@ -683,18 +686,114 @@ class ScheduleOptimizerV2 {
             // Calculate new start time on target date
             $newStart = strtotime($targetDate . ' ' . $this->params['optimal_day_start']);
             
+            // Generate a new pair ID if not provided
+            if (!$pairId) {
+                $pairId = 'pair_' . uniqid();
+            }
+            
+            // Calculate animation properties for a premium feel
+            $daysOffset = (strtotime($targetDate) - strtotime($currentDate)) / 86400; // Number of days moved
+            $animationType = $this->getAnimationType($event);
+            $animationDuration = min(1200, 800 + (abs($daysOffset) * 200)); // Longer animation for farther moves
+            $animationEasing = "cubic-bezier(0.34, 1.56, 0.64, 1)"; // Bouncy premium easing
+            $animationColor = $this->getEventColor($event);
+            
             $this->changes[] = [
                 'event_id' => $event['event']['id'],
                 'new_time' => date('Y-m-d H:i:s', $newStart),
                 'duration' => round($event['duration'] / 60),
                 'reason' => "Moved to $targetDate to balance workload",
-                'action' => 'move'
+                'action' => 'move',
+                'animation_pair_id' => $pairId,
+                'from_date' => $currentDate,
+                'to_date' => $targetDate,
+                'animation' => [
+                    'type' => $animationType,
+                    'duration' => $animationDuration,
+                    'easing' => $animationEasing,
+                    'color' => $animationColor,
+                    'highlight_path' => true,
+                    'show_connector' => true,
+                    'days_offset' => $daysOffset
+                ]
             ];
+            
+            // Track this pair
+            $this->pairedEvents[$pairId][] = $event['event']['id'];
             
             // Update daily load tracking
             $this->dailyLoad[$currentDate] -= $event['duration'] / 3600;
             $this->dailyLoad[$targetDate] += $event['duration'] / 3600;
             $this->metrics['events_moved']++;
+            
+            return $pairId;
+        }
+        
+        return null;
+    }
+    
+    /**
+     * Get appropriate animation type based on event properties
+     * 
+     * @param array $event The event to animate
+     * @return string Animation type name
+     */
+    private function getAnimationType($event) {
+        $types = ['slide-fade', 'bounce', 'elastic', 'glide', 'arc-path'];
+        
+        // For study events, use more focused animations
+        if ($event['isStudy']) {
+            return 'arc-path';
+        }
+        
+        // For breaks, use gentler animations
+        if ($event['isBreak']) {
+            return 'glide';
+        }
+        
+        // For longer events, use more substantial animations
+        if ($event['duration'] > 3600) {
+            return 'bounce';
+        }
+        
+        // Otherwise use slide-fade as default
+        return 'slide-fade';
+    }
+    
+    /**
+     * Get a color for the event animation based on event type
+     * 
+     * @param array $event The event to animate
+     * @return string Color in hexadecimal or rgba format
+     */
+    private function getEventColor($event) {
+        // If the event has a category with color, use that
+        if (isset($event['event']['category_id'])) {
+            // Default category colors if not specified
+            $categoryColors = [
+                1 => '#4285F4', // Blue (Work)
+                2 => '#EA4335', // Red (Important)
+                3 => '#FBBC05', // Yellow (Personal)
+                4 => '#34A853', // Green (Study)
+                5 => '#9C27B0', // Purple (Focus)
+                6 => '#FF9800', // Orange (Meetings)
+                7 => '#795548', // Brown (Other)
+                8 => '#607D8B'  // Blue Grey (Break)
+            ];
+            
+            $categoryId = (int)$event['event']['category_id'];
+            if (isset($categoryColors[$categoryId])) {
+                return $categoryColors[$categoryId];
+            }
+        }
+        
+        // Otherwise base color on event type
+        if ($event['isStudy']) {
+            return '#34A853'; // Green for study
+        } else if ($event['isBreak']) {
+            return '#607D8B'; // Blue Grey for breaks
+        } else {
+            return '#4285F4'; // Blue as default
         }
     }
     
@@ -793,8 +892,7 @@ class ScheduleOptimizerV2 {
             $lastEventEnd = $event['end'];
         }
     }
-    
-    /**
+      /**
      * Balance workload across days when some days are overloaded
      */
     private function balanceDailyWorkload() {
@@ -835,19 +933,163 @@ class ScheduleOptimizerV2 {
             $excessHours = $load - $loadThreshold;
             $secondsToMove = $excessHours * 3600;
             
-            // Move events until we've balanced enough
-            foreach ($movableEvents as $event) {
+            // Group events by similarity to move them in pairs
+            $groupedEvents = $this->groupSimilarEvents($movableEvents);
+            
+            // First move grouped events (in pairs)
+            foreach ($groupedEvents as $group) {
                 if ($secondsToMove <= 0) {
                     break;
                 }
                 
-                // Move this event to another day
-                $this->moveEventToAnotherDay($event, $date);
-                
-                // Update tracking
-                $secondsToMove -= $event['duration'];
+                if (count($group) >= 2) {
+                    // Generate a shared pair ID for this group
+                    $pairId = 'pair_' . uniqid();
+                    $this->metrics['paired_moves']++;
+                    
+                    // Move events in this group together (visually connected)
+                    foreach ($group as $event) {
+                        $this->moveEventToAnotherDay($event, $date, $pairId);
+                        $secondsToMove -= $event['duration'];
+                        
+                        if ($secondsToMove <= 0) {
+                            break;
+                        }
+                    }
+                }
+            }
+            
+            // Then move remaining events individually if needed
+            if ($secondsToMove > 0) {
+                foreach ($movableEvents as $event) {
+                    // Skip events that have already been moved as part of a group
+                    $alreadyMoved = false;
+                    foreach ($this->pairedEvents as $pairId => $eventIds) {
+                        if (in_array($event['event']['id'], $eventIds)) {
+                            $alreadyMoved = true;
+                            break;
+                        }
+                    }
+                    
+                    if (!$alreadyMoved) {
+                        if ($secondsToMove <= 0) {
+                            break;
+                        }
+                        
+                        // Move this event to another day
+                        $this->moveEventToAnotherDay($event, $date);
+                        
+                        // Update tracking
+                        $secondsToMove -= $event['duration'];
+                    }
+                }
             }
         }
+    }
+    
+    /**
+     * Group similar events that should be moved together
+     * 
+     * @param array $events List of events to group
+     * @return array Grouped events
+     */
+    private function groupSimilarEvents($events) {
+        $groups = [];
+        $processedEvents = [];
+        
+        // First group by category/type
+        foreach ($events as $i => $event1) {
+            if (in_array($i, $processedEvents)) {
+                continue;
+            }
+            
+            $group = [$event1];
+            $processedEvents[] = $i;
+            
+            // Find similar events
+            foreach ($events as $j => $event2) {
+                if ($i == $j || in_array($j, $processedEvents)) {
+                    continue;
+                }
+                
+                // Check similarity (same category, similar duration, title similarity, etc.)
+                if ($this->eventsAreSimilar($event1, $event2)) {
+                    $group[] = $event2;
+                    $processedEvents[] = $j;
+                    
+                    // Limit group size to 2-3 events for visual clarity
+                    if (count($group) >= 3) {
+                        break;
+                    }
+                }
+            }
+            
+            if (count($group) > 1) {
+                $groups[] = $group;
+            }
+        }
+        
+        // Add any remaining individual events
+        foreach ($events as $i => $event) {
+            if (!in_array($i, $processedEvents)) {
+                $groups[] = [$event];
+            }
+        }
+        
+        return $groups;
+    }
+    
+    /**
+     * Determine if two events are similar enough to be paired in animation
+     * 
+     * @param array $event1 First event
+     * @param array $event2 Second event
+     * @return bool True if events should be paired
+     */
+    private function eventsAreSimilar($event1, $event2) {
+        // Check for same category
+        $sameCategoryOrType = false;
+        
+        // Check category field
+        if (!empty($event1['event']['category']) && !empty($event2['event']['category'])) {
+            $sameCategoryOrType = ($event1['event']['category'] == $event2['event']['category']);
+        }
+        
+        // Check if both are study events
+        if ($event1['isStudy'] && $event2['isStudy']) {
+            $sameCategoryOrType = true;
+        }
+        
+        // Check similarity in duration (within 20% of each other)
+        $similarDuration = false;
+        $durationRatio = max($event1['duration'], $event2['duration']) / 
+                         max(1, min($event1['duration'], $event2['duration']));
+        if ($durationRatio < 1.2) {
+            $similarDuration = true;
+        }
+        
+        // Check title similarity
+        $titleSimilarity = false;
+        $title1 = strtolower($event1['event']['title'] ?? '');
+        $title2 = strtolower($event2['event']['title'] ?? '');
+        
+        if (!empty($title1) && !empty($title2)) {
+            // Check for common words in titles
+            $words1 = preg_split('/\W+/', $title1, -1, PREG_SPLIT_NO_EMPTY);
+            $words2 = preg_split('/\W+/', $title2, -1, PREG_SPLIT_NO_EMPTY);
+            
+            $commonWords = array_intersect($words1, $words2);
+            if (count($commonWords) > 0) {
+                $titleSimilarity = true;
+            }
+        }
+        
+        // Return true if at least 2 of the 3 criteria match
+        $criteriaMatched = ($sameCategoryOrType ? 1 : 0) + 
+                          ($similarDuration ? 1 : 0) + 
+                          ($titleSimilarity ? 1 : 0);
+        
+        return $criteriaMatched >= 2;
     }
     
     /**
