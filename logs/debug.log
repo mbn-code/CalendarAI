@@ -70472,3 +70472,261 @@ Data: {
     "error": "Unknown column &#039;name&#039; in &#039;INSERT INTO&#039;"
 }
 [10-Apr-2025 01:54:56 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[01-May-2025 12:16:52 Europe/Berlin] [2025-05-01 12:16:52] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar_ai&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:17:19 Europe/Berlin] [2025-05-01 12:17:19] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar_ai&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:17:20 Europe/Berlin] [2025-05-01 12:17:20] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar_ai&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:17:23 Europe/Berlin] [2025-05-01 12:17:23] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:17:23 Europe/Berlin] [2025-05-01 12:17:23] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:17:24 Europe/Berlin] [2025-05-01 12:17:24] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:17:44 Europe/Berlin] [2025-05-01 12:17:44] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:17:45 Europe/Berlin] [2025-05-01 12:17:45] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:17:45 Europe/Berlin] [2025-05-01 12:17:45] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:17:45 Europe/Berlin] [2025-05-01 12:17:45] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:18:05 Europe/Berlin] [2025-05-01 12:18:05] db.php:58 - Database initialization error
+Data: {
+    "message": "Unknown database &#039;calendar&#039;",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:18:05 Europe/Berlin] [2025-05-01 12:18:05] db.php:58 - Database initialization error
+Data: {
+    "message": "Unknown database &#039;calendar&#039;",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:18:05 Europe/Berlin] [2025-05-01 12:18:05] db.php:58 - Database initialization error
+Data: {
+    "message": "Unknown database &#039;calendar&#039;",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:18:06 Europe/Berlin] [2025-05-01 12:18:06] db.php:58 - Database initialization error
+Data: {
+    "message": "Unknown database &#039;calendar&#039;",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:18:06 Europe/Berlin] [2025-05-01 12:18:06] db.php:58 - Database initialization error
+Data: {
+    "message": "Unknown database &#039;calendar&#039;",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:18:06 Europe/Berlin] [2025-05-01 12:18:06] db.php:58 - Database initialization error
+Data: {
+    "message": "Unknown database &#039;calendar&#039;",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:18:06 Europe/Berlin] [2025-05-01 12:18:06] db.php:58 - Database initialization error
+Data: {
+    "message": "Unknown database &#039;calendar&#039;",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:18:06 Europe/Berlin] [2025-05-01 12:18:06] db.php:58 - Database initialization error
+Data: {
+    "message": "Unknown database &#039;calendar&#039;",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:01 Europe/Berlin] [2025-05-01 12:22:01] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:01 Europe/Berlin] [2025-05-01 12:22:01] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:02 Europe/Berlin] [2025-05-01 12:22:02] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:02 Europe/Berlin] [2025-05-01 12:22:02] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:02 Europe/Berlin] [2025-05-01 12:22:02] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:12 Europe/Berlin] [2025-05-01 12:22:12] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:12 Europe/Berlin] [2025-05-01 12:22:12] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:12 Europe/Berlin] [2025-05-01 12:22:12] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:12 Europe/Berlin] [2025-05-01 12:22:12] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:13 Europe/Berlin] [2025-05-01 12:22:13] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:13 Europe/Berlin] [2025-05-01 12:22:13] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:13 Europe/Berlin] [2025-05-01 12:22:13] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:13 Europe/Berlin] [2025-05-01 12:22:13] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:21 Europe/Berlin] [2025-05-01 12:22:21] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:21 Europe/Berlin] [2025-05-01 12:22:21] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:25 Europe/Berlin] [2025-05-01 12:22:25] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:25 Europe/Berlin] [2025-05-01 12:22:25] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:25 Europe/Berlin] [2025-05-01 12:22:25] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:22:26 Europe/Berlin] [2025-05-01 12:22:26] db.php:58 - Database initialization error
+Data: {
+    "message": "Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(6): mysqli-&gt;__construct(&#039;localhost&#039;, &#039;root&#039;, Object(SensitiveParameterValue), &#039;calendar&#039;)\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:23:34 Europe/Berlin] [2025-05-01 12:23:34] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:23:34 Europe/Berlin] [2025-05-01 12:23:34] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:23:34 Europe/Berlin] [2025-05-01 12:23:34] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:23:34 Europe/Berlin] [2025-05-01 12:23:34] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:23:34 Europe/Berlin] [2025-05-01 12:23:34] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:23:35 Europe/Berlin] [2025-05-01 12:23:35] db.php:58 - Database initialization error
+Data: {
+    "message": "SQLSTATE[HY000] [1045] Access denied for user &#039;root&#039;@&#039;localhost&#039; (using password: YES)",
+    "trace": "#0 C:\\xampp\\htdocs\\CalendarAI\\backend\\db.php(30): PDO-&gt;__construct(&#039;mysql:host=loca...&#039;, &#039;root&#039;, Object(SensitiveParameterValue))\n#1 C:\\xampp\\htdocs\\CalendarAI\\index.php(8): require_once(&#039;C:\\\\xampp\\\\htdocs...&#039;)\n#2 {main}"
+}
+[01-May-2025 12:24:06 Europe/Berlin] [2025-05-01 12:24:06] login.php:43 - User not found
+Data: {
+    "username": "johndoe@greenwood.edu"
+}
+[01-May-2025 12:24:09 Europe/Berlin] [2025-05-01 12:24:09] login.php:22 - Login attempt
+Data: {
+    "username": "mbn",
+    "stored_hash": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi",
+    "password_verify_result": false
+}
+[01-May-2025 12:24:28 Europe/Berlin] [2025-05-01 12:24:28] login.php:22 - Login attempt
+Data: {
+    "username": "admin",
+    "stored_hash": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi",
+    "password_verify_result": true
+}
+[01-May-2025 12:24:28 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[01-May-2025 12:24:36 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[01-May-2025 12:24:48 Europe/Berlin] [2025-05-01 12:24:48] login.php:22 - Login attempt
+Data: {
+    "username": "mbn",
+    "stored_hash": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi",
+    "password_verify_result": false
+}
+[01-May-2025 12:24:55 Europe/Berlin] [2025-05-01 12:24:55] login.php:22 - Login attempt
+Data: {
+    "username": "mbn",
+    "stored_hash": "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC\/.og\/at2.uheWG\/igi",
+    "password_verify_result": true
+}
+[01-May-2025 12:24:55 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171
+[01-May-2025 12:26:25 Europe/Berlin] [DEBUG] Starting optimization process
+[01-May-2025 12:26:25 Europe/Berlin] [DEBUG] Raw input: {"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines","autoApply":"on","days":["2025-05-01","2025-05-02","2025-05-05","2025-05-06","2025-05-07","2025-05-08","2025-05-09","2025-05-12","2025-05-13","2025-05-14","2025-05-15","2025-05-16","2025-05-19","2025-05-20","2025-05-21","2025-05-22","2025-05-23","2025-05-26","2025-05-27","2025-05-28","2025-05-29","2025-05-30"],"preset":"busy_week","auto_apply":true}
+[01-May-2025 12:26:25 Europe/Berlin] [DEBUG] Received data: {"studyTime":"evening","breakDuration":"15","sessionLength":"30","priority":"deadlines","autoApply":"on","days":["2025-05-01","2025-05-02","2025-05-05","2025-05-06","2025-05-07","2025-05-08","2025-05-09","2025-05-12","2025-05-13","2025-05-14","2025-05-15","2025-05-16","2025-05-19","2025-05-20","2025-05-21","2025-05-22","2025-05-23","2025-05-26","2025-05-27","2025-05-28","2025-05-29","2025-05-30"],"preset":"busy_week","auto_apply":true}
+[01-May-2025 12:26:25 Europe/Berlin] [DEBUG] Retrieved events count: 38
+[01-May-2025 12:26:25 Europe/Berlin] [DEBUG] First event sample: {"id":29,"user_id":7,"title":"2. \u00e5rg. Aflevering af Teknologi B projektrapport","description":"Technology B project report deadline","category_id":2,"start_date":"2025-05-01 00:00:00","end_date":null,"all_day":1,"is_ai_optimized":0,"ai_description":null,"is_human_ai_altered":0,"is_immovable":1,"preset_source":"default","created_at":"2025-05-01 12:21:59"}
+[01-May-2025 12:26:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method ScheduleOptimizerV2::redistributeWorkload() in C:\xampp\htdocs\CalendarAI\backend\ScheduleOptimizerV2.php:360
+Stack trace:
+#0 C:\xampp\htdocs\CalendarAI\backend\ScheduleOptimizerV2.php(252): ScheduleOptimizerV2->optimizeBusyWeek('2025-05-01', Array)
+#1 C:\xampp\htdocs\CalendarAI\api\optimize.php(103): ScheduleOptimizerV2->optimize('busy_week')
+#2 {main}
+  thrown in C:\xampp\htdocs\CalendarAI\backend\ScheduleOptimizerV2.php on line 360
+[01-May-2025 12:26:28 Europe/Berlin] PHP Warning:  Undefined variable $stepNumber in C:\xampp\htdocs\CalendarAI\components\setup-wizard.php on line 171

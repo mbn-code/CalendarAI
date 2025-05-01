@@ -19,7 +19,7 @@ CREATE TABLE users (
     last_login DATETIME,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE password_resets (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -28,14 +28,14 @@ CREATE TABLE password_resets (
     expires_at DATETIME NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE event_categories (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
     color VARCHAR(7) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE calendar_events (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -54,7 +54,7 @@ CREATE TABLE calendar_events (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (category_id) REFERENCES event_categories(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE user_preferences (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -69,29 +69,32 @@ CREATE TABLE user_preferences (
     has_completed_setup BOOLEAN DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    UNIQUE KEY unique_user (user_id)
-);
+    UNIQUE KEY unique_user (user_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE system_prompts (
     id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT NOT NULL,
     prompt_text TEXT NOT NULL,
     is_active BOOLEAN DEFAULT TRUE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE assistant_chat (
     id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT NOT NULL,
     message TEXT NOT NULL,
     is_user BOOLEAN DEFAULT TRUE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Insert default admin user if not exists
-INSERT IGNORE INTO users (id, username, email, password, full_name, role) VALUES 
+INSERT IGNORE INTO users (id, username, email, password, full_name, role) VALUES
 (1, 'admin', 'admin@calendar.ai', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'System Admin', 'admin');
 
 -- Insert default system prompt if not exists
-INSERT IGNORE INTO system_prompts (user_id, prompt_text, is_active) VALUES 
+INSERT IGNORE INTO system_prompts (user_id, prompt_text, is_active) VALUES
 (1, 'You are a calendar management assistant. Help the user manage their schedule effectively by suggesting optimal times for tasks, managing breaks, and ensuring a healthy work-life balance.', 1);

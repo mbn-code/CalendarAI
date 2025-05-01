@@ -2,58 +2,57 @@
 require_once __DIR__ . '/../config.php';
 
 try {
-    // Create mysqli connection for backward compatibility
-    $conn = new mysqli('localhost', 'root', '2671', 'calendar_ai');
-    
+    // Create mysqli connection
+    $dbHost = 'localhost';
+    $dbUser = 'root';
+    $dbPass = ''; // Default XAMPP password - CHANGE IF YOURS IS DIFFERENT
+    $dbName = 'calendar'; // Use consistent database name
+
+    $conn = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
+
     if ($conn->connect_error) {
         if (DEBUG) {
-            debug_log('Database connection failed', [
+            debug_log('Database connection failed (mysqli)', [
                 'error' => $conn->connect_error,
-                'host' => 'localhost',
-                'database' => 'calendar_ai'
+                'host' => $dbHost,
+                'database' => $dbName
             ]);
         }
-        throw new Exception("Connection failed: " . $conn->connect_error);
+        throw new Exception("Connection failed (mysqli): " . $conn->connect_error);
     }
-    
+
     // Set character set
     if (!$conn->set_charset("utf8mb4")) {
         if (DEBUG) {
-            debug_log('Error setting charset', [
+            debug_log('Error setting charset (mysqli)', [
                 'error' => $conn->error
             ]);
         }
-        throw new Exception("Error setting charset: " . $conn->error);
+        // Don't throw exception here, maybe log and continue
+        error_log("Warning: Error setting charset (mysqli): " . $conn->error);
     }
-    
+
     // Also create PDO connection for scripts that use it
-    $pdo = new PDO('mysql:host=localhost;dbname=calendar_ai;charset=utf8mb4', 'root', '2671');
+    // Use the same credentials and database name
+    $dsn = "mysql:host={$dbHost};dbname={$dbName};charset=utf8mb4";
+    $pdo = new PDO($dsn, $dbUser, $dbPass); // Use variables defined above
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    
+
+    // Removed debug code that inserted conflicting test user/preferences
+    // The default admin user (ID 1) inserted by database.sql can be used.
+
+} catch (PDOException $e) { // Catch PDO specific exceptions
     if (DEBUG) {
-        // Ensure test user exists in debug mode
-        $testUserQuery = "INSERT IGNORE INTO users (id, name, email) VALUES (1, 'Test User', 'test@example.com')";
-        if (!$conn->query($testUserQuery)) {
-            debug_log('Error creating test user', [
-                'error' => $conn->error
-            ]);
-        }
-        
-        // Ensure test user preferences exist
-        $testPrefsQuery = "INSERT IGNORE INTO user_preferences 
-            (user_id, focus_start_time, focus_end_time, chill_start_time, chill_end_time, 
-             break_duration, session_length, priority_mode) 
-            VALUES 
-            (1, '09:00:00', '17:00:00', '18:00:00', '22:00:00', 15, 45, 'balanced')";
-        if (!$conn->query($testPrefsQuery)) {
-            debug_log('Error creating test user preferences', [
-                'error' => $conn->error
-            ]);
-        }
+        debug_log('Database initialization error (PDO)', [
+            'message' => $e->getMessage(),
+            'trace' => $e->getTraceAsString()
+        ]);
     }
-    
-} catch (Exception $e) {
+    // Provide a more specific error for PDO connection issues
+    die("Database connection failed (PDO): " . $e->getMessage());
+
+} catch (Exception $e) { // Catch general exceptions (like mysqli connection)
     if (DEBUG) {
         debug_log('Database initialization error', [
             'message' => $e->getMessage(),
