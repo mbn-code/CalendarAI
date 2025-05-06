@@ -1,0 +1,59 @@
+digraph Architecture {
+    rankdir=TB;
+    node [shape=box, style=filled, fontname="Arial"];
+    
+    subgraph cluster_presentation {
+        label="Presentation Layer";
+        style=filled;
+        color=lightgrey;
+        
+        frontend [label="Frontend", fillcolor=lightblue];
+        subgraph cluster_frontend {
+            style=filled;
+            color=white;
+            
+            html [label="HTML/Views\n- index.php\n- dashboard.php\n- profile.php", fillcolor=skyblue];
+            components [label="Components\n- navbar\n- sidebar\n- calendar\n- modals", fillcolor=skyblue];
+            css [label="Styling\n- styles.css\n- Tailwind", fillcolor=skyblue];
+        }
+    }
+    
+    subgraph cluster_business {
+        label="Business Logic Layer";
+        style=filled;
+        color=lightgrey;
+        
+        api [label="API Endpoints\n- optimize.php\n- chat-assistant.php\n- analyze-schedule.php", fillcolor=lightpink];
+        core [label="Core Logic\n- ScheduleOptimizerV2\n- Authentication\n- Middleware", fillcolor=lightpink];
+        config [label="Configuration\n- config.php\n- functions.php", fillcolor=lightpink];
+    }
+    
+    subgraph cluster_data {
+        label="Data Layer";
+        style=filled;
+        color=lightgrey;
+        
+        database [label="Database\n- MySQL", fillcolor=palegreen];
+        models [label="Data Models\n- Users\n- Events\n- Preferences", fillcolor=palegreen];
+        db_layer [label="Database Layer\n- db.php\n- PDO/mysqli", fillcolor=palegreen];
+    }
+    
+    // Connections between layers
+    frontend -> api [dir=both, label="HTTP/AJAX"];
+    html -> components;
+    components -> css;
+    
+    api -> core [dir=both];
+    api -> config;
+    core -> config;
+    
+    core -> db_layer;
+    api -> db_layer;
+    db_layer -> database [dir=both];
+    database -> models [dir=both];
+    
+    // Ranking
+    {rank=same; frontend html components css}
+    {rank=same; api core config}
+    {rank=same; database models db_layer}
+}

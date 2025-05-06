@@ -13,7 +13,7 @@ error_reporting(E_ERROR);
 ob_clean();
 
 require_once '../backend/db.php';
-require_once '../backend/ScheduleOptimizerV2.php';
+require_once '../backend/ScheduleOptimizer.php';
 require_once '../config.php'; // Include config for debug functions
 header('Content-Type: application/json');
 
@@ -35,13 +35,13 @@ try {
         throw new Exception('Empty or invalid request data');
     }
 
-    // Get preset parameters with validation
+    // validere preset parametre
     $preset = isset($data['preset']) ? $data['preset'] : 'default';
     if (!in_array($preset, ['default', 'busy_week', 'conflicts', 'optimized'])) {
         $preset = 'default';
     }
     
-    // Check if we should auto-apply changes
+    // tjekker auto apply med isset
     $autoApply = isset($data['auto_apply']) ? (bool)$data['auto_apply'] : false;
     
     // Validate days array
